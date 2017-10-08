@@ -41,6 +41,6 @@ img {vertical-align: top;}
 /* ·¹ÀÌ¾Æ¿ô CSS */
 #wrap {width:100%; position:relative;}
 .profile {text-align: left; letter-spacing: -1px;}
-.profile h2 {font-size: 35px; color: #000; font-weight: bold;}
-.profile p {font-size: 10px; line-height: 12px;}
+.profile h2 {font-size: 55px; color: #000; font-weight: bold;}
+.profile p {font-size: 15px; line-height: 12px; font-weight: 100;}
 
