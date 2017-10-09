@@ -61,7 +61,7 @@ html {
 	background-image: linear-gradient(to bottom, #C643FC 0%, #FF5F37 100%); 
 	display:none; 
 }
-.profile { 
+.profile, .info { 
 	text-align: center; 
 	letter-spacing: -0.05em;
 	float: left;
@@ -77,16 +77,26 @@ html {
 	color: #fff;
 }
 .profile p {
-	color: #fff;
+	color: #fff;ß
 }
 .profile .subtxt {
 	margin: 10px 0 0 0;
 	font-size: 1.5em; 
 	font-weight: 300;
 }
-.profile .txt {
-	margin: 150px 0 0 0;
-	font-size: 0.5em; 
+.info {width: 100%;}
+.info .txt {
+	margin: 100px 0 0 0;
+	font-size: 1em; 
 	font-weight: 500;
 }
-
+.info .t1 {
+	float: left;
+	font-size: 0.5em; 
+	font-weight: 100;
+}
+.info .t2 {
+	float: left;
+	font-size: 0.5em; 
+	font-weight: 100;
+}
