@@ -55,9 +55,9 @@ html {background-color: #B94FC1;}
 
 
 #wrap {height: 100%; padding: 0 20px 0 20px;}
-.profile_area {width: 100%; padding: 150px 0 150px 0; letter-spacing: -0.5px; float: left;}
+.profile_area {width: 100%; padding: 150px 0px 150px 0px; letter-spacing: -0.5px; float: left;}
 .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff;}
-.profile_area .subtxt {margin: 10px 0 0 0; font-size: 20px; font-weight: 300; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
+.profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: 300; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
 
 .info_area {width: 100%; letter-spacing: -0.5px; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
 .info_area dl {float: left; margin-top: 50px;  text-align: left; height: 130px;}
@@ -65,3 +65,7 @@ html {background-color: #B94FC1;}
 .info_area .end {margin-bottom: 50px;}
 .info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 .info_area .t1 {font-size: 12px; font-weight: 100;}
+
+
+#footer {clear: both; background-color: #000; color: #fff; font-size: 12px; font-weight: 200; padding: 5px 0px; text-align: center; width: 100%; bottom: 0px;}
+#footer .content-in-middle {margin: 0px 10px 0px 10px; padding: 5px 0px 5px 0px;}
