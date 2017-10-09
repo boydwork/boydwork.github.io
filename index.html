@@ -9,14 +9,27 @@
   <link rel="stylesheet" type="text/css" href="inc/css/main_layout.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
+<script type="text/javascript" src="inc/js/jquery-1.8.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+    fadeToggle( $('.gradient.one') );
+    fadeToggle( $('.gradient.two') );
+});
+
+function fadeToggle(el, hide) {
+    el.fadeToggle(5000,null,function() { fadeToggle(el); });
+}
+	</script>
 
 <body>
 <!--wrap star-->
 <div id="wrap">
-<div class="profile">
-<h2>Boydwork</h2>
-<p>Line Doodler, Designer<br>안녕하세요. 김보인입니다.</p>
-</div>
+<div class="profile area">
+	<h2>Boydwork</h2>
+	<p>Line Doodler, Designer<br>안녕하세요. 김보인입니다.</p>
+	</div>
+<div class="gradient one"></div>
+<div class="gradient two"></div>
 </div>
 <!--//wrap end-->
 
