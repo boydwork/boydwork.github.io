@@ -62,5 +62,6 @@ html {background-color: #B94FC1;}
 .info_area {width: 100%; letter-spacing: -0.5px; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
 .info_area dl {float: left; margin-top: 50px;  text-align: left;}
 .info_area .list {margin-right: 50px;}
+.info_area .end {margin-bottom: 50px;}
 .info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 .info_area .t1 {font-size: 12px; font-weight: 100;}
