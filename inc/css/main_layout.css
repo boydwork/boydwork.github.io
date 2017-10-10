@@ -66,9 +66,10 @@ html {background-color: #B94FC1;}
 
 .info_area {width: 100%; float: left; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
 .info_area dl {height: 100%; margin-top: 50px;  text-align: left; clear: both;}
+.info_area dl dd span {color: #fff16a; font-size: 5px;}
 .info_area .list {margin-right: 20px;}
-.info_area .둥 {margin-bottom: 50px;}
-.info_area .txt {font-size: 15px; font-weight: bold; margin-bottom: 10px; }
+.info_area .end {margin-bottom: 50px;}
+.info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 .info_area .t1 {font-size: 12px; font-weight: lighter;}
 
 
