@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* default CSS */
 * { -webkit-text-size-adjust: none; }
 html, body, div, span, applet, object, iframe,
@@ -36,7 +37,8 @@ img {vertical-align: top;}
 /* default CSS */
 
 /* CSS */
-html {background-color: #B94FC1;}
+html {background-color: #B94FC1; height: 100%;}
+body {height: 100%;}
 .gradient { 
 	content: ""; 
 	height: 100%; 
@@ -53,19 +55,18 @@ html {background-color: #B94FC1;}
 	display:none; 
 }
 
-
-#wrap {padding: 0 20px 0 20px;}
-.profile_area {width: 100%; padding: 150px 0px 150px 0px; letter-spacing: -0.5px; float: left;}
+#wrap {padding: 150px 20px 0px 20px; position: relative; float: left;  height: 100%; box-sizing: border-box;}
+.profile_area {width: 100%;  letter-spacing: -0.5px; clear: both; margin-bottom: 150px;}
 .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff;}
-.profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: 300; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
+.profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: 300; color: #fff; font-family: 'Noto Sans KR', sans-serif;}
 
-.info_area {width: 100%; letter-spacing: -0.5px; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif';}
-.info_area dl {float: left; margin-top: 50px;  text-align: left; height: 130px;}
+.info_area {width: 100%; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; clear: both;}
+.info_area dl {height: 140px; float: left; margin-top: 50px;  text-align: left; }
 .info_area .list {margin-right: 50px;}
 .info_area .end {margin-bottom: 50px;}
-.info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
-.info_area .t1 {font-size: 12px; font-weight: 100;}
+.info_area .txt {font-size: 15px; font-weight: bold; margin-bottom: 10px; }
+.info_area .t1 {font-size: 12px; font-weight: lighter;}
 
 
-#footer {clear: both; color: #fff; font-family: 'Spoqa Han Sans', 'Sans-serif'; font-size: 12px; font-weight: 200; padding: 5px 0px; text-align: center; width: 100%; bottom: 0px; position: absolute;}
-#footer .footer_area {margin: 0px 10px 0px 10px; padding: 5px 0px 5px 0px;}
+#footer {width: 100%; clear: both; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: lighter; }
+.footer_area {position: absolute; bottom: 20px; }
