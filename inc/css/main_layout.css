@@ -37,8 +37,8 @@ img {vertical-align: top;}
 /* default CSS */
 
 /* CSS */
-html {background-color: #B94FC1; height: 100%;}
-body {height: 100%;}
+html, body { height: 100%;}
+html {background-color: #B94FC1;}
 .gradient { 
 	content: ""; 
 	height: 100%; 
@@ -55,15 +55,16 @@ body {height: 100%;}
 	display:none; 
 }
 
-#wrap {padding: 20px 20px 0px 20px; position: relative; float: left;  height: 100%; box-sizing: border-box;}
+#wrap {position: relative; min-height: 100%; padding: 20px 20px 0px 20px; float: left; box-sizing: border-box; }
 
-.sign {width: 50px; height: 50px}
-.profile_area {width: 100%;  letter-spacing: -0.5px; clear: both; margin: 150px 0px;}
+.sign {width: 50px; height: 50px; position: fixed; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%;}
+
+.profile_area {width: 100%; clear: both; letter-spacing: -0.5px;  margin: 100px 0px;}
 .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff;}
 .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: 300; color: #fff; font-family: 'Noto Sans KR', sans-serif;}
 
 
-.info_area {width: 100%; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; clear: both;}
+.info_area {width: 100%; clear: both; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
 .info_area dl {width: 280px; height: 140px; float: left; margin-top: 50px;  text-align: left; }
 .info_area .list {margin-right: 20px;}
 .info_area .end {margin-bottom: 50px;}
@@ -71,5 +72,6 @@ body {height: 100%;}
 .info_area .t1 {font-size: 12px; font-weight: lighter;}
 
 
-#footer {width: 100%; clear: both; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: lighter; }
-.footer_area {position: absolute; bottom: 20px; }
+#footer {position: absolute; bottom: 20px; clear: both; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: lighter; }
+
+
