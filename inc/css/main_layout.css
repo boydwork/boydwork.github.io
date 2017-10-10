@@ -65,7 +65,7 @@ html {background-color: #B94FC1;}
 
 
 .info_area {width: 100%; clear: both; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
-.info_area dl {height: 140px; float: left; margin-top: 50px;  text-align: left; }
+.info_area dl {height: 100%; margin-top: 50px;  text-align: left; }
 .info_area .list {margin-right: 20px;}
 .info_area .end {margin-bottom: 50px;}
 .info_area .txt {font-size: 15px; font-weight: bold; margin-bottom: 10px; }
@@ -73,5 +73,3 @@ html {background-color: #B94FC1;}
 
 
 #footer {position: absolute; bottom: 20px; clear: both; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: lighter; }
-
-
