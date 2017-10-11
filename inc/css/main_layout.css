@@ -21,7 +21,7 @@ footer, header, hgroup, menu, nav, section {display: block;}
 h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
 a:link {color: #fff; text-decoration: none; }
 a:visited {color: #fff; text-decoration: none; }
-a:hover {color: #fff16a;  text-decoration: none; }
+a:hover {color: #fff;  text-decoration: none; }
 a:active {color: #fff; text-decoration: none; }
 a:focus {color: #fff; text-decoration: none; }
 select, input, textarea {font-size: 100%; vertical-align: middle;}
@@ -34,6 +34,7 @@ legend, caption {width: 0; height: 0; overflow: hidden; visibility: hidden; font
 button {cursor: pointer;}
 button:focus {outline: 1px dotted;}
 img {vertical-align: top;}
+a, input, button {-webkit-tap-highlight-color: rgba(0,0,0,0);}
 /* default CSS */
 
 /* CSS */
@@ -55,20 +56,48 @@ html {background-color: #B94FC1;}
 	display:none; 
 }
 
+.info_area dl {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.info_area dd {
+    -webkit-animation: fadein 5.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5.5s; /* Firefox < 16 */
+        -ms-animation: fadein 5.5s; /* Internet Explorer */
+         -o-animation: fadein 5.5s; /* Opera < 12.1 */
+            animation: fadein 5.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 #wrap {position: relative; min-height: 100%; padding: 20px 20px 100px 20px; float: left; box-sizing: border-box; }
 
 .sign {width: 50px; height: 50px; position: fixed; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%;}
 
 .profile_area {width: 100%; clear: both; letter-spacing: -0.5px;  margin: 150px 0px;}
-.profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff; text-shadow: 3px 3px 0px rgba(63,107,169, 0.5)}
+.profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff; text-shadow:  -3px -3px 0px rgba(31,200,35, 1.0);}
 .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif;}
 .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif; font-style: italic; opacity: 0.5;}
 
 
 #info_wrap {width: 100%;}
+
 .info_area {float: left; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
 .info_area dl {height: 100%; margin-top: 50px;  text-align: left; clear: both;}
-.info_area dl dd span {color: #fff; font-size: 9px; opacity: 0.5;}
+.info_area dl dd .day {color: #fff; font-size: 9px; opacity: 0.5;}
+.info_area dl dd .link {color: #fff;  opacity: 0.5;}
 .info_area .list {margin-right: 20px;}
 .info_area .end {margin-bottom: 50px;}
 .info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
