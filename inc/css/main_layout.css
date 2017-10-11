@@ -87,7 +87,7 @@ html {background-color: #B94FC1;}
 
 #wrap {position: relative; min-height: 100%; padding: 20px 20px 100px 20px; float: left; box-sizing: border-box; }
 
-.sign {width: 50px; height: 50px; position: fixed; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%;}
+.sign {width: 50px; height: 50px; position: fixed; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%; z-index: 9;}
 
 .profile_area {width: 100%; clear: both; letter-spacing: -0.5px;  margin: 150px 0px;}
 .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff; text-shadow:  -3px -3px 0px rgba(31,200,35, 1.0);}
