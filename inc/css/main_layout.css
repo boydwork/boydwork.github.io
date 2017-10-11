@@ -285,14 +285,13 @@ html {background-color: #B94FC1;}
 .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif; font-style: italic; opacity: 0.5;}
 
 
-#info_wrap {width: 100%;}
+#info_wrap {width: 100%; clear: both;}
 
-.info_area {float: left; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
-.info_area dl {height: 100%; margin-top: 50px;  text-align: left; clear: both;}
+.info_area {width: 100%; float: left; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
+.info_area dl {float: left; width: 25%; height: 200px; text-align: left;}
 .info_area dl dd .day {color: #fff; font-size: 9px; opacity: 0.5;}
 .info_area dl dd .link {color: #fff;  opacity: 0.5;}
-.info_area .list {margin-right: 20px;}
-.info_area .end {margin-bottom: 50px;}
+.info_area .list {}
 .info_area .txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 .info_area .t1 {font-size: 12px; font-weight: lighter;}
 .info_area img {width: 50%}
