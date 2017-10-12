@@ -288,16 +288,6 @@ html, body { height: 100%;}
 #sign_arap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif;}
 #sign_arap .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif; font-style: italic; opacity: 0.5;}
 
-#info_wrap {width: 100%; clear: both; padding: 0px 10px; }
-.info_area {width: 100%; float: left; letter-spacing: -0.5px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
-.info_area dl {float: left;  height: 200px; text-align: left;}
-.info_area dl dd .day {color: #fff; font-size: 9px; opacity: 0.5;}
-.info_area dl dd .link {color: #fff;  opacity: 0.5;}
-.info_area dl.list {margin-right: 2%;}
-.info_area dl:nth-of-type(3n) {margin-right: 0;}
-.info_area dt.txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
-.info_area .t1 {font-size: 12px; font-weight: lighter;}
-
 .gradient {
 	width: 100%;
     height: 100%;
@@ -317,7 +307,15 @@ html, body { height: 100%;}
 }
 
 
-
+#info_wrap {width: 100%; height: 100%; clear: both; padding: 0px 10px; }
+.info_area {width: 100%;  height: 100%; margin-bottom: 10%; float: left; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; }
+.info_area dl {float: left;  height: 200px; text-align: left;}
+.info_area dl dd .day {color: #000; font-size: 9px;}
+.info_area dl dd .link {color: #000;}
+.info_area dl.list {margin-right: 2%;}
+.info_area dl:nth-of-type(3n) {margin-right: 0;}
+.info_area dt.txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
+.info_area .t1 {font-size: 12px; font-weight: lighter;}
 
 
 #footer {
