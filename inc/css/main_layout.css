@@ -117,7 +117,7 @@ html, body { height: 100%;}
 }
 
 @media screen and (max-width:768px) {
-	#drawing.entry .img {
+	#drawing .entry .img {
 		margin-bottom: 20px;
 	}
 }
