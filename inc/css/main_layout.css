@@ -261,7 +261,7 @@ html, body { height: 100%;}
     margin-bottom: 10%;
 }
 #sign_arap {padding: 20px 20px;}
-#sign_arap .sign {width: 50px; height: 50px; position: fixed; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%; z-index: 9;}
+#sign_arap .sign {width: 50px; height: 50px; box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); border-radius: 50%; z-index: 9;}
 #sign_arap .profile_area {width: 100%; clear: both; letter-spacing: -0.5px;  margin: 150px 0px;}
 #sign_arap .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff; text-shadow:  -3px -3px 0px rgba(31,200,35, 1.0);}
 #sign_arap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif;}
