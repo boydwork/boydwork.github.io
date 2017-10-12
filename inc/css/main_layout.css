@@ -307,11 +307,11 @@ html, body { height: 100%;}
 }
 
 
-#info_wrap {width: 100%; height: 100%; clear: both; padding: 0px 10px; }
+#info_wrap {width: 100%; height: 100%; overflow: hidden; padding: 0px 10px;}
 .info_area {width: 100%;  height: 100%; margin-bottom: 10%; float: left; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; }
 .info_area dl {float: left;  height: 134px; text-align: left; margin-bottom: 30px;}
 .info_area dl dd .day {color: #999; font-size: 10px; font-weight: 500;}
-.info_area dl dd .link {color: #999;}
+.info_area dl dd .link {color: #999; font-weight: 500;}
 .info_area dl.list {margin-right: 2%;}
 .info_area dl:nth-of-type(3n) {margin-right: 0;}
 .info_area dt.txt {font-size: 15px; font-weight: 500; margin-bottom: 10px; }
