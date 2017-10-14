@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<title>Boydwork</title>
@@ -38,6 +38,10 @@
         selector: '.info_wrap',
         vh: 100
       }
+      {
+        selector: '.Bears',
+        vh: 100
+      }
     ]);
   </script>
 	</head>
@@ -45,6 +49,26 @@
 	<body>
 <!--#wrap start-->
 <div id="wrap"> 
+  <div class="Bears">
+    <div class="Overlay Overlay--dark"></div>
+    <div class="Container">
+      <h1>Mobile Chrome <code>vh</code> units fix</h1>
+      <h2>What is this?</h2>
+      <p>
+        Mobile (Android and iOS) Chrome has something I consider a bug.
+        On scroll, when address bar dissapears, inner window height is changed,
+        and with it <code>vh</code> units size is changed as well,
+        making whole page to jump after recalculating the layout.
+        This also happens when keyboard pops up.
+      </p>
+
+      <p>
+        This small library aims to solve that problem.
+      </p>
+
+      <a href="#usage">Jump to usage.</a>
+    </div>
+  </div>
       <!--탑-->
       <div class="top_wrap">
           <div class="table-row">
