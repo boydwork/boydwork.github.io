@@ -244,16 +244,8 @@ html, body { height: 100%;}
 #top_wrap {
 	width: 100%; 
 	overflow: hidden;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     background-color: #B94FC1;
 	height: 100vh;
-	position: relative;
-	z-index: -7;
 	display: table; 
 }
 
@@ -284,25 +276,6 @@ html, body { height: 100%;}
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-.gradient {
-	width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-	content: ""; 
-	z-index: -5;
-}
- .gradient.one { 
-	background-image: 
-		linear-gradient(to bottom, #5856D6 0%, #C644FC 100%);
-}
-.gradient.two { 
-	background-image: linear-gradient(to bottom, #C643FC 0%, #FF5F37 100%); 
-	display:none; 
-}
-
 
 #info_wrap {height: 100vh; background-color: #ffde13; clear: both;}
 #info_wrap .info_area {width: 100%;  height: 100%; display: table; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; }
