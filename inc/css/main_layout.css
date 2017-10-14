@@ -162,7 +162,7 @@ body {
 
 .Horses {
   height: 150vh;
-  background: #111 url(inc/images/1.jpg) no-repeat bottom center;
+  background: #111 url(../inc/images/1.jpg) no-repeat bottom center;
 }
 
 .Docs,
