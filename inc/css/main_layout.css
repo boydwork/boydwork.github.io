@@ -300,15 +300,14 @@ html, body { height: 100%;}
 }
 
 #footer {
-	width: 100%;
     position: relative;
 	text-align: center;
     background-color: #fff;
-    z-index: 1; 
 	clear: both; 
 	color: #999; 
 	font-family: 'Noto Sans KR', sans-serif; 
 	font-size: 10px; 
 	font-weight: 500;
-	margin-bottom: 20px;
 }
+#footer .footer_area {
+	height: 50px;}
