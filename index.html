@@ -37,6 +37,24 @@
     el.fadeToggle(5000,null,function() { fadeToggle(el); });
 	  }
 	</script>
+  <script src="mobile-chrome-vh-fix.js"></script>
+  <script>
+    var vhFix = new VHChromeFix([
+      {
+        selector: '.Bears',
+        vh: 100
+      },
+      {
+        selector: '.Foxes',
+        vh: 50
+      },
+      {
+        selector: '.Horses',
+        vh: 150
+      }
+    ]);
+  </script>
+
 	</head>
 
 	<body>
@@ -159,7 +177,7 @@
       <!-- 이미지 frist-->
       <!-- #footer start -->
       <div id="footer" >
-    <div class="footer_area"> Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Boydwork. All rights reserved. </div>
+    <div class="footer_area"> Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Boydwork. All rights reserved.</div>
   </div>
       <!-- #footer end --> 
     </div>
