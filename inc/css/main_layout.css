@@ -17,7 +17,7 @@ ol, ul {list-style: none;}
 /* default CSS */
 
 /* CSS */
-#wrap {position: relative; width: 100%; box-sizing: border-box;}
+#wrap {position: relative; width: 100%;}
 
 .top_wrap {width: 100%; background-color: #B94FC1; height: 100vh; display: table;}
 .top_wrap .sign {width: 50px; height: 50px; position: fixed;}
@@ -97,7 +97,7 @@ ol, ul {list-style: none;}
 
 .Bears {
   height: 100vh;
-  background: #111 url(../images/common/bg_girl.png) no-repeat 70% center;
+  background: #111 url(../images/common/bg_girl.png) no-repeat 50% center;
 }
 
 
