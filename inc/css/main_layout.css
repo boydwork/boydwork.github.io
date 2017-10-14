@@ -43,8 +43,7 @@ html, body { height: 100%;}
 #wrap {position: relative; width: 100%; min-height: 100%; box-sizing: border-box;}
 
 #top_wrap {
-	width: 100%; 
-	overflow: hidden;
+	width: 100%;
     background-color: #B94FC1;
 	height: 100vh;
 	display: table; 
