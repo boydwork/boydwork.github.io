@@ -16,6 +16,20 @@ footer, header, hgroup, menu, nav, section {
 	padding: 0;
 	border: 0;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: #202123;
+  color: #f8f8fb;
+  font-size: 15px;
+}
 article, aside, details, figcaption, figure, dialog,
 footer, header, hgroup, menu, nav, section {display: block;}
 h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
@@ -95,48 +109,16 @@ html, body {height: 100%;}
 
 #footer {
     position: relative;
-	text-align: center;
-    background-color: #fff;
-	clear: both; 
-	color: #999; 
-	font-family: 'Noto Sans KR', sans-serif; 
-	font-size: 10px; 
-	font-weight: 500;
+	  text-align: center;
+	  clear: both; 
+	  color: #fff; 
+	  font-family: 'Noto Sans KR', sans-serif; 
+	  font-size: 10px; 
+	  font-weight: 500;
 }
 #footer .footer_area {
-	height: 50px;}
+	  height: 50px;}
 
-	Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @boydwork
- Sign out
- Watch 1
-  Star 20  Fork 4 Stanko/mobile-chrome-vh-fix
- Code  Issues 0  Pull requests 1  Projects 0  Wiki  Insights
-Branch: master Find file Copy pathmobile-chrome-vh-fix/style.css
-81f0f3c  on 20 Jan
-@Stanko Stanko Initial commit
-1 contributor
-RawBlameHistory     
-147 lines (122 sloc)  1.88 KB
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  background: #202123;
-  color: #f8f8fb;
-  font-size: 15px;
-}
 
 @media (min-width: 500px) {
   body {
@@ -152,23 +134,12 @@ body {
 
 .Bears {
   height: 100vh;
-  background: #111 url(inc/images/3.jpg) no-repeat 70% center;
+  background: #111 url(../images/3.jpg) no-repeat 70% center;
 }
 
-.Foxes {
-  height: 50vh;
-  background: #111 url(inc/images/2.jpg) no-repeat center 80% ;
-}
-
-.Horses {
-  height: 150vh;
-  background: #111 url(../inc/images/1.jpg) no-repeat bottom center;
-}
 
 .Docs,
-.Bears,
-.Foxes,
-.Horses {
+.Bears{
   background-size: cover;
   position: relative;
 }
@@ -201,59 +172,9 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-h2 {
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-  display: inline-block;
-  margin-bottom: 1em;
-}
-
 p {
   margin-bottom: 1em;
   line-height: 1.4em;
-}
-
-code,
-pre {
-  font-family: "Monaco", "Consolas", "Menlo", monospace;
-  font-size: 0.9em;
-  color: #eee;
-}
-
-pre {
-  line-height: 1.5em;
-  background: #28292c;
-  border-radius: 3px;
-  padding: 0.8em 1em;
-  white-space: pre;
-  word-break: keep-all;
-  word-wrap: normal;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 1em;
-}
-
-.Color--blue {
-  color: #6BD9ED;
-}
-
-.Color--green {
-  color: #A7E040;
-}
-
-.Color--purple {
-  color: #AE85FC;
-}
-
-.Color--red {
-  color: #DC2B6A;
-}
-
-.Color--yellow {
-  color: #E6DA7B;
-}
-
-.Color--gray {
-  color: #75715F;
 }
 
 a {
@@ -266,7 +187,7 @@ small {
 }
 
 ul {
-  padding-left: 20px;
   line-height: 1.4em;
   margin-bottom: 1em;
+  margin-top: 1em;
 }
