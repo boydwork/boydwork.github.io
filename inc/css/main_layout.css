@@ -67,10 +67,9 @@ ol, ul {list-style: none;}
 }
 
 #footer {
-    position: relative;
 	  text-align: center;
 	  clear: both; 
-	  color: #fff; 
+	  color: #f8f8fb; 
 	  font-family: 'Noto Sans KR', sans-serif; 
 	  font-size: 10px; 
 	  font-weight: 500;
