@@ -7,11 +7,8 @@
 }
 
 body {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #202123;
-  color: #f8f8fb;
-  font-size: 15px;
 }
 ol, ul {list-style: none;}
 /* default CSS */
@@ -19,14 +16,14 @@ ol, ul {list-style: none;}
 /* CSS */
 #wrap {position: relative; width: 100%;}
 
-.top_wrap {width: 100%; background-color: #B94FC1; height: 100vh; display: table;}
+.top_wrap {width: 100%;  height: 100vh; background-color: #B94FC1; display: table;}
 .top_wrap .sign {width: 50px; height: 50px; position: fixed;}
 .top_wrap .table-row {display: table-row; z-index: 9;}
 .top_wrap .profile_area {clear: both; letter-spacing: -0.5px; display: table;}
 .top_wrap .table-row .table-cell {text-align: center; vertical-align: middle; display: table-cell;}
-.top_wrap .table-row .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #fff; text-shadow:  -3px -3px 0px rgba(255,222,19, 1.0);}
-.top_wrap .table-row .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif;}
-.top_wrap .table-row .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #fff; font-family: 'Noto Sans KR', sans-serif;}
+.top_wrap .table-row .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #f8f8fb; text-shadow:  -3px -3px 0px rgba(255,222,19, 1.0);}
+.top_wrap .table-row .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
+.top_wrap .table-row .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 
 .table-row .profile_area h2 {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -48,13 +45,13 @@ ol, ul {list-style: none;}
     to   { opacity: 1; }
 }
 
-.info_wrap {height: 100vh; background-color: #ffde13; clear: both;}
+.info_wrap {height: 100vh; background-color: #ffde13;}
 .info_wrap .info_area {width: 100%;  height: 100%; display: table; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; }
 .info_area .table-row {display: table-row;}
 .table-row .table-cell {text-align: center; vertical-align: middle; display: table-cell;}
 .table-row dl dd .day {color: #000; font-size: 10px; font-weight: 300;}
 .table-row dl dd .link {color: #000; font-weight: 500;}
-.table-row .title {font-size: 17px; font-weight: 500; margin-bottom: 30px;}
+.table-row .title {font-size: 18px; font-weight: 500; margin-bottom: 30px;}
 .table-row .t1 {font-size: 12px; line-height: 22px; font-weight: 300; color: #000;}
 
 .pic_list {padding: 20px 20px;}
@@ -83,37 +80,20 @@ ol, ul {list-style: none;}
 	  height: 50px;}
 
 
-@media (min-width: 500px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1000px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-.Bears {
-  height: 100vh;
-}
-
-
-.Bears{
-  background-size: cover;
-  position: relative;
-}
-
-.Container {
+.name {height: 100vh;}
+.name{background-size: cover; position: relative;}
+.container {
   margin: 0 auto;
   max-width: 700px;
   position: relative;
   z-index: 1;
   padding: 20px;
+  color: #f8f8fb;
 }
-
-.Overlay {
+.container h1 {font-size: 35px; font-weight: bold;}
+.container h2 {font-size: 25px; font-weight: lighter; line-height: 2.2em;}
+.container p {font-size: 12px; font-weight: lighter;}
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -121,34 +101,4 @@ ol, ul {list-style: none;}
   width: 100%;
   height: 100%;
 }
-
-.Overlay--dark {
-  background: rgba(0,0,0,0.6);
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 300;
-  margin-bottom: 0.5em;
-}
-
-p {
-  margin-bottom: 1em;
-  line-height: 1.4em;
-}
-
-a {
-  color: rgba(255,255,255,0.6);
-}
-
-small {
-  display: block;
-  margin-top: 50px;
-}
-
-ul {
-  line-height: 1.4em;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
+.overlay-dark {background: rgba(0,0,0,0.6);}
