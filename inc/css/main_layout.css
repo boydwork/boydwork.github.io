@@ -24,26 +24,6 @@ ol, ul {list-style: none;}
 .top_wrap .table-row .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 .top_wrap .table-row .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 
-.table-row .profile_area h2 {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-}
-.table-row .profile_area .subtxt, .word {
-    -webkit-animation: fadein 5.5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5.5s; /* Firefox < 16 */
-        -ms-animation: fadein 5.5s; /* Internet Explorer */
-         -o-animation: fadein 5.5s; /* Opera < 12.1 */
-            animation: fadein 5.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 .info_wrap {height: 100vh; background-color: #ffde13;}
 .info_wrap .info_area {width: 100%;  height: 100%; display: table; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; }
 .info_area .table-row {display: table-row;}
