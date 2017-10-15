@@ -14,7 +14,6 @@ ol, ul {list-style: none;}
 /* default CSS */
 
 /* CSS */
-#wrap {width: 100%; position: relative;}
 
 .top_wrap {width: 100%;  height: 100vh; background-color: #B94FC1; display: table;}
 .top_wrap .sign {width: 50px; height: 50px; position: fixed;}
