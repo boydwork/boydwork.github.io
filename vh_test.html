@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vh tset</title>
+<script src="mobile-chrome-vh-fix.js"></script> 
+<script>
+    var vhFix = new VHChromeFix([
+      {
+        selector: '.vh_01',
+        vh: 100
+      },
+      {
+        selector: '..vh_02',
+        vh: 50
+      },
+      {
+        selector: '.vh_03',
+        vh: 150
+      }
+    ]);
+  </script>
+<style type="text/css">
+.vh_01 {height: 100vh; background-color: #000;}
+.vh_02 {height: 100vh; background-color: #999;}
+.vh_03 {height: 100vh; background-color: #333;}
+</style>
+</head>
+
+<body>
+	<div class="vh_01">
+	</div>
+	<div class="vh_02">
+	</div>
+	<div class="vh_03">
+	</div>
+</body>
+</html>
