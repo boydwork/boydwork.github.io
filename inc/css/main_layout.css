@@ -51,7 +51,7 @@ ol, ul {list-style: none;}
 .info_wrap .info_area {letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; text-align: center;}
 .info_area dl dd .day {color: #000; font-size: 10px; font-weight: 300;}
 .info_area dl dd .link {color: #000; font-weight: 500;}
-.info_area .title {font-size: 18px; font-weight: 500; margin-bottom: 30px;}
+.info_area .title {font-size: 18px; font-weight: 500; margin-bottom: 20px;}
 .info_area .t1 {font-size: 12px; line-height: 22px; font-weight: 300; color: #000;}
 
 .pic_list {padding: 20px 20px;}
