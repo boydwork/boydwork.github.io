@@ -1,8 +1,8 @@
 /*!
- * fullPage 2.9.4
- * https://github.com/alvarotrigo/fullPage.js
+ * fullpage 2.9.4
+ * https://github.com/alvarotrigo/fullpage.js
  * @license MIT licensed
- *
+ *fullpage
  * Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
  */
 (function(global, factory) {
