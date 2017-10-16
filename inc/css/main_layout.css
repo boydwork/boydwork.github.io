@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #202123;
+  background: #333;
 }
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
@@ -67,7 +67,7 @@ ol, ul {list-style: none;}
     background-color: #d1d1d1;
 }
 
-#footer {
+.footer {
 	  text-align: center;
 	  clear: both; 
 	  color: #f8f8fb; 
@@ -75,6 +75,6 @@ ol, ul {list-style: none;}
 	  font-size: 10px; 
 	  font-weight: 500;
 }
-#footer .footer_area {
+.footer .footer_area {
 	  height: 50px;}
 
