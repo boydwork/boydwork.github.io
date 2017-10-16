@@ -44,7 +44,7 @@ ol, ul {list-style: none;}
 .overlay-dark {background: rgba(0,0,0,0.6);}
 .top_wrap {width: 100%; background-color: #B94FC1;}
 .top_wrap .profile_area {clear: both; text-align: center; vertical-align: middle;}
-.top_wrap .profile_area h1 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #ffde13; text-shadow:  -3px -3px 0px rgba(255,255,255, 1.0);}
+.top_wrap .profile_area h1 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #85d148; text-shadow:  -3px -3px 0px rgba(255,255,255, 1.0);}
 .top_wrap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 18px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 .top_wrap .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 
