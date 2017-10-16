@@ -29,35 +29,34 @@ body {
     font-size: 18px;
   }
 }
-.Bears {height: 100vh; background-color: #000;}
+.vh_01 {height: 100vh; background-color: #000;}
 p {color: #fff;}
-.Foxes {height: 100vh; background-color: #999;}
-.Horses {height: 100vh; background-color: #333;}
+.vh_02 {height: 100vh; background-color: #999;}
+.vh_03 {height: 100vh; background-color: #333;}
 </style>
 </head>
 
 <body>
-<div class="Bears">
-	<p>테스트_02</p>
+<div class="vh_01">
+	<p>테스트_03</p>
 </div>
-<div class="Foxes">
+<div class="vh_02">
 </div>
-<div class="Horses">
-  
+<div class="vh_03">
 </div>
 <script src="inc/js/mobile-chrome-vh-fix.js"></script> 
 <script>
     var vhFix = new VHChromeFix([
       {
-        selector: '.Bears',
+        selector: '.vh_01',
         vh: 100
       },
       {
-        selector: '.Foxes',
+        selector: '.vh_02',
         vh: 100
       },
       {
-        selector: '.Horses',
+        selector: '.vh_03',
         vh: 100
       }
     ]);
