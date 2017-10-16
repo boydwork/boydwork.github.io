@@ -10,28 +10,49 @@ body {
   font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #202123;
 }
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none; }
+a:active {text-decoration: none;}
+a:focus {text-decoration: none;}
 ol, ul {list-style: none;}
 /* default CSS */
 
 /* CSS */
-
-.top_wrap {width: 100%; background-color: #B94FC1; display: table;}
-.top_wrap .sign {width: 50px; height: 50px; position: fixed;}
-.top_wrap .table-row {display: table-row; z-index: 9;}
-.top_wrap .profile_area {clear: both; letter-spacing: -0.5px; display: table;}
-.top_wrap .table-row .table-cell {text-align: center; vertical-align: middle; display: table-cell;}
-.top_wrap .table-row .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #f8f8fb; text-shadow:  -3px -3px 0px rgba(255,222,19, 1.0);}
-.top_wrap .table-row .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
-.top_wrap .table-row .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
+.name{background-size: cover; position: relative;}
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #f8f8fb;
+  text-align: center;
+}
+.container h1 {font-size: 35px; font-weight: bold; line-height: 1.2em;}
+.container h2 {font-size: 25px; font-weight: lighter; line-height: 2.2em;}
+.container p {font-size: 12px; font-weight: lighter;}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+}
+.overlay-dark {background: rgba(0,0,0,0.6);}
+.top_wrap {width: 100%; background-color: #B94FC1;}
+.top_wrap .profile_area {clear: both; letter-spacing: -0.5px; text-align: center; vertical-align: middle;}
+.top_wrap .profile_area h2 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #f8f8fb; text-shadow:  -3px -3px 0px rgba(255,222,19, 1.0);}
+.top_wrap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 20px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
+.top_wrap .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 
 .info_wrap {background-color: #ffde13;}
-.info_wrap .info_area {width: 100%;  height: 100%; display: table; letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; position: absolute;}
-.info_area .table-row {display: table-row;}
-.table-row .table-cell {text-align: center; vertical-align: middle; display: table-cell;}
-.table-row dl dd .day {color: #000; font-size: 10px; font-weight: 300;}
-.table-row dl dd .link {color: #000; font-weight: 500;}
-.table-row .title {font-size: 18px; font-weight: 500; margin-bottom: 30px;}
-.table-row .t1 {font-size: 12px; line-height: 22px; font-weight: 300; color: #000;}
+.info_wrap .info_area {letter-spacing: -0.5px; color: #000; font-family: 'Noto Sans KR', sans-serif; text-align: center;}
+.info_area dl dd .day {color: #000; font-size: 10px; font-weight: 300;}
+.info_area dl dd .link {color: #000; font-weight: 500;}
+.info_area .title {font-size: 18px; font-weight: 500; margin-bottom: 30px;}
+.info_area .t1 {font-size: 12px; line-height: 22px; font-weight: 300; color: #000;}
 
 .pic_list {padding: 20px 20px;}
 .pic_list ul {
@@ -57,26 +78,3 @@ ol, ul {list-style: none;}
 #footer .footer_area {
 	  height: 50px;}
 
-
-.name, .top_wrap, .info_wrap {height: 100vh;}
-.name{background-size: cover; position: relative;}
-.container {
-  margin: 0 auto;
-  max-width: 700px;
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #f8f8fb;
-}
-.container h1 {font-size: 35px; font-weight: bold; line-height: 1.2em;}
-.container h2 {font-size: 25px; font-weight: lighter; line-height: 2.2em;}
-.container p {font-size: 12px; font-weight: lighter;}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.4);
-  width: 100%;
-  height: 100%;
-}
-.overlay-dark {background: rgba(0,0,0,0.6);}
