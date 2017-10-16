@@ -9,7 +9,7 @@
 body {
   font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #333;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.7px;
 }
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
@@ -37,7 +37,7 @@ ol, ul {list-style: none;}
 .top_wrap {width: 100%; background-color: #B94FC1;}
 .top_wrap .profile_area {clear: both; text-align: center; vertical-align: middle;}
 .top_wrap .profile_area h1 {font-family: 'Lobster', cursive; font-size: 65px; font-weight: bold; color: #ffe64c; text-shadow:  -3px -3px 0px rgba(78,158,13, 1.0);}
-.top_wrap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 18px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
+.top_wrap .profile_area .subtxt {margin: 10px 0px 0px 0px; font-size: 18px; font-weight: lighter;  color: #f8f8fb; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: 1px;}
 .top_wrap .profile_area .word {margin: 20px 0px 0px 0px; font-size: 12px; font-weight: lighter;  color: #f8f8fb; font-family: 'Noto Sans KR', sans-serif;}
 
 .info_wrap {background-color: #ffde13;}
