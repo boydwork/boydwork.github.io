@@ -48,7 +48,7 @@ ol, ul {list-style: none;}
 .info_area .title {font-size: 25px; font-weight: 500; margin-bottom: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 .info_area .t1 {font-size: 12px; line-height: 20px; font-weight: 300; color: #414141; font-family: 'Noto Sans KR', sans-serif; }
 
-.pic_list {padding-top: 20px; padding-bottom: 20px;}
+.pic_list {}
 .pic_list ul {
     display: -ms-grid;
     display: grid;
@@ -57,13 +57,15 @@ ol, ul {list-style: none;}
     grid-gap: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .pic_list li {
     min-height: 200px;
     background-color: #d1d1d1;
 }
 
-.footer {
+.pic_list .footer {
 	  text-align: center;
 	  clear: both; 
 	  color: #f8f8fb; 
@@ -71,5 +73,5 @@ ol, ul {list-style: none;}
 	  font-size: 10px; 
 	  font-weight: 500;
 }
-.footer .footer_area {
-	  height: 50px;}
+.pic_list .footer .footer_area {
+	  padding-bottom: 20px;}
