@@ -48,7 +48,6 @@ ol, ul {list-style: none;}
 .info_area .title {font-size: 25px; font-weight: 500; margin-bottom: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 .info_area .t1 {font-size: 12px; line-height: 20px; font-weight: 300; color: #414141; font-family: 'Noto Sans KR', sans-serif; }
 
-.pic_list {}
 .pic_list ul {
     display: -ms-grid;
     display: grid;
