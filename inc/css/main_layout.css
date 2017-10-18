@@ -48,7 +48,9 @@ ol, ul {list-style: none;}
 .info_area .title {font-size: 25px; font-weight: 500; margin-bottom: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 .info_area .t1 {font-size: 12px; line-height: 20px; font-weight: 300; color: #414141; font-family: 'Noto Sans KR', sans-serif; }
 
-.pic_list ul {
+.pic_list .fp-tableCell {vertical-align: top;}
+.pic_list .min {min-height: calc(100% - 32px);}
+.pic_list .min ul {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (minmax(200px,1fr))[auto-fit];
@@ -59,7 +61,7 @@ ol, ul {list-style: none;}
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.pic_list li {
+.pic_list .min li {
     min-height: 200px;
     background-color: #d1d1d1;
 }
