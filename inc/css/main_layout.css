@@ -31,6 +31,7 @@ ol, ul {list-style: none;}
   color: #f8f8fb;
   text-align: center;
 }
+.container object {width: 100px; height: 100px;}
 .container h1 {font-size: 35px; font-weight: bold; line-height: 38px; margin-bottom: 20px;background-image: linear-gradient(#ffc3ca,#a8a9e7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .container h2 {font-size: 18px; font-weight: lighter; margin-bottom: 20px; line-height: 20px;}
 .container p {font-size: 12px; font-weight: lighter; line-height: 20px;}
