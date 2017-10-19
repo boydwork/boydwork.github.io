@@ -24,14 +24,57 @@ ol, ul {list-style: none;}
 
 .container {
   margin: 0 auto;
-  max-width: 700px;
   position: relative;
   z-index: 1;
   padding: 20px;
   color: #f8f8fb;
   text-align: center;
 }
-.container object {width: 50px; height: 50px; margin-bottom:15px; }
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  margin: 0 auto;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+.container object {width: 50px; height: 50px;}
 .container h1 {font-size: 35px; font-weight: bold; line-height: 38px; margin-bottom: 20px;background-image: linear-gradient(#ffc3ca,#a8a9e7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .container h2 {font-size: 18px; font-weight: lighter; margin-bottom: 20px; line-height: 20px;}
 .container p {font-size: 12px; font-weight: lighter; line-height: 20px;}
@@ -46,7 +89,14 @@ ol, ul {list-style: none;}
 .info_wrap .info_area {color: #333; text-align: center;}
 .info_area dl dd .day {color: #333; font-size: 10px; font-weight: 300;}
 .info_area dl dd .link {color: #333; font-weight: 500;}
-.info_area .title {font-size: 25px; font-weight: 500; margin-bottom: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.info_area .title {
+     font-size: 25px;
+     font-weight: 500;
+     margin-bottom: 20px;
+     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     text-align: center;
+     text-transform: uppercase;
+     text-shadow: -3px 0 0 #F22613,  3px 0 0 #00FFFF;}
 .info_area .t1 {font-size: 12px; line-height: 20px; font-weight: 300; color: #414141; font-family: 'Noto Sans KR', sans-serif; }
 
 .pic_list .fp-tableCell {vertical-align: top;}
@@ -76,5 +126,4 @@ ol, ul {list-style: none;}
 	  font-weight: lighter;
     letter-spacing: 0px;
 }
-.pic_list .footer .footer_area {
-	  padding-bottom: 20px;}
+.pic_list .footer .footer_area {padding-bottom: 20px;}
