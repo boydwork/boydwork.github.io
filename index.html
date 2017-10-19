@@ -34,7 +34,7 @@
  <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        anchors: ['Introduce', 'Ego', 'Information', 'Work', 'Footer'],
+        anchors: ['intro', 'Introduce', 'Ego', 'Information', 'Work', 'Footer'],
         slidesNavigation: true,
         controlArrows: false,
         autoScrolling: true,
@@ -47,9 +47,22 @@
 
 <body>
 <div id="fullpage">
-<div class="name section active">
+<!-- 인트로 -->
+<div class="intro_wrap section active">
+ <div class="container">
+  <object type="image/svg+xml" data="inc/svg/boydwork.svg"></object>
+ </div>
+ <div class="scrolldown">
+   <label>SCROLL</label>
+ </div> 
+ <div class="bg"></div>
+ <div class="bg bg2"></div>
+ <div class="bg bg3"></div>
+</div>
+<!-- 인트로 -->
+<!-- 이름 -->  
+<div class="name_wrap section">
   <div class="container">
-         <object type="image/svg+xml" data="inc/svg/boydwork.svg"></object>
     <h1>안녕하세요.<br>김보인입니다.</h1>
     <h2>시작은, 어쩌다가</h2>
     <p>어느덧 7년차 디자이너.<br>
@@ -58,8 +71,9 @@
     </p>
   </div>
 </div>
-<!--탑-->
-<div class="top_wrap section">
+<!-- 이름 -->
+<!-- 일러스트레이터 -->
+<div class="illust_wrap section">
     <div class="profile_area">
       <h1>Boydwork</h1>
       <h2 class="subtxt">Line Doodler</h2>
@@ -67,8 +81,8 @@
         의미있는 날들로 남기를 바랍니다.</p>
   </div>
 </div>
-<!--탑--> 
-<!-- 프로필 내용 -->
+<!-- 일러스트레이터 --> 
+<!-- 인포메이션 -->
 <div class="info_wrap section">
   <div class="info_area">
       <dl class="list slide active" id="slide1">
@@ -104,9 +118,9 @@
       </dl>  
   </div>
 </div>
-<!-- 프로필 내용 -->
-<!-- 그림 리스트 -->
-<div class="pic_list section">
+<!-- 인포메이션 -->
+<!-- 픽쳐 -->
+<div class="pic_wrap section">
   <div class="min">
   <ul>
     <li></li>
@@ -133,7 +147,7 @@
   <div class="footer_area"> Copyright Boydwork All Rights Reserved.</div>
 </div>
 </div>
-<!-- 그림 리스트 --> 
+<!-- 픽쳐 --> 
 </div>
 </body>
 </html>
