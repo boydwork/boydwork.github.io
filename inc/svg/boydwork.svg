@@ -50,6 +50,7 @@
 .boydwork {
   animation: boydwork 5s ease none;
 }
+
 </style>
 <g class="face">
 	<path d="M22.3,0C10,0,0,10,0,22.3s10,22.3,22.3,22.3s22.3-10,22.3-22.3S34.6,0,22.3,0L22.3,0z"/>
