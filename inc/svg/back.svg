@@ -1,9 +1,10 @@
-<svg version="1.1" class="boydwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" class="back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 44.6 44.6" style="enable-background:new 0 0 44.6 44.6;" xml:space="preserve">
 <style type="text/css">
-	.lips {fill: #FFF;}
-	.boydwork .eyes {
-  fill: #FFF;
+	.lips {fill: #fff;}
+	.face {fill: #44c400;}
+  .eyes {
+  fill: #000;
   -webkit-animation-name: blink;
   -webkit-animation-duration: 5s;
   -webkit-animation-iteration-count: infinite; 
@@ -13,7 +14,6 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes blink { 
   0% { -webkit-transform: scaleX(1) scaleY(1); } 
   1% { -webkit-transform: scaleX(1.1) scaleY(0.1); } 
