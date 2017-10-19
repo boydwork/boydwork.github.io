@@ -2,7 +2,8 @@
 	 viewBox="0 0 44.6 44.6" style="enable-background:new 0 0 44.6 44.6;" xml:space="preserve">
 <style type="text/css">
 	.lips {fill: #fff;}
-	.boydwork .eyes {
+  .face {000;}
+	.eyes {
   fill: #fff;
   -webkit-animation-name: blink;
   -webkit-animation-duration: 5s;
