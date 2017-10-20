@@ -29,7 +29,7 @@ ol, ul {list-style: none;}
   filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
 }
 .intro_wrap .scrolldown {
-  bottom: 50px;
+  bottom: 30px;
   left: 20px;
   position: absolute;
   color: #fff;
@@ -160,16 +160,16 @@ ol, ul {list-style: none;}
   padding-bottom: 20px;
 }
 .pic_wrap .min li {
-    padding-top: 100%;
-    background-color: #fff;
+  padding-top: 100%;
+  background-color: #fff;
 }
 .pic_wrap .footer {
-	  text-align: center;
-	  clear: both; 
-	  color: #f8f8fb; 
-	  font-family: 'Noto Sans KR', sans-serif; 
-	  font-size: 10px; 
-	  font-weight: lighter;
-    letter-spacing: 0px;
+ text-align: center;
+ clear: both; 
+ color: #f8f8fb; 
+ font-family: 'Noto Sans KR', sans-serif; 
+ font-size: 10px; 
+ font-weight: lighter;
+ letter-spacing: 0px;
 }
 .pic_wrap .footer .footer_area {padding-bottom: 20px;}
