@@ -33,7 +33,7 @@ ol, ul {list-style: none;}
   left: 20px;
   position: absolute;
   color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans KR', sans-serif; 
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 1px;
@@ -41,7 +41,6 @@ ol, ul {list-style: none;}
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
-.intro_wrap .scrolldown span {display: block;}
 .scrolldown .scroller {
   width: 5px;
   height: 5px;
@@ -55,7 +54,7 @@ ol, ul {list-style: none;}
 @keyframes scroll {
   0% {opacity: 0;}
   5% {transform: translateY(0); opacity: 1;}
-  100% {transform: translateY(55px); opacity: 0;}
+  100% {transform: translateY(75px); opacity: 0;}
 }
 .intro_wrap .bg {
   animation: slide 3s ease-in-out infinite alternate;
