@@ -10,6 +10,7 @@ body {
   font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #333;
   letter-spacing: -0.7px;
+  -webkit-font-smoothing: antialiased;
 }
 a:link {color: #fff; text-decoration: none;}
 a:visited {color: #fff; text-decoration: none;}
@@ -23,27 +24,40 @@ ol, ul {list-style: none;}
 .intro_wrap .container {text-align: center;;}
 .intro_wrap .container object {
   width: 50px; 
-  height: 50px; 
-  margin-bottom: 10px; 
+  height: 50px;
   -webkit-filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));      
   filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
 }
-.scrolldown {
-  bottom: 20px;
+.intro_wrap .scrolldown {
+  bottom: 50px;
   left: 20px;
   position: absolute;
   color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 1px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
 }
-.scrolldown label {
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
+.intro_wrap .scrolldown span {display: block;}
+.scrolldown .scroller {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  5% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(60px); opacity: 0;}
 }
 .intro_wrap .bg {
-  animation:slide 3s ease-in-out infinite alternate;
+  animation: slide 3s ease-in-out infinite alternate;
   background-image: radial-gradient(circle at 3% 100%, #87f252 20%, #00aeff);
   bottom:0;
   left:-50%;
