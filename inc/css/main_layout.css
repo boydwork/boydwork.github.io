@@ -123,6 +123,82 @@ ol, ul {list-style: none;}
   color: #f8f8fb; 
   font-family: 'Noto Sans KR', sans-serif;
 }
+.illust_wrap .night_wrap {position: absolute; left: 48%; top: 25%;
+}
+.night {
+  width: 180px; 
+  height: 180px;
+  position: absolute;
+}
+.night .moon {
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: rgba(255,241,118 ,1);
+  box-shadow: 1px 1px 30px rgba(224,224,224 ,1);
+}
+.night .spot1 {
+  position: absolute;
+  top: 2%;
+  left: 85%;
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  background-color: #fff;
+  animation: light 8.5s infinite;
+}
+.night .spot2 {
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 100%;
+  background-color: #fff;
+  animation: light 5s ease infinite;
+}
+.night li {
+  position: absolute;
+  list-style: none;
+  width: 1px;
+  height: 1px;
+  border-radius: 100%;
+  background-color: #fff;
+  transform: rotate(45deg);
+  animation: light 3.3s ease infinite;
+}
+.night li:nth-child(1) {top:30%; left:65%;}
+.night li:nth-child(2) {top:35%; left:53%;}
+.night li:nth-child(3) {
+  opacity: 0;
+  top: 20%;
+  left: 75%;
+  width: 2px;
+  height: 2px;
+  animation: meteor 1.5s infinite linear;
+  animation-delay: 0.6s;
+}
+.night li:nth-child(4) {top:5%; left:50%;}
+.night li:nth-child(5) {
+  opacity: 0;
+  top: 20%;
+  left: 60%;
+  width: 1px;
+  height: 15px;
+  animation: meteor 1.5s infinite linear;
+}
+@keyframes meteor {
+  10% {opacity: 1;}
+  80% {left: 10%; top: 75%; opacity: 0;}
+}
+@keyframes light {
+  0%, 10%  {opacity: 0.2}
+  45%, 70% {opacity: 1}
+  70%, 80%, 100% {opacity: 0.2}
+}
 
 .info_wrap {background-color: #ffde13;}
 .info_wrap .info_area {color: #333; text-align: center;}
@@ -146,7 +222,7 @@ ol, ul {list-style: none;}
 }
 
 .pic_wrap .fp-tableCell {vertical-align: top;}
-.pic_wrap .min {min-height: calc(100% - 32px);}
+.pic_wrap .min {min-height: calc(100vh - 32px);}
 .pic_wrap .min ul {
   display: -ms-grid;
   display: grid;
