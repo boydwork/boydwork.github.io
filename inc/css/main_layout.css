@@ -21,7 +21,29 @@ ol, ul {list-style: none;}
 /* default CSS */
 
 /* CSS */
-.intro_wrap .container {text-align: center;;}
+.intro_wrap {
+  background: linear-gradient(-45deg, #87f252, #00aeff, #87f252, #00aeff);
+  background-size: 400% 400%;
+  -webkit-animation: gradi 15s ease infinite;
+  -moz-animation: gradi 15s ease infinite;
+  animation: gradi 15s ease infinite;
+}
+@-webkit-keyframes gradi {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+@-moz-keyframes gradi {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+@keyframes gradi {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+.intro_wrap .container {text-align: center;}
 .intro_wrap .container object {
   width: 50px; 
   height: 50px;
@@ -55,28 +77,6 @@ ol, ul {list-style: none;}
   0% {opacity: 0;}
   5% {transform: translateY(0); opacity: 1;}
   100% {transform: translateY(75px); opacity: 0;}
-}
-.intro_wrap .bg {
-  animation: slide 3s ease-in-out infinite alternate;
-  background-image: radial-gradient(circle at 3% 100%, #87f252 20%, #00aeff);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-.intro_wrap .bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-.intro_wrap .bg3 {
-  animation-duration:5s;
-}
-@keyframes slide {
-  0% {transform:translateX(-25%);}
-  100% {transform:translateX(25%);}
 }
 
 .name_wrap {background: #181818;}
@@ -123,7 +123,10 @@ ol, ul {list-style: none;}
   color: #f8f8fb; 
   font-family: 'Noto Sans KR', sans-serif;
 }
-.illust_wrap .night_wrap {position: absolute; left: 48%; top: 25%;
+.illust_wrap .night_wrap {
+  position: absolute; 
+  left: 45%; 
+  top: 10%;
 }
 .night {
   width: 180px; 
@@ -134,8 +137,8 @@ ol, ul {list-style: none;}
   position: absolute;
   top: 10%;
   left: 65%;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   background: rgba(255,241,118 ,1);
   box-shadow: 1px 1px 30px rgba(224,224,224 ,1);
