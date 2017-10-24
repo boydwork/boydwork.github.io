@@ -100,15 +100,16 @@ ol, ul {list-style: none;}
   width: 100%; 
   background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);
 }
-.illust_wrap .profile_area {clear: both; text-align: center; vertical-align: middle;}
-.illust_wrap .profile_area h1 {
+.illust_wrap .profile_area {clear: both; text-align: center; vertical-align: middle; position: absolute; top: 50%; left: 50%;}
+.illust_wrap .profile_area .inner {position: relative; left: -50%; transform: translateY(-50%); padding-top: 80px;}
+.profile_area .inner h1 {
   font-family: 'Lobster', cursive; 
   font-size: 60px; 
   font-weight: bold; 
   color: #ffe64c; 
   text-shadow: 3px 3px 0px rgba(78,158,13, 1.0);
 }
-.illust_wrap .profile_area .subtxt {
+.profile_area .inner .subtxt {
   margin: 10px 0px 0px 0px; 
   font-size: 18px; 
   font-weight: lighter;  
@@ -116,32 +117,32 @@ ol, ul {list-style: none;}
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   letter-spacing: 1px;
 }
-.illust_wrap .profile_area .word {
+.profile_area .inner .word {
   margin: 20px 0px 0px 0px; 
   font-size: 12px; 
   font-weight: lighter;  
   color: #f8f8fb; 
   font-family: 'Noto Sans KR', sans-serif;
 }
-.illust_wrap .night_wrap {
+.profile_area .inner .night_wrap {
   position: absolute; 
   left: 45%; 
   top: 10%;
 }
 .night {
-  width: 180px; 
-  height: 180px;
+  width: 130px; 
+  height: 130px;
   position: absolute;
 }
 .night .moon {
   position: absolute;
-  top: 10%;
-  left: 65%;
+  top: 3%;
+  left: 58%;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background: rgba(255,241,118 ,1);
-  box-shadow: 1px 1px 30px rgba(224,224,224 ,1);
+  background: rgba(255,226,135 ,1);
+  box-shadow: 1px 1px 30px rgba(246,246,246 ,1);
 }
 .night .spot1 {
   position: absolute;
@@ -157,8 +158,8 @@ ol, ul {list-style: none;}
   position: absolute;
   top: 30%;
   left: 75%;
-  width: 2.5px;
-  height: 2.5px;
+  width: 2px;
+  height: 2px;
   border-radius: 100%;
   background-color: #fff;
   animation: light 5s ease infinite;
@@ -173,33 +174,33 @@ ol, ul {list-style: none;}
   transform: rotate(45deg);
   animation: light 3.3s ease infinite;
 }
-.night li:nth-child(1) {top:30%; left:65%;}
+.night li:nth-child(1) {top:29%; left:65%;}
 .night li:nth-child(2) {top:35%; left:53%;}
 .night li:nth-child(3) {
   opacity: 0;
-  top: 20%;
+  top: 12%;
   left: 75%;
   width: 2px;
   height: 2px;
-  animation: meteor 1.5s infinite linear;
-  animation-delay: 0.6s;
+  animation: fallout 1.3s infinite linear;
+  animation-delay: 0.7s;
 }
-.night li:nth-child(4) {top:5%; left:50%;}
+.night li:nth-child(4) {top:7%; left:45%;}
 .night li:nth-child(5) {
   opacity: 0;
   top: 20%;
   left: 60%;
   width: 1px;
   height: 15px;
-  animation: meteor 1.5s infinite linear;
+  animation: fallout 1.3s infinite linear;
 }
-@keyframes meteor {
-  10% {opacity: 1;}
-  80% {left: 10%; top: 75%; opacity: 0;}
+@keyframes fallout {
+  15% {opacity: 1;}
+  85% {left: 10%; top: 60%; opacity: 0;}
 }
 @keyframes light {
   0%, 10%  {opacity: 0.2}
-  45%, 70% {opacity: 1}
+  40%, 70% {opacity: 1}
   70%, 80%, 100% {opacity: 0.2}
 }
 
