@@ -218,11 +218,11 @@ ol, ul {list-style: none;}
 }
 .night li:nth-child(6) {
   opacity: 0;
-  top: 12%;
+  top: 35%;
   left: 12%;
   width: 1px;
   height: 5px;
-  transform: rotate(-45deg);
+  transform: rotate(-50deg);
   animation: fallout_fix 1.2s infinite linear;
 }
 .night li:nth-child(7) {
