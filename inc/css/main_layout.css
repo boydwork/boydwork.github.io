@@ -145,6 +145,39 @@ ol, ul {list-style: none;}
   border-radius: 100%;
   background: rgba(255,226,135 ,1);
   box-shadow: 1px 1px 30px rgba(246,246,246 ,1);
+  animation: schaler 2s;
+  animation-iteration-count: infinite;
+  /* Safari and Chrome*/
+  -webkit-animation: schaler 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes schaler
+  {
+  from {transform: scale(1,1);}
+  40% {transform: scale(0.2,0.2);
+      border-radius:30px;
+      transform:rotate(180deg);
+  }
+  60% {transform: scale(0.2,0.2);
+      border-radius:30px;
+      transform:rotate(-180deg);
+  }
+  to {transform: scale(1,1);}
+ }
+
+/* Safari and Chrome */
+@-webkit-keyframes schaler 
+  {
+  from {-webkit-transform: scale(1,1);}
+  40% {-webkit-transform: scale(0.2,0.2);
+      border-radius:30px;
+      -webkit-transform:rotate(180deg);
+  }
+  60% {-webkit-transform: scale(0.2,0.2);
+      border-radius:30px;
+      -webkit-transform:rotate(-180deg);
+  }
+  to {-webkit-transform: scale(1,1);}
 }
 .night .star_01 {
   position: absolute;

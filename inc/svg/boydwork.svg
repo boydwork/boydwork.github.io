@@ -42,13 +42,12 @@
   100% { -webkit-transform: scaleX(1) scaleY(1);} 
 }
 
+#boydwork {
+  animation: boydwork 5s ease none;
+}
 @keyframes boydwork {
   0%, 10%  {opacity: 0}
   45%, 100% {opacity: 1}
-}
-
-#boydwork {
-  animation: boydwork 5s ease none;
 }
 </style>
 </defs>
