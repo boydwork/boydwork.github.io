@@ -350,7 +350,6 @@ ol, ul {list-style: none;}
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  /*background-image: url(../images/photo/photo_01.jpg);*/
 }
 .pic_wrap .min li .details {
   width: 100%;
