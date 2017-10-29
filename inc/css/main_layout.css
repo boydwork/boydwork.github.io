@@ -330,7 +330,7 @@ ol, ul {list-style: none;}
 }
 
 .pic_wrap .fp-tableCell {vertical-align: top;}
-.pic_wrap .min {min-height: calc(100vh - 32px);}
+.pic_wrap .min {min-height: calc(100% - 32px);}
 .pic_wrap .min ul {
   display: -ms-grid;
   display: grid;
