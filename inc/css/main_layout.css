@@ -336,7 +336,7 @@ ol, ul {list-style: none;}
   display: grid;
   -ms-grid-columns: (minmax(200px,1fr))[auto-fit];
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  grid-gap: 5px;
+  grid-gap: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
