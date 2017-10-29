@@ -47,18 +47,20 @@ ol, ul {list-style: none;}
 .intro_wrap .container .boydwork {
   width: 51px; 
   height: 50px;
+  border-radius: 100%
   -webkit-filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));      
   filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
   margin-top: 5px;
 }
 .shake:hover {
-  -webkit-animation-name: shake;
-  -webkit-animation-duration: 100ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 0s;
+  animation-name: shake;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
 }
-@keyframes shake { 0% { transform: translate(0px, 0px) rotate(0deg); }
+@keyframes shake { 
+  0% { transform: translate(0px, 0px) rotate(0deg); }
   2% { transform: translate(-2.5px, -2.5px) rotate(-1.5deg); }
   4% { transform: translate(1.5px, 0.5px) rotate(0.5deg); }
   6% { transform: translate(1.5px, -0.5px) rotate(0.5deg); }
@@ -109,7 +111,6 @@ ol, ul {list-style: none;}
   96% { transform: translate(1.5px, -2.5px) rotate(0.5deg); }
   98% { transform: translate(-2.5px, -0.5px) rotate(-1.5deg); } 
 }
-.intro_wrap .container .object {display: block; width: 30px; height: 30px; margin: 0 auto;}
 .intro_wrap .scrolldown {
   bottom: 30px;
   left: 20px;
@@ -342,8 +343,12 @@ ol, ul {list-style: none;}
   padding-bottom: 20px;
 }
 .pic_wrap .min li {
+  width: 100%;
   padding-top: 100%;
-  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-image: url(../images/photo/photo_01.jpg);*/
 }
 .pic_wrap .footer {
  text-align: center;
