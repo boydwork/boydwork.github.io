@@ -91,9 +91,14 @@ ol, ul {list-style: none;}
   font-weight: bold;
   line-height: 38px;
   margin-bottom: 20px;
-  background-image: linear-gradient(#ffc3ca,#a8a9e7); 
+  background-image: linear-gradient(to left, #ffc3ca, #a8a9e7, #ffc3ca); 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
+  animation: bg 15s linear infinite;
+}
+@keyframes bg {
+  0% {background-position-x: 0;}
+  100% {background-position-x: 10000px;}
 }
 .name_wrap .container h2 {font-size: 18px; font-weight: lighter; margin-bottom: 20px; line-height: 20px;}
 .name_wrap .container p {font-size: 12px; font-weight: lighter; line-height: 20px;}
@@ -154,7 +159,6 @@ ol, ul {list-style: none;}
   height: 2px;
   border-radius: 100%;
   background-color: #fff;
-  animation: light 8.5s infinite;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
