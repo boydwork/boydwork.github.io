@@ -88,7 +88,7 @@ background-position: 0% 50%
 	filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
 	margin-top: 5px;
 }
-.shake {
+.shake.active {
 	animation-name: shake;
 	animation-duration: 100ms;
 	animation-iteration-count: infinite;
