@@ -1,390 +1,614 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* default CSS */
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: 100%;
 }
-
 body {
-  font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #333;
-  letter-spacing: -0.7px;
-  -webkit-font-smoothing: antialiased;
+	font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #333;
+	letter-spacing: -0.7px;
+	-webkit-font-smoothing: antialiased;
 }
-a:link {color: #fff; text-decoration: none;}
-a:visited {color: #fff; text-decoration: none;}
-a:hover {color: #fff; text-decoration: none; }
-a:active {color: #fff; text-decoration: none;}
-a:focus {color: #fff; text-decoration: none;}
-ol, ul {list-style: none;}
+a:link {
+	color: #fff;
+	text-decoration: none;
+}
+a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+a:active {
+	color: #fff;
+	text-decoration: none;
+}
+a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
 /* default CSS */
 
 /* CSS */
 .intro_wrap {
-  background: linear-gradient(-45deg, #87f252, #00aeff, #87f252, #00aeff);
-  background-size: 400% 400%;
-  -webkit-animation: gradi 15s ease infinite;
-  -moz-animation: gradi 15s ease infinite;
-  animation: gradi 15s ease infinite;
+	background: linear-gradient(-45deg, #87f252, #00aeff, #87f252, #00aeff);
+	background-size: 400% 400%;
+	-webkit-animation: gradi 15s ease infinite;
+	-moz-animation: gradi 15s ease infinite;
+	animation: gradi 15s ease infinite;
 }
 @-webkit-keyframes gradi {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+ 0% {
+background-position: 0% 50%
+}
+ 50% {
+background-position: 100% 50%
+}
+ 100% {
+background-position: 0% 50%
+}
 }
 @-moz-keyframes gradi {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+ 0% {
+background-position: 0% 50%
+}
+ 50% {
+background-position: 100% 50%
+}
+ 100% {
+background-position: 0% 50%
+}
 }
 @keyframes gradi {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+ 0% {
+background-position: 0% 50%
 }
-.intro_wrap .container {text-align: center;}
-.intro_wrap .container .boydwork {
-  width: 51px; 
-  height: 50px;
-  border-radius: 100%
-  -webkit-filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));      
-  filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
-  margin-top: 5px;
+ 50% {
+background-position: 100% 50%
 }
-.shake:hover {
-  animation-name: shake;
-  animation-duration: 100ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
+ 100% {
+background-position: 0% 50%
 }
-@keyframes shake { 
-  0% { transform: translate(0px, 0px) rotate(0deg); }
-  2% { transform: translate(-2.5px, -2.5px) rotate(-1.5deg); }
-  4% { transform: translate(1.5px, 0.5px) rotate(0.5deg); }
-  6% { transform: translate(1.5px, -0.5px) rotate(0.5deg); }
-  8% { transform: translate(-0.5px, 1.5px) rotate(-1.5deg); }
-  10% { transform: translate(0.5px, 0.5px) rotate(0.5deg); }
-  12% { transform: translate(1.5px, -2.5px) rotate(-0.5deg); }
-  14% { transform: translate(1.5px, -0.5px) rotate(0.5deg); }
-  16% { transform: translate(-1.5px, -2.5px) rotate(0.5deg); }
-  18% { transform: translate(0.5px, -2.5px) rotate(-0.5deg); }
-  20% { transform: translate(-2.5px, -2.5px) rotate(0.5deg); }
-  22% { transform: translate(-0.5px, -1.5px) rotate(0.5deg); }
-  24% { transform: translate(-1.5px, -2.5px) rotate(-1.5deg); }
-  26% { transform: translate(-1.5px, 1.5px) rotate(-0.5deg); }
-  28% { transform: translate(0.5px, 1.5px) rotate(-1.5deg); }
-  30% { transform: translate(-0.5px, 1.5px) rotate(0.5deg); }
-  32% { transform: translate(-1.5px, 0.5px) rotate(0.5deg); }
-  34% { transform: translate(-2.5px, 1.5px) rotate(0.5deg); }
-  36% { transform: translate(-0.5px, -2.5px) rotate(-0.5deg); }
-  38% { transform: translate(0.5px, 1.5px) rotate(-0.5deg); }
-  40% { transform: translate(1.5px, -1.5px) rotate(-0.5deg); }
-  42% { transform: translate(-0.5px, 0.5px) rotate(-0.5deg); }
-  44% { transform: translate(1.5px, 1.5px) rotate(0.5deg); }
-  46% { transform: translate(0.5px, -1.5px) rotate(0.5deg); }
-  48% { transform: translate(-1.5px, 0.5px) rotate(-1.5deg); }
-  50% { transform: translate(-0.5px, -1.5px) rotate(-0.5deg); }
-  52% { transform: translate(-0.5px, 1.5px) rotate(-0.5deg); }
-  54% { transform: translate(-1.5px, 1.5px) rotate(0.5deg); }
-  56% { transform: translate(-1.5px, -0.5px) rotate(-0.5deg); }
-  58% { transform: translate(1.5px, 0.5px) rotate(-0.5deg); }
-  60% { transform: translate(1.5px, 0.5px) rotate(-0.5deg); }
-  62% { transform: translate(-1.5px, -1.5px) rotate(0.5deg); }
-  64% { transform: translate(1.5px, 0.5px) rotate(-1.5deg); }
-  66% { transform: translate(1.5px, -0.5px) rotate(0.5deg); }
-  68% { transform: translate(0.5px, -2.5px) rotate(-1.5deg); }
-  70% { transform: translate(0.5px, -2.5px) rotate(-1.5deg); }
-  72% { transform: translate(1.5px, -1.5px) rotate(0.5deg); }
-  74% { transform: translate(1.5px, -0.5px) rotate(0.5deg); }
-  76% { transform: translate(1.5px, -1.5px) rotate(-0.5deg); }
-  78% { transform: translate(1.5px, -1.5px) rotate(-1.5deg); }
-  80% { transform: translate(-2.5px, -1.5px) rotate(-1.5deg); }
-  82% { transform: translate(1.5px, -2.5px) rotate(-0.5deg); }
-  84% { transform: translate(1.5px, -2.5px) rotate(-0.5deg); }
-  86% { transform: translate(1.5px, 0.5px) rotate(0.5deg); }
-  88% { transform: translate(-2.5px, 0.5px) rotate(-1.5deg); }
-  90% { transform: translate(0.5px, 1.5px) rotate(0.5deg); }
-  92% { transform: translate(-1.5px, 1.5px) rotate(0.5deg); }
-  94% { transform: translate(-0.5px, 0.5px) rotate(-1.5deg); }
-  96% { transform: translate(1.5px, -2.5px) rotate(0.5deg); }
-  98% { transform: translate(-2.5px, -0.5px) rotate(-1.5deg); } 
+}
+.intro_wrap .container {
+	text-align: center;
+}
+.intro_wrap .container .boyd {
+	width: 51px;
+	height: 50px;
+  border-radius: 100%;  
+  -webkit-filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
+	filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
+	margin-top: 5px;
+}
+.shake.active {
+	animation-name: shake;
+	animation-duration: 100ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0s;
+}
+@keyframes shake {
+ 0% {
+transform: translate(0px, 0px) rotate(0deg);
+}
+ 2% {
+transform: translate(-2.5px, -2.5px) rotate(-1.5deg);
+}
+ 4% {
+transform: translate(1.5px, 0.5px) rotate(0.5deg);
+}
+ 6% {
+transform: translate(1.5px, -0.5px) rotate(0.5deg);
+}
+ 8% {
+transform: translate(-0.5px, 1.5px) rotate(-1.5deg);
+}
+ 10% {
+transform: translate(0.5px, 0.5px) rotate(0.5deg);
+}
+ 12% {
+transform: translate(1.5px, -2.5px) rotate(-0.5deg);
+}
+ 14% {
+transform: translate(1.5px, -0.5px) rotate(0.5deg);
+}
+ 16% {
+transform: translate(-1.5px, -2.5px) rotate(0.5deg);
+}
+ 18% {
+transform: translate(0.5px, -2.5px) rotate(-0.5deg);
+}
+ 20% {
+transform: translate(-2.5px, -2.5px) rotate(0.5deg);
+}
+ 22% {
+transform: translate(-0.5px, -1.5px) rotate(0.5deg);
+}
+ 24% {
+transform: translate(-1.5px, -2.5px) rotate(-1.5deg);
+}
+ 26% {
+transform: translate(-1.5px, 1.5px) rotate(-0.5deg);
+}
+ 28% {
+transform: translate(0.5px, 1.5px) rotate(-1.5deg);
+}
+ 30% {
+transform: translate(-0.5px, 1.5px) rotate(0.5deg);
+}
+ 32% {
+transform: translate(-1.5px, 0.5px) rotate(0.5deg);
+}
+ 34% {
+transform: translate(-2.5px, 1.5px) rotate(0.5deg);
+}
+ 36% {
+transform: translate(-0.5px, -2.5px) rotate(-0.5deg);
+}
+ 38% {
+transform: translate(0.5px, 1.5px) rotate(-0.5deg);
+}
+ 40% {
+transform: translate(1.5px, -1.5px) rotate(-0.5deg);
+}
+ 42% {
+transform: translate(-0.5px, 0.5px) rotate(-0.5deg);
+}
+ 44% {
+transform: translate(1.5px, 1.5px) rotate(0.5deg);
+}
+ 46% {
+transform: translate(0.5px, -1.5px) rotate(0.5deg);
+}
+ 48% {
+transform: translate(-1.5px, 0.5px) rotate(-1.5deg);
+}
+ 50% {
+transform: translate(-0.5px, -1.5px) rotate(-0.5deg);
+}
+ 52% {
+transform: translate(-0.5px, 1.5px) rotate(-0.5deg);
+}
+ 54% {
+transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+}
+ 56% {
+transform: translate(-1.5px, -0.5px) rotate(-0.5deg);
+}
+ 58% {
+transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+}
+ 60% {
+transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+}
+ 62% {
+transform: translate(-1.5px, -1.5px) rotate(0.5deg);
+}
+ 64% {
+transform: translate(1.5px, 0.5px) rotate(-1.5deg);
+}
+ 66% {
+transform: translate(1.5px, -0.5px) rotate(0.5deg);
+}
+ 68% {
+transform: translate(0.5px, -2.5px) rotate(-1.5deg);
+}
+ 70% {
+transform: translate(0.5px, -2.5px) rotate(-1.5deg);
+}
+ 72% {
+transform: translate(1.5px, -1.5px) rotate(0.5deg);
+}
+ 74% {
+transform: translate(1.5px, -0.5px) rotate(0.5deg);
+}
+ 76% {
+transform: translate(1.5px, -1.5px) rotate(-0.5deg);
+}
+ 78% {
+transform: translate(1.5px, -1.5px) rotate(-1.5deg);
+}
+ 80% {
+transform: translate(-2.5px, -1.5px) rotate(-1.5deg);
+}
+ 82% {
+transform: translate(1.5px, -2.5px) rotate(-0.5deg);
+}
+ 84% {
+transform: translate(1.5px, -2.5px) rotate(-0.5deg);
+}
+ 86% {
+transform: translate(1.5px, 0.5px) rotate(0.5deg);
+}
+ 88% {
+transform: translate(-2.5px, 0.5px) rotate(-1.5deg);
+}
+ 90% {
+transform: translate(0.5px, 1.5px) rotate(0.5deg);
+}
+ 92% {
+transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+}
+ 94% {
+transform: translate(-0.5px, 0.5px) rotate(-1.5deg);
+}
+ 96% {
+transform: translate(1.5px, -2.5px) rotate(0.5deg);
+}
+ 98% {
+transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
+}
 }
 .intro_wrap .scrolldown {
-  bottom: 30px;
-  left: 20px;
-  position: absolute;
-  color: #fff;
-  font-family: 'Noto Sans KR', sans-serif; 
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 1px;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+	bottom: 30px;
+	left: 20px;
+	position: absolute;
+	color: #fff;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 1px;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
 }
 .scrolldown .scroller {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #fff;
+	animation-name: scroll;
+	animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+	animation-iteration-count: infinite;
 }
 @keyframes scroll {
-  0% {opacity: 0;}
-  5% {transform: translateY(0); opacity: 1;}
-  100% {transform: translateY(75px); opacity: 0;}
+ 0% {
+opacity: 0;
 }
-
-.name_wrap {background: #181818; position: relative;}
+ 5% {
+transform: translateY(0);
+opacity: 1;
+}
+ 100% {
+transform: translateY(75px);
+opacity: 0;
+}
+}
+.name_wrap {
+	background: #181818;
+	position: relative;
+}
 .name_wrap .container {
-  color: #f8f8fb;
-  text-align: center;
+	color: #f8f8fb;
+	text-align: center;
 }
 .name_wrap .container h1 {
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 38px;
-  margin-bottom: 20px;
-  background-image: linear-gradient(to left, #ffc3ca, #a8a9e7, #ffc3ca); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  animation: bg 15s linear infinite;
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 38px;
+	margin-bottom: 20px;
+	background-image: linear-gradient(to left, #ffc3ca, #a8a9e7, #ffc3ca);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: bg 15s linear infinite;
 }
 @keyframes bg {
-  0% {background-position-x: 0;}
-  100% {background-position-x: 10000px;}
+ 0% {
+background-position-x: 0;
 }
-.name_wrap .container h2 {font-size: 18px; font-weight: lighter; margin-bottom: 20px; line-height: 20px;}
-.name_wrap .container p {font-size: 12px; font-weight: lighter; line-height: 20px;}
-
+ 100% {
+background-position-x: 10000px;
+}
+}
+.name_wrap .container h2 {
+	font-size: 18px;
+	font-weight: lighter;
+	margin-bottom: 20px;
+	line-height: 20px;
+}
+.name_wrap .container p {
+	font-size: 12px;
+	font-weight: lighter;
+	line-height: 20px;
+}
 .illust_wrap {
-  width: 100%; 
-  background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);
+	width: 100%;
+	background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);
 }
-.illust_wrap .profile_area {clear: both; text-align: center; vertical-align: middle; position: absolute; top: 50%; left: 50%;}
-.illust_wrap .profile_area .inner {position: relative; left: -50%; transform: translateY(-50%); padding-top: 75px;}
+.illust_wrap .profile_area {
+	clear: both;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.illust_wrap .profile_area .inner {
+	position: relative;
+	left: -50%;
+	transform: translateY(-50%);
+	padding-top: 75px;
+}
 .profile_area .inner h1 {
-  font-family: 'Lobster', cursive; 
-  font-size: 60px; 
-  font-weight: bold; 
-  color: #ffe64c; 
-  text-shadow: 3px 3px 0px rgba(78,158,13, 1.0);
+	font-family: 'Lobster', cursive;
+	font-size: 60px;
+	font-weight: bold;
+	color: #ffe64c;
+	text-shadow: 3px 3px 0px rgba(78,158,13, 1.0);
 }
 .profile_area .inner .subtxt {
-  margin: 10px 0px 0px 0px; 
-  font-size: 18px; 
-  font-weight: lighter;  
-  color: #f8f8fb; 
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-  letter-spacing: 1px;
+	margin: 10px 0px 0px 0px;
+	font-size: 18px;
+	font-weight: lighter;
+	color: #f8f8fb;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
 }
 .profile_area .inner .word {
-  margin: 20px 0px 0px 0px; 
-  font-size: 12px; 
-  font-weight: lighter;  
-  color: #f8f8fb; 
-  font-family: 'Noto Sans KR', sans-serif;
+	margin: 20px 0px 0px 0px;
+	font-size: 12px;
+	font-weight: lighter;
+	color: #f8f8fb;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .profile_area .inner .night_wrap {
-  position: absolute; 
-  left: 45%; 
-  top: 10%;
+	position: absolute;
+	left: 45%;
+	top: 10%;
 }
 .night {
-  width: 130px; 
-  height: 130px;
-  position: absolute;
+	width: 130px;
+	height: 130px;
+	position: absolute;
 }
 .night .moon {
-  position: absolute;
-  top: 3%;
-  left: 58%;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background: rgba(255,226,135 ,1);
-  box-shadow: 1px 1px 30px rgba(246,246,246 ,1);
+	position: absolute;
+	top: 3%;
+	left: 58%;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: rgba(255,226,135 ,1);
+	box-shadow: 1px 1px 30px rgba(246,246,246 ,1);
 }
 .night .star_01 {
-  position: absolute;
-  top: 2%;
-  left: 85%;
-  width: 2px;
-  height: 2px;
-  border-radius: 100%;
-  background-color: #fff;
-  animation: pulse 2s infinite;
+	position: absolute;
+	top: 2%;
+	left: 85%;
+	width: 2px;
+	height: 2px;
+	border-radius: 100%;
+	background-color: #fff;
+	animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(246,246,226, 0.3); }
-  70% { box-shadow: 0 0 0 5px rgba(246,246,226, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(246,246,226, .0); }
+ 0% {
+box-shadow: 0 0 0 0 rgba(246,246,226, 0.3);
+}
+ 70% {
+box-shadow: 0 0 0 5px rgba(246,246,226, 0);
+}
+ 100% {
+box-shadow: 0 0 0 0 rgba(246,246,226, .0);
+}
 }
 .night .star_02 {
-  position: absolute;
-  top: 30%;
-  left: 75%;
-  width: 2px;
-  height: 2px;
-  border-radius: 100%;
-  background-color: #fff;
-  animation: light 5s ease infinite;
+	position: absolute;
+	top: 30%;
+	left: 75%;
+	width: 2px;
+	height: 2px;
+	border-radius: 100%;
+	background-color: #fff;
+	animation: light 5s ease infinite;
 }
 .night .star_03 {
-  position: absolute;
-  top: 22%;
-  left: 10%;
-  width: 2px;
-  height: 2px;
-  border-radius: 100%;
-  background-color: #fff;
-  animation: light 2s ease infinite;
+	position: absolute;
+	top: 22%;
+	left: 10%;
+	width: 2px;
+	height: 2px;
+	border-radius: 100%;
+	background-color: #fff;
+	animation: light 2s ease infinite;
 }
 .night .star_04 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 2px;
-  border-radius: 100%;
-  background-color: #fff;
-  animation: light 2s ease infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 2px;
+	border-radius: 100%;
+	background-color: #fff;
+	animation: light 2s ease infinite;
 }
 .night li {
-  position: absolute;
-  list-style: none;
-  width: 1px;
-  height: 1px;
-  border-radius: 100%;
-  background-color: #fff;
-  transform: rotate(45deg);
-  animation: light 3.3s ease infinite;
+	position: absolute;
+	list-style: none;
+	width: 1px;
+	height: 1px;
+	border-radius: 100%;
+	background-color: #fff;
+	transform: rotate(45deg);
+	animation: light 3.3s ease infinite;
 }
-.night li:nth-child(1) {top:29%; left:65%;}
-.night li:nth-child(2) {top:35%; left:53%;}
+.night li:nth-child(1) {
+	top: 29%;
+	left: 65%;
+}
+.night li:nth-child(2) {
+	top: 35%;
+	left: 53%;
+}
 .night li:nth-child(3) {
-  opacity: 0;
-  top: 12%;
-  left: 75%;
-  width: 2px;
-  height: 2px;
-  animation: fallout 1.3s infinite linear;
-  animation-delay: 0.7s;
+	opacity: 0;
+	top: 12%;
+	left: 75%;
+	width: 2px;
+	height: 2px;
+	animation: fallout 1.3s infinite linear;
+	animation-delay: 0.7s;
 }
-.night li:nth-child(4) {top:7%; left:45%;}
+.night li:nth-child(4) {
+	top: 7%;
+	left: 45%;
+}
 .night li:nth-child(5) {
-  opacity: 0;
-  top: 20%;
-  left: 60%;
-  width: 1px;
-  height: 13px;
-  animation: fallout 1.3s infinite linear;
+	opacity: 0;
+	top: 20%;
+	left: 60%;
+	width: 1px;
+	height: 13px;
+	animation: fallout 1.3s infinite linear;
 }
 .night li:nth-child(6) {
-  opacity: 0;
-  top: 2%;
-  left: 18%;
-  width: 2px;
-  height: 2px;
-  transform: rotate(20deg);
-  animation: fallout_fix 3.2s infinite linear;
+	opacity: 0;
+	top: 2%;
+	left: 18%;
+	width: 2px;
+	height: 2px;
+	transform: rotate(20deg);
+	animation: fallout_fix 3.2s infinite linear;
 }
 @keyframes fallout {
-  15% {opacity: 1;}
-  85% {left: 10%; top: 60%; opacity: 0;}
+ 15% {
+opacity: 1;
+}
+ 85% {
+left: 10%;
+top: 60%;
+opacity: 0;
+}
 }
 @keyframes fallout_fix {
-  15% {opacity: 1;}
-  85% {left: 50%; top: 60%; opacity: 0;}
+ 15% {
+opacity: 1;
+}
+ 85% {
+left: 50%;
+top: 60%;
+opacity: 0;
+}
 }
 @keyframes light {
-  0%, 10%  {opacity: 0.2}
-  40%, 70% {opacity: 1}
-  70%, 80%, 100% {opacity: 0.2}
+ 0%, 10% {
+opacity: 0.2
 }
-
-.info_wrap {background-color: #ffde13;}
-.info_wrap .info_area {color: #333; text-align: center;}
-.info_wrap .info_area dl dd .day {color: #333; font-size: 10px; font-weight: 300;}
-.info_wrap .info_area dl dd .link {color: #333; font-weight: 500;}
+ 40%, 70% {
+opacity: 1
+}
+ 70%, 80%, 100% {
+opacity: 0.2
+}
+}
+.info_wrap {
+	background-color: #ffde13;
+}
+.info_wrap .info_area {
+	color: #333;
+	text-align: center;
+}
+.info_wrap .info_area dl dd .day {
+	color: #333;
+	font-size: 10px;
+	font-weight: 300;
+}
+.info_wrap .info_area dl dd .link {
+	color: #333;
+	font-weight: 500;
+}
 .info_wrap .info_area .title {
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: -3px 0 0 #F22613,  3px 0 0 #00FFFF;
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: -3px 0 0 #F22613, 3px 0 0 #00FFFF;
 }
 .info_wrap .info_area .t1 {
-  font-size: 12px; 
-  line-height: 20px; 
-  font-weight: 300; 
-  color: #414141; 
-  font-family: 'Noto Sans KR', sans-serif; 
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #414141;
+	font-family: 'Noto Sans KR', sans-serif;
 }
-
-.pic_wrap .fp-tableCell {vertical-align: top;}
-.pic_wrap .min {min-height: calc(100% - 32px);}
+.pic_wrap .fp-tableCell {
+	vertical-align: top;
+}
+.pic_wrap .min {
+	min-height: calc(100% - 32px);
+}
 .pic_wrap .min ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(200px,1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  grid-gap: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+	display: -ms-grid;
+	display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .pic_wrap .min li {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	cursor: pointer;
 }
 .pic_wrap .min li .details {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #000;
-  top: 0;
-  left: 100%;
-  padding: 60px 30px;
-  box-sizing: border-box;
-  transition: .5s;
+	width: 100.3%;
+	height: 100.3%;
+	position: absolute;
+	background: #000;
+	top: 0;
+	left: 100%;
+	padding: 60px 30px;
+	box-sizing: border-box;
+	transition: .5s;
+	opacity: 0.9;
 }
-.pic_wrap .min li:hover .details {top: 0; left: 0%; cursor: pointer;}
+.pic_wrap .min li.active .details {
+	top: 0;
+	left: 0%;
+	cursor: pointer;
+}
 .pic_wrap .min li .details h3 {
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  border-bottom: 2px solid #fff;
-  font-size: 15px;
-  font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	font-size: 15px;
+	font-weight: bold;
 }
 .pic_wrap .min li .details p {
-  margin: 10px 0 0 0; 
-  color: #fff; 
-  font-size: 12px; 
-  font-family: 'Noto Sans KR', sans-serif; 
-  font-weight: lighter;
+	margin: 10px 0 0 0;
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: lighter;
 }
 .pic_wrap .footer {
- text-align: center;
- clear: both; 
- color: #f8f8fb; 
- font-family: 'Noto Sans KR', sans-serif; 
- font-size: 10px; 
- font-weight: lighter;
- letter-spacing: 0px;
+	text-align: center;
+	clear: both;
+	color: #f8f8fb;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 10px;
+	font-weight: lighter;
+	letter-spacing: 0px;
 }
-.pic_wrap .footer .footer_area {padding-bottom: 20px;}
+.pic_wrap .footer .footer_area {
+	padding-bottom: 20px;
+}
