@@ -89,6 +89,7 @@ background-position: 0% 50%
 	top: 0;
 	border-radius: 100%;
 	margin-left: -25px;
+	cursor: pointer;
 }
 .intro_wrap .container .sign {
 	width: 51px;
