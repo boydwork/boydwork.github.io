@@ -308,7 +308,7 @@ opacity: 0;
 	background-image: linear-gradient(to left, #ffc3ca, #a8a9e7, #ffc3ca);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: bg 15s linear infinite;
+	animation: bg 50s linear infinite;
 }
 @keyframes bg {
  0% {
