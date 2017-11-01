@@ -652,19 +652,16 @@ opacity: 0.2
 	left: -14px; opacity: 0;
 	transform: scale(0.2) translate(0, 0);
 }
-
 @keyframes smokeL {
 	0%   { transform: scale(0.2) translate(0, 0) }
 	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
 	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
 }
-
 @keyframes smokeR {
 	0%   { transform: scale(0.2) translate(0, 0) }
 	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
 	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
 }
-
 #smoke .s0 { animation: smokeL 10s 0s infinite }
 #smoke .s1 { animation: smokeR 10s 1s infinite }
 #smoke .s2 { animation: smokeL 10s 2s infinite }
