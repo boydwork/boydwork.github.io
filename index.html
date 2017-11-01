@@ -48,7 +48,8 @@
       });
 
       $(document).on('click','.btn',function() {
-        $(this).parent().toggleClass('shake', 'active');
+        $(this).parent().toggleClass('shake');
+        $(this).parent().toggleClass('smoke');
       });
 
     });
@@ -59,8 +60,20 @@
   <!-- 인트로 -->
   <div class="intro_wrap section active">
     <div class="container">
-        <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg"></object>
-        <a class="btn"></a>
+      <div id="smoke">
+       <span class="s0"></span>
+       <span class="s1"></span>
+       <span class="s2"></span>
+       <span class="s3"></span>
+       <span class="s4"></span>
+       <span class="s5"></span>
+       <span class="s6"></span>
+       <span class="s7"></span>
+       <span class="s8"></span>
+       <span class="s9"></span>
+      </div>
+      <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg"></object>
+      <a class="btn"></a>
     </div>
     <div class="scrolldown"> <span>내려보세요</span>
       <div class="scroller"></div>
