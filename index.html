@@ -48,7 +48,7 @@
       });
 
       $(document).on('click','.btn',function() {
-        $(this).parent().toggleClass('shake');
+        $(this).parent().toggleClass('shake', 'active');
       });
 
     });
@@ -60,7 +60,7 @@
   <div class="intro_wrap section active">
     <div class="container">
         <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg"></object>
-        <a class="btn" style="position: absolute;"></a>
+        <a class="btn"></a>
     </div>
     <div class="scrolldown"> <span>내려보세요</span>
       <div class="scroller"></div>
