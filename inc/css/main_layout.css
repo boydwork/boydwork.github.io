@@ -491,6 +491,7 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 .show #smoke {
 	opacity: 1; 
 	display: block;
+	transition: opacity 3s ease;
 }
 #smoke span {
 	position: absolute;
