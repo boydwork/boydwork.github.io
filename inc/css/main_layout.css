@@ -437,8 +437,8 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 	cursor: pointer;
 }
 .pic_wrap .min li .details {
-	width: 100.3%;
-	height: 100.3%;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	background: #000;
 	top: 0;
@@ -446,7 +446,6 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 	padding: 60px 30px;
 	box-sizing: border-box;
 	transition: .5s;
-	opacity: 0.9;
 }
 .pic_wrap .min li.active .details {
 	top: 0;
