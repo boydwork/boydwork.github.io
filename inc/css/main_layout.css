@@ -341,7 +341,7 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 	width: 2px;
 	height: 2px;
 	animation: fallout 1.3s infinite linear;
-	animation-delay: 0.7s;
+	animation-delay: 10s;
 }
 .night li:nth-child(4) {
 	top: 7%;
@@ -465,18 +465,6 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 	font-size: 12px;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: lighter;
-}
-.pic_wrap .footer {
-	text-align: center;
-	clear: both;
-	color: #f8f8fb;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 10px;
-	font-weight: lighter;
-	letter-spacing: 0px;
-}
-.pic_wrap .footer .footer_area {
-	padding-bottom: 20px;
 }
 #smoke {
 	opacity: 0;
