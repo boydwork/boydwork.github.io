@@ -207,7 +207,9 @@ ol, ul {
 }
 .illust_wrap {
 	width: 100%;
-	background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);
+	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
+	background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg,coral,transparent);
+	background-blend-mode: screen;
 }
 .illust_wrap .profile_area {
 	clear: both;
@@ -334,15 +336,10 @@ box-shadow: 0 0 0 0 rgba(246,246,226, .0);
 	top: 35%;
 	left: 53%;
 }
-/*.night li:nth-child(3) {
-	opacity: 0;
-	top: 12%;
-	left: 75%;
+.night li:nth-child(3) {
 	width: 2px;
 	height: 2px;
-	animation: fallout 1.3s infinite linear;
-	animation-delay: 10s;
-}*/
+}
 .night li:nth-child(4) {
 	top: 7%;
 	left: 45%;
