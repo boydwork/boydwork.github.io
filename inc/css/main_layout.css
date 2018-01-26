@@ -94,8 +94,8 @@ ol, ul {
 @keyframes shake {
 	0% {transform: translate(0px, 0px) rotate(0deg);}
 	2% {transform: translate(-2.5px, -2.5px) rotate(-1.5deg);}
-    4% {transform: translate(1.5px, 0.5px) rotate(0.5deg);}
-    6% {transform: translate(1.5px, -0.5px) rotate(0.5deg);}
+  4% {transform: translate(1.5px, 0.5px) rotate(0.5deg);}
+  6% {transform: translate(1.5px, -0.5px) rotate(0.5deg);}
 	8% {transform: translate(-0.5px, 1.5px) rotate(-1.5deg);}
  	10% {transform: translate(0.5px, 0.5px) rotate(0.5deg);}
  	12% {transform: translate(1.5px, -2.5px) rotate(-0.5deg);}
@@ -144,12 +144,30 @@ ol, ul {
  	98% {transform: translate(-2.5px, -0.5px) rotate(-1.5deg);}
 }
 
+.instructions{
+	position:absolute;
+  width:100%;
+  top:50%;
+  margin: auto;
+  margin-top:50px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#fdde8c;
+  font-size:.8em;
+  text-transform: uppercase;
+  text-align : center;
+  line-height : 1.5;
+  user-select: none;
+}
+.sub_instructions {
+  color:#f89a78;
+  font-size:.9em;
+}
 .intro_wrap .scrolldown {
 	bottom: 30px;
 	left: 20px;
 	position: absolute;
 	color: #fff;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	font-size: 13px;
 	letter-spacing: 1px;
