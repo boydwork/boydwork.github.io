@@ -545,15 +545,6 @@ opacity: 0.2
 .info_wrap .info_area {
 	color: #333;
 }
-.info_wrap .info_area .title {
-	font-size: 25px;
-	font-weight: 500;
-	margin-bottom: 20px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	text-shadow: -3px 0 0 #F22613, 3px 0 0 #00FFFF;
-}
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
 }
