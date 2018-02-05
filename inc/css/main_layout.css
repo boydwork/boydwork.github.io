@@ -745,7 +745,7 @@ transform: scale(1) translate(20px, -130px)
 	position: relative;
 	display: inline;
 	padding: 6px 10px;
-	font-weight: 600;
+	font-weight: bold;
 	text-align: left;
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -754,7 +754,7 @@ transform: scale(1) translate(20px, -130px)
 	line-height: 1em;
 	font-size: 0.66666em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #fff;
+	color: #333;
 	vertical-align: middle;
 }
 .direction-l .time-wrapper {
@@ -772,6 +772,7 @@ transform: scale(1) translate(20px, -130px)
 	font-size: 0.77777em;
 	line-height: 1.3em;
 	font-family: 'Noto Sans KR', sans-serif;
+	opacity: 0.5;
 }
 .direction-r .desc {
 	margin: 1em 0 0 0.75em;
