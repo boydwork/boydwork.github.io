@@ -689,7 +689,6 @@ transform: scale(1) translate(20px, -130px)
 	position: relative;
 	width: 660px;
 	margin: 0 auto;
-	margin-top: 50px;
 	padding: 4em 0 4em 0;
 }
 .timeline:before {
@@ -730,7 +729,6 @@ transform: scale(1) translate(20px, -130px)
 .flag-wrapper {
 	position: relative;
 	display: inline-block;
-	text-align: center;
 }
 .flag {
 	position: relative;
@@ -740,6 +738,26 @@ transform: scale(1) translate(20px, -130px)
 	text-align: left;
 	font-family: 'Noto Sans KR', sans-serif;
 }
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #ffde13;
+  border-radius: 10px;
+  border: 4px solid #333;
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
 .time-wrapper {
 	display: inline;
 	line-height: 1em;
@@ -805,8 +823,23 @@ transform: scale(1) translate(20px, -130px)
 	text-align: left;
 }
 .flag {
-	z-index: 15;
+	z-index: 15
 }
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  left: -3%;
+	content: ' ';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-left: -9px;
+	background: #ffde13;
+	border-radius: 10px;
+	border: 4px solid #333;
+	z-index: 10;
+}
+
 .time-wrapper {
 	display: block;
 	position: relative;
@@ -837,4 +870,50 @@ transform: scale(1) translate(20px, -130px)
  .direction-l .desc, .direction-r .desc {
  margin: 1em 4em 0 4em;
 }
+}
+
+.process {
+  list-style: none;
+  position: relative;
+}
+.process li {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.process li .process_number {
+  float: left;
+  width: 15%;
+  width: 3.71428571em;
+  height: 3.71428571em;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+  background: #fff;
+  text-align: center;
+}
+.process li .process_number span {
+  font-size: 1.35714286em;
+  font-weight: bold;
+  color: #4a90e2;
+  position: relative;
+  top: 12px;
+}
+.process li .process_body {
+  width: 80%;
+  float: right;
+}
+.process li .process_body h4 {
+  margin-bottom: 0.342105263157895em;
+}
+.process li:not(:last-child) {
+  margin-bottom: 3.71428571em;
+}
+.process:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  left: 1.85714286em;
+  top: 0;
+  border-left: 1px dashed #ddd;
 }
