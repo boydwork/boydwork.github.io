@@ -369,7 +369,6 @@ background-position-x: 10000px;
 	position: relative;
 	left: -50%;
 	transform: translateY(-50%);
-	padding-top: 75px;
 }
 .profile_area .inner h1 {
 	font-family: 'Lobster', cursive;
@@ -762,6 +761,7 @@ transform: scale(1) translate(20px, -130px)
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #333;
 	vertical-align: middle;
+	opacity: 0.5;
 }
 .direction-l .time-wrapper {
 	float: left;
@@ -840,6 +840,7 @@ transform: scale(1) translate(20px, -130px)
 	position: relative;
 	margin: 4px 0 0 0;
 	z-index: 14;
+	opacity: 0.5;
 }
 .direction-l .time-wrapper {
 	float: none;
