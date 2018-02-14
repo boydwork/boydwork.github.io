@@ -538,7 +538,7 @@ opacity: 0.2
 }
 }
 .info_wrap {
-	background-image: linear-gradient(-60deg, #ffd524 50%, #fff 50%);
+	background-image: linear-gradient(60deg, #ffd524 60%, #fff 60%);
   bottom:0;
   position:fixed;
   top:0;
