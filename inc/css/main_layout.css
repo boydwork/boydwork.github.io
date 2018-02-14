@@ -726,6 +726,12 @@ transform: scale(1) translate(20px, -130px)
 .flag-wrapper {
 	position: relative;
 }
+.direction-r .flag-wrapper {
+	margin-right: 1.5em;
+}
+.direction-l .flag-wrapper {
+	margin-left: 1.5em;
+}
 .flag {
 	position: relative;
 	display: inline;
@@ -771,23 +777,23 @@ transform: scale(1) translate(20px, -130px)
 }
 .time {
 	display: inline-block;
-	padding: 5px 10px;
+	padding: 5px 0;
 }
 .desc {
-	margin: 1em 0.75em 0 0;
+	margin: 1em 0.75em 0 1.5em;
 	font-size: 0.77777em;
 	line-height: 1.3em;
 	font-family: 'Noto Sans KR', sans-serif;
 	opacity: 0.5;
 }
 .direction-r .desc {
-	margin: 1em 0 0 0.75em;
+	margin: 1em 1.5em 0 0.75em;
 }
 
 @media screen and (max-width: 660px) {
 .timeline {
 	width: 100%;
-	padding: 4em 0 4em 0;
+	padding: 4em 4em 4em 0;
 }
 .timeline li {
 	padding: 2em 0;
@@ -824,11 +830,11 @@ transform: scale(1) translate(20px, -130px)
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
-  left: -3%;
+  left: -2%;
 	content: ' ';
 	display: block;
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	margin-left: -9px;
 	background: #ffde13;
 	border-radius: 10px;
@@ -847,6 +853,10 @@ transform: scale(1) translate(20px, -130px)
 }
 .direction-r .time-wrapper {
 	float: none;
+}
+.time {
+	display: inline-block;
+	padding: 5px 10px;
 }
 .desc {
 	position: relative;
