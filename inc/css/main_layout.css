@@ -720,7 +720,7 @@ transform: scale(1) translate(20px, -130px)
 }
 .direction-r {
 	position: relative;
-	width: 299px;
+	width: 297px;
 	float: right;
 }
 .flag-wrapper {
@@ -747,8 +747,8 @@ transform: scale(1) translate(20px, -130px)
   right: -40px;
   content: ' ';
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   margin-top: -10px;
   background: #ffde13;
   border-radius: 10px;
