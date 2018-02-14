@@ -739,7 +739,7 @@ transform: scale(1) translate(20px, -130px)
 	position: relative;
 	display: inline;
 	padding: 6px 10px;
-	font-weight: bold;
+	font-weight: 400;
 	text-align: left;
 	color: #333;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -764,7 +764,7 @@ transform: scale(1) translate(20px, -130px)
 }
 .time-wrapper {
 	display: inline;
-	line-height: 1em;
+	line-height: 1.4em;
 	font-size: 0.66666em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #333;
@@ -858,8 +858,8 @@ transform: scale(1) translate(20px, -130px)
 }
 .direction-l .flag:before,
 .direction-r .flag:before {
-  position: absolute;
-  left: -2%;
+    position: absolute;
+    left: -2%;
 	content: ' ';
 	display: block;
 	width: 10px;
