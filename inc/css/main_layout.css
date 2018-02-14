@@ -779,6 +779,21 @@ transform: scale(1) translate(20px, -130px)
 	display: inline-block;
 	padding: 5px 0;
 }
+.direction-r .position {
+	padding: 10px 0 0 10px;
+}
+.direction-l .position {
+	padding: 10px 10px 0 0;
+}
+.position .job{
+	font-size: 1.5em;
+	font-weight: 100;
+}
+.position .role{
+	display: block;
+	font-size: 1.5em;
+	font-weight: 400;
+}
 .desc {
 	margin: 1em 0.75em 0 1.5em;
 	font-size: 0.77777em;
@@ -823,6 +838,15 @@ transform: scale(1) translate(20px, -130px)
 .flag-wrapper {
 	margin: 1em 1em 0 1.5em;
 	text-align: left;
+}
+.direction-r .position {
+	padding: 0 0 0 0;
+}
+.direction-l .position {
+	padding: 0 0 0 0;
+}
+.position {
+	margin: 1em 1em 0 2em;
 }
 .flag {
 	z-index: 15
