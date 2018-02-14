@@ -544,9 +544,6 @@ opacity: 0.2
   top:0;
   z-index:-1;
 }
-.info_wrap .info_area {
-	color: #333;
-}
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
 }
@@ -764,11 +761,13 @@ transform: scale(1) translate(20px, -130px)
 }
 .time-wrapper {
 	display: inline;
-	line-height: 1.4em;
 	font-size: 0.66666em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #333;
+	color: #fff;
 	vertical-align: middle;
+    background-color: #000;
+    border-radius: 100px;
+    padding: 0px 12px;
 }
 .direction-l .time-wrapper {
 	float: left;
@@ -877,10 +876,10 @@ transform: scale(1) translate(20px, -130px)
 	z-index: 14;
 }
 .direction-l .time-wrapper {
-	float: none;
+	float: right;
 }
 .direction-r .time-wrapper {
-	float: none;
+	float: right;
 }
 .time {
 	display: inline-block;
