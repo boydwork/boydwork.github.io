@@ -761,7 +761,7 @@ transform: scale(1) translate(20px, -130px)
 }
 .time-wrapper {
 	display: inline;
-	font-size: 0.3em;
+	font-size: 0.66666em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #ffd524;
 	vertical-align: middle;
