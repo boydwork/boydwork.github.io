@@ -315,10 +315,12 @@ opacity: 0;
 }
 }
 .name_wrap {
+	z-index: 1;
 	background: #181818;
 	position: relative;
 }
 .name_wrap .container {
+	z-index: 2;
 	color: #f8f8fb;
 	text-align: center;
 }
@@ -352,16 +354,19 @@ background-position-x: 10000px;
 	line-height: 20px;
 }
 .svg_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+	z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
 }
 .bigs_gate_particle {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: -50%;
-  transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -50%;
+    transform: translateY(-50%);
 }
 .illust_wrap {
 	width: 100%;
