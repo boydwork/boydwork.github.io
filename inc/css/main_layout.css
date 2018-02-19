@@ -356,8 +356,8 @@ background-position-x: 10000px;
 .svg_box {
 	z-index: -1;
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     top: 50%;
     left: 50%;
 }
