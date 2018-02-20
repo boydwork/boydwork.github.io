@@ -354,20 +354,20 @@ background-position-x: 10000px;
 	line-height: 20px;
 }
 .svg_box {
-	pointer-events: none;
+	pointer-events: none; /* 스크롤 */
 	z-index: -1;
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  top: 50%;
-  left: 50%;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
 }
 .bigs_gate_particle {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: -50%;
-  transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -50%;
+    transform: translateY(-50%);
 }
 .illust_wrap {
 	width: 100%;
