@@ -1,0 +1,13 @@
+<svg width="1000" height="1000">
+  <rect fill="gray" width="1000" height="1000"/>
+  <circle fill="blue" cy="50" r="25" transform="translate(302, 14)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      dur="10"
+      repeatCount="indefinite"
+      keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1"
+      values="302,14 ; 302,14 ; 42,312 ; 42,312 ; 320,123 ; 320,123 ; 60,200 ; 60,200 ; 302,14"
+    />
+  </circle>
+</svg>
