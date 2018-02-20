@@ -354,19 +354,20 @@ background-position-x: 10000px;
 	line-height: 20px;
 }
 .svg_box {
+	pointer-events: none;
 	z-index: -1;
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
 }
 .bigs_gate_particle {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    left: -50%;
-    transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: -50%;
+  transform: translateY(-50%);
 }
 .illust_wrap {
 	width: 100%;
@@ -412,7 +413,7 @@ background-position-x: 10000px;
 .profile_area .inner .night_wrap {
 	position: absolute;
 	left: 45%;
-	top: 10%;
+	top: -30%;
 }
 .night {
 	width: 130px;
@@ -780,11 +781,12 @@ transform: scale(1) translate(20px, -130px)
 	display: inline;
 	font-size: 0.66666em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #ffd524;
+	color: #fff;
 	vertical-align: middle;
-    background-color: #000;
-    border-radius: 100px;
-    padding: 0px 10px;
+  background-color: #000;
+  border-radius: 100px;
+  padding: 0px 10px;
+  opacity: 0.8;
 }
 .direction-l .time-wrapper {
 	float: left;
