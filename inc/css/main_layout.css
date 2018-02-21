@@ -272,6 +272,11 @@ transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
 	font-size: .9em;
 	text-align : center;
 	line-height : 1.0;
+    animation: fade 5s ease none;
+}
+@keyframes fade {
+  0%, 15%  {opacity: 0}
+  45%, 100% {opacity: 1}
 }
 .sub_instructions {
 	color: #fff;
