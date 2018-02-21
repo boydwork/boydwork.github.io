@@ -80,7 +80,7 @@
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="-100,240 ; 30,276">
 		</animateTransform>
 	
-		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="30,276 ; 30,276 ; 280,244 ; 280,244 ; 81,117 ; 81,117 ; 340,325 ; 340,325 ; 30,276">
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="30,276 ; 30,276 ; 280,244 ; 280,244 ; 81,117 ; 81,117 ; 300,380 ; 300,380 ; 30,276">
 		</animateTransform>
 	<path id="blue_bar_1_" fill="none" stroke="#135AFE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M21,20
 		L0,0	">
