@@ -53,7 +53,7 @@
 		<!-- animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="320,300 ; 292,282">
 		</animateTransform> -->
 	
-		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="292,299 ; 292,299 ; 66,66 ; 66,66 ; 82,302 ; 82,302 ; 272,21 ; 272,21 ; 292,282">
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="292,299 ; 292,299 ; 66,66 ; 66,66 ; 82,302 ; 82,302 ; 272,21 ; 272,21 ; 292,299">
 		</animateTransform>
 	<path id="b_white_curve" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="
 		M0.6,30.5C9.4,37,22,37.2,31,30c9-7.4,11.5-20,6.7-30	">
@@ -92,7 +92,7 @@
 		<!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="360,360 ; 315,335">
 		</animateTransform> -->
 	
-		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="315,335 ; 315,335 ; 72,135 ; 72,135 ; 266,39 ; 266,39 ; 266,176 ; 266,176 ; 315,335">
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="315,335 ; 315,335 ; 72,135 ; 72,135 ; 266,39 ; 266,39 ; 266,196 ; 266,196 ; 315,335">
 		</animateTransform>
 	<path id="yellow_bar" fill="none" stroke="#FFD200" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M7.8,10.2
 		L0.4,0	">
