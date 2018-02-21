@@ -18,7 +18,7 @@
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="50,-100 ; 79,35">
 		</animateTransform>
 	
-		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="79,35 ; 79,35 ; 286,35 ; 286,35 ; 244,326 ; 244,326 ; 49,168 ; 49,168 ; 79,35">
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="79,35 ; 79,35 ; 286,35 ; 286,35 ; 244,360 ; 244,360 ; 49,168 ; 49,168 ; 79,35">
 		</animateTransform>
 	<path id="purple_bar" fill="none" stroke="#9000FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M0,19
 		L16,0	">
@@ -26,15 +26,14 @@
 			</animateTransform>
 	</path>
 </g>
-<g id="sky_bar_g" transform="translate(302, 14)">
+<g id="sky_tri_g" transform="translate(302, 14)">
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="380,-100 ; 302,14">
 		</animateTransform>
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="302,14 ; 302,14 ; 100,312 ; 100,312 ; 320,123 ; 320,123 ; 55,230 ; 55,230 ; 302,14">
 		</animateTransform>
-	<path id="sky_bar" fill="none" stroke="#6CB7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M0,0l38,43"
-		>
+	<path id="sky_tri" fill="#6CB7FF" d="M10.4,2.7L2.9,12.9l12.2,1.4L10.4,2.7z	">
 <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 104; 104; 174; 174; -291 ; -291 ; 0">
 			</animateTransform>
 	</path>
@@ -46,8 +45,8 @@
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="260,2 ; 260,2 ; 330,180 ; 330,180 ; 100,50 ; 100,50 ; 309,250 ; 309,250 ; 260,2">
 		</animateTransform>
-	<path fill="#FFD200" d="M1,41.46c-6.62,0-12-5.38-12-12s5.38-12,12-12s12,5.38,12,12S7.62,41.46,1,41.46z M1,21.46
-		c-4.41,0-8,3.59-8,8s3.59,8,8,8s8-3.59,8-8S5.41,21.46,1,21.46z"></path>
+	<path fill="#FFD200" d="M1,41.5c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S7.6,41.5,1,41.5z M1,21.5c-4.4,0-8,3.6-8,8
+		s3.6,8,8,8s8-3.6,8-8S5.4,21.5,1,21.5z"/>
 </g>
 <g id="big_white_curve_g" transform="translate(292,282)">
 	
@@ -82,7 +81,7 @@
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="30,276 ; 30,276 ; 280,244 ; 280,244 ; 81,117 ; 81,117 ; 300,380 ; 300,380 ; 30,276">
 		</animateTransform>
-	<path id="blue_bar_1_" fill="none" stroke="#135AFE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M21,20
+	<path id="blue_bar_1_" fill="none" stroke="#135AFE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M29,27.7
 		L0,0	">
 <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 190; 190; 91; 91; 170 ; 170 ; 0">
 			</animateTransform>
@@ -95,7 +94,7 @@
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="315,335 ; 315,335 ; 72,135 ; 72,135 ; 266,39 ; 266,39 ; 266,176 ; 266,176 ; 315,335">
 		</animateTransform>
-	<path id="yellow_bar" fill="none" stroke="#FFD200" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M11.4,15
+	<path id="yellow_bar" fill="none" stroke="#FFD200" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M7.8,10.2
 		L0.4,0	">
 <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -120; -120; -212; -212; -96 ; -96 ; 0">
 			</animateTransform>
@@ -108,7 +107,7 @@
 	
 		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="54,232 ; 54,232 ; 293,97 ; 293,97 ; 297,168 ; 297,168 ; 35,400 ; 35,400 ; 54,232">
 		</animateTransform>
-	<path id="mint_tri" fill="#50E3C2" d="M10.4,2.7L2.9,12.9l12.2,1.4L10.4,2.7z	">
+	<path id="mint_square" fill="#50E3C2" d="M27.6,23.2l-9.7-10.3l10.3-9.7l9.7,10.3L27.6,23.2z	">
 <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 182; 182; 106; 106; -27 ; -27 ; 0">
 			</animateTransform>
 	</path>
