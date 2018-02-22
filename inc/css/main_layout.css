@@ -376,7 +376,7 @@ background-position-x: 10000px;
 .illust_wrap {
 	width: 100%;
 	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
-	background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+	background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
 	background-blend-mode: screen;
 }
 .illust_wrap .profile_area {
