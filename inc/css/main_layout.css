@@ -271,11 +271,15 @@ transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
 	font-size: .9em;
 	text-align : center;
 	line-height : 1.0;
-  animation: fade 5s ease none;
+	animation: fade 5s ease none;
 }
 @keyframes fade {
-  0%, 15%  {opacity: 0}
-  45%, 100% {opacity: 1}
+ 0%, 15% {
+opacity: 0
+}
+ 45%, 100% {
+opacity: 1
+}
 }
 .sub_instructions {
 	color: #fff;
@@ -360,18 +364,18 @@ background-position-x: 10000px;
 .svg_box {
 	pointer-events: none; /* 스크롤 */
 	z-index: -1;
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
 }
 .bigs_gate_particle {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    left: -50%;
-    transform: translateY(-50%);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left: -50%;
+	transform: translateY(-50%);
 }
 .illust_wrap {
 	width: 100%;
@@ -560,11 +564,11 @@ opacity: 0.2
 }
 }
 .info_wrap {
-  background-image: linear-gradient(50deg, #ffd524 80%, #fff 60%);
-  bottom:0;
-  position:fixed;
-  top:0;
-  z-index:-1;
+	background-image: linear-gradient(50deg, #ffd524 80%, #fff 60%);
+	bottom: 0;
+	position: fixed;
+	top: 0;
+	z-index: -1;
 }
 .timeline {
 	position: relative;
@@ -624,23 +628,22 @@ opacity: 0.2
 	color: #333;
 	font-family: 'Noto Sans KR', sans-serif;
 }
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  content: ' ';
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin-top: -10px;
-  background: #ffd524;
-  border-radius: 10px;
-  border: 3px solid #333;
-  z-index: 10;
+.direction-l .flag:before, .direction-r .flag:before {
+	position: absolute;
+	top: 50%;
+	right: -40px;
+	content: ' ';
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin-top: -10px;
+	background: #ffd524;
+	border-radius: 10px;
+	border: 3px solid #333;
+	z-index: 10;
 }
 .direction-r .flag:before {
-  left: -40px;
+	left: -40px;
 }
 .time-wrapper {
 	display: inline;
@@ -648,10 +651,10 @@ opacity: 0.2
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
 	vertical-align: middle;
-  background-color: #000;
-  border-radius: 100px;
-  padding: 0px 10px;
-  opacity: 0.8;
+	background-color: #000;
+	border-radius: 100px;
+	padding: 0px 10px;
+	opacity: 0.8;
 }
 .direction-l .time-wrapper {
 	float: left;
@@ -672,11 +675,11 @@ opacity: 0.2
 .position {
 	line-height: 1.4em;
 }
-.position .job{
+.position .job {
 	font-size: 1.5em;
 	font-weight: 100;
 }
-.position .role{
+.position .role {
 	display: block;
 	font-size: 1.5em;
 	font-weight: 400;
@@ -739,10 +742,9 @@ opacity: 0.2
 .flag {
 	z-index: 15
 }
-.direction-l .flag:before,
-.direction-r .flag:before {
-    position: absolute;
-    left: -2%;
+.direction-l .flag:before, .direction-r .flag:before {
+	position: absolute;
+	left: -2%;
 	content: ' ';
 	display: block;
 	width: 10px;
@@ -781,13 +783,11 @@ opacity: 0.2
 	z-index: 15;
 }
 }
-
  @media screen and (min-width: 400px max-width: 660px) {
  .direction-l .desc, .direction-r .desc {
  margin: 1em 4em 0 4em;
 }
 }
-
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
 }
@@ -925,4 +925,56 @@ transform: scale(1) translate(20px, -130px)
 }
 #smoke .s9 {
 	animation: smokeR 10s 9s infinite
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+#footer.no_margin {
+	margin-top: 0;
+}
+#footer .btn_area {
+	padding: 20px 20px;
+}
+#footer .btn_area .set {
+	margin-top: 3px
+}
+#footer .btn_area a {
+	color: #999;
+	font-size: 13px;
+	line-height: 12px;
+	display: inline-block
+	pointer: cursor;
+}
+#footer .btn_area .btn_t1 {
+	border: 1px solid #ccc;
+	color: #555;
+	padding: 6px 11px;
+	line-height: 13px;
+	margin-left: 5px;
+	font-size: 13px;
+	vertical-align: top;
+}
+.a #footer .btn_area .btn_t1 {
+	padding: 7px 11px 5px;
+}
+#footer .btn_area .btn_t1:first-child {
+	margin-left: 0;
+}
+#footer .btn_area .btn_t2 {
+	padding: 8px 10px 7px 8px;
+}
+#footer .btn_area .btn_t2:first-child {
+	padding-right: 0;
+}
+#footer .btn_area .btn_t2:first-child span {
+	display: inline-block;
+	border-right: 1px solid #ebebeb;
+	line-height: 12px;
+	padding-right: 8px;
 }
