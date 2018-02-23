@@ -790,7 +790,7 @@ opacity: 0.2
 }
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
-}
+} 
 .pic_wrap .min ul {
 	display: -ms-grid;
 	display: grid;
@@ -800,7 +800,8 @@ opacity: 0.2
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 120px;
+	/*height: calc(100   - 100px) !important;*/
 }
 .pic_wrap .min li {
 	position: relative;
