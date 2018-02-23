@@ -932,7 +932,6 @@ transform: scale(1) translate(20px, -130px)
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #f9f9f9;
     text-align: center;
     overflow: hidden;
 }
@@ -954,7 +953,7 @@ transform: scale(1) translate(20px, -130px)
 }
 #footer .btn_area .btn_t1 {
 	border: 1px solid #ccc;
-	color: #555;
+	color: #fff;
 	padding: 6px 11px;
 	line-height: 13px;
 	margin-left: 5px;
@@ -975,7 +974,7 @@ transform: scale(1) translate(20px, -130px)
 }
 #footer .btn_area .btn_t2:first-child span {
 	display: inline-block;
-	border-right: 1px solid #ebebeb;
+	border-right: 1px solid #999;
 	line-height: 12px;
 	padding-right: 8px;
 }
