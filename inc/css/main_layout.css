@@ -266,8 +266,8 @@ transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
 	width: 100%;
 	margin: auto;
 	margin-top: 10px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #ffde13;
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #fff;
 	font-size: .9em;
 	text-align : center;
 	line-height : 1.0;
@@ -320,6 +320,69 @@ opacity: 1;
  100% {
 transform: translateY(75px);
 opacity: 0;
+}
+}
+#mouse-scroll {
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	margin-top: 50px;
+	animation: fade 20s ease none;
+}
+#mouse-scroll .mouse {
+	width: 20px;
+	height: 35px;
+	margin: 0 auto;
+	border-radius: 25px;
+	border: 2px solid #ffffff;
+}
+#mouse-scroll .mouse-in {
+	width: 3px;
+	height: 3px;
+	border-radius: 50px;
+	display: block;
+	margin: 5px auto;
+	background: #ffffff;
+	position: relative;
+}
+#mouse-scroll .mouse-in {
+	-webkit-animation: animated-mouse 1.2s ease infinite;
+	moz-animation: mouse-animated 1.2s ease infinite;
+}
+ @-webkit-keyframes animated-mouse {
+ 0% {
+ opacity: 1;
+ -webkit-transform: translateY(0);
+ -ms-transform: translateY(0);
+ transform: translateY(0);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: translateY(20px);
+ -ms-transform: translateY(20px);
+ transform: translateY(20px);
+}
+}
+@-webkit-keyframes mouse-scroll {
+ 0% {
+ opacity: 1;
+}
+ 50% {
+ opacity: .5;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes mouse-scroll {
+ 0% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 0.5;
+}
+ 100% {
+ opacity: 1;
 }
 }
 .name_wrap {
@@ -790,7 +853,7 @@ opacity: 0.2
 }
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
-} 
+}
 .pic_wrap .min ul {
 	display: -ms-grid;
 	display: grid;
@@ -800,8 +863,7 @@ opacity: 0.2
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
-	padding-bottom: 120px;
-	/*height: calc(100   - 100px) !important;*/
+	padding-bottom: 120px;/*height: calc(100   - 100px) !important;*/
 }
 .pic_wrap .min li {
 	position: relative;
@@ -852,7 +914,7 @@ opacity: 0.2
 	height: 160px;
 	left: 50%;
 	bottom: 47px;
-    animation: fade 10s ease none;
+	animation: fade 10s ease none;
 }
 @keyframes fade {
  0%, 15% {
@@ -895,7 +957,7 @@ transform: scale(1) translate(-20px, -130px)
 }
 @keyframes smokeR {
  0% {
-opacity: 0; 	
+opacity: 0;
 transform: scale(0.0) translate(0, 0)
 }
  10% {
@@ -937,13 +999,12 @@ transform: scale(1) translate(20px, -130px)
 #smoke .s9 {
 	animation: smokeR 10s 9s infinite
 }
-
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
 }
 #footer.no_margin {
 	margin-top: 0;
@@ -958,8 +1019,7 @@ transform: scale(1) translate(20px, -130px)
 	color: #999;
 	font-size: 13px;
 	line-height: 12px;
-	display: inline-block
-	pointer: cursor;
+ display: inline-block  pointer: cursor;
 }
 #footer .btn_area .btn_t1 {
 	border: 1px solid #ccc;
