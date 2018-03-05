@@ -107,7 +107,7 @@ background-position: 0% 50%
 	animation-duration: 100ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
-	animation-delay: 3s;
+	animation-delay: 1s;
 }
 @keyframes shake {
  0% {
@@ -266,7 +266,7 @@ transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
 	width: 100%;
 	margin: auto;
 	margin-top: 10px;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
 	font-size: .9em;
 	text-align : center;
@@ -282,7 +282,9 @@ opacity: 1
 }
 }
 .sub_instructions {
+	line-height: 2em;
 	color: #fff;
+	font-family: 'Noto Sans KR', sans-serif;
 	font-size: .8em;
 	opacity: 0.5;
 }
@@ -325,8 +327,7 @@ opacity: 0;
 #mouse-scroll {
 	position: absolute;
 	width: 100%;
-	margin: auto;
-	margin-top: 50px;
+	bottom: 50px;
 	animation: fade 20s ease none;
 }
 #mouse-scroll .mouse {
