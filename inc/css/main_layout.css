@@ -324,20 +324,20 @@ transform: translateY(75px);
 opacity: 0;
 }
 }
-#mouse-scroll {
+#mouse_scroll {
 	position: absolute;
 	width: 100%;
 	bottom: 50px;
 	animation: fade 20s ease none;
 }
-#mouse-scroll .mouse {
+#mouse_scroll .mouse {
 	width: 20px;
 	height: 35px;
 	margin: 0 auto;
 	border-radius: 25px;
 	border: 2px solid #ffffff;
 }
-#mouse-scroll .mouse-in {
+#mouse_scroll .mouse_in {
 	width: 3px;
 	height: 3px;
 	border-radius: 50px;
@@ -346,11 +346,11 @@ opacity: 0;
 	background: #ffffff;
 	position: relative;
 }
-#mouse-scroll .mouse-in {
-	-webkit-animation: animated-mouse 1.2s ease infinite;
-	moz-animation: mouse-animated 1.2s ease infinite;
+#mouse_scroll .mouse_in {
+	-webkit-animation: mouse 1.2s ease infinite;
+	moz-animation: mouse 1.2s ease infinite;
 }
- @-webkit-keyframes animated-mouse {
+ @-webkit-keyframes mouse {
  0% {
  opacity: 1;
  -webkit-transform: translateY(0);
@@ -362,28 +362,6 @@ opacity: 0;
  -webkit-transform: translateY(20px);
  -ms-transform: translateY(20px);
  transform: translateY(20px);
-}
-}
-@-webkit-keyframes mouse-scroll {
- 0% {
- opacity: 1;
-}
- 50% {
- opacity: .5;
-}
- 100% {
- opacity: 1;
-}
-}
-@keyframes mouse-scroll {
- 0% {
- opacity: 0;
-}
- 50% {
- opacity: 0.5;
-}
- 100% {
- opacity: 1;
 }
 }
 .name_wrap {
