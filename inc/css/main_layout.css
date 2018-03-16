@@ -426,6 +426,7 @@ background-position-x: 10000px;
 	background-blend-mode: screen;
 }
 .illust_wrap .profile_area {
+	width: 100%;
 	clear: both;
 	text-align: center;
 	vertical-align: middle;
@@ -1027,4 +1028,39 @@ transform: scale(1) translate(20px, -130px)
 	border-right: 1px solid #999;
 	line-height: 12px;
 	padding-right: 8px;
+}
+
+.skills {
+	padding: 0 20px;
+	margin-top: 80px;
+	display: flex;
+  display: -webkit-flex; /* Safari 8 */
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; /* Safari 8 */
+  justify-content: center;
+  -webkit-justify-content: center; /* Safari 8 */
+}
+.skills .skills-tit {
+	float: left;
+	margin-top: 5px;
+  background-color: #000;
+  padding: 11px 15px;
+  color: #fff;
+  margin-right: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+.skills a {
+	float: left;
+	margin-top: 5px;
+	background-color: transparent;
+	border: 1px solid #fff;
+  margin-right: 5px;
+  padding: 9px 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: .03em;
+}
 }
