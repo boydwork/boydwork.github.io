@@ -446,11 +446,14 @@ background-position-x: 10000px;
 	color: #fff;
 	text-shadow: 3px 3px 0px rgba(78,158,13, 1.0);
 }
+.profile_area .inner .signature {
+	width: 250px;
+}
 .profile_area .inner .subtxt {
 	margin: 10px 0px 0px 0px;
 	font-size: 18px;
 	font-weight: lighter;
-	color: #f8f8fb;
+	color: #fff;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 1px;
 }
@@ -458,7 +461,7 @@ background-position-x: 10000px;
 	margin: 20px 0px 0px 0px;
 	font-size: 12px;
 	font-weight: lighter;
-	color: #f8f8fb;
+	color: #fff;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 .profile_area .inner .night_wrap {
