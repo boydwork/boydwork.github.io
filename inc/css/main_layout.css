@@ -448,6 +448,7 @@ background-position-x: 10000px;
 }
 .profile_area .inner .signature {
 	width: 250px;
+	pointer-events: none;
 }
 .profile_area .inner .subtxt {
 	margin: 10px 0px 0px 0px;
