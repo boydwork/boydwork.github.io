@@ -405,7 +405,7 @@ background-position-x: 10000px;
 }
 .svg_box {
 	pointer-events: none; /* 스크롤 */
-	z-index: -1;
+	z-index: -9;
 	position: absolute;
 	width: 80%;
 	height: 80%;
@@ -425,32 +425,16 @@ background-position-x: 10000px;
 	background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
 	background-blend-mode: screen;
 }
-.illust_wrap .profile_area {
-	width: 100%;
-	clear: both;
+.illust_wrap h1 {
 	text-align: center;
-	vertical-align: middle;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-}
-.illust_wrap .profile_area .inner {
-	position: relative;
-	left: -50%;
-	transform: translateY(-50%);
-}
-.profile_area .inner h1 {
 	font-family: 'Lobster', cursive;
 	font-size: 60px;
 	font-weight: bold;
-	color: #fff;
-	text-shadow: 3px 3px 0px rgba(78,158,13, 1.0);
+	color: #000;
+	/*text-shadow: 3px 3px 0px rgba(255,255,255, 1.0);*/
 }
-.profile_area .inner .signature {
-	width: 250px;
-	pointer-events: none;
-}
-.profile_area .inner .subtxt {
+.subtxt {
+	text-align: center;
 	margin: 10px 0px 0px 0px;
 	font-size: 18px;
 	font-weight: lighter;
@@ -458,7 +442,8 @@ background-position-x: 10000px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 1px;
 }
-.profile_area .inner .word {
+.word {
+	text-align: center;
 	margin: 20px 0px 0px 0px;
 	font-size: 12px;
 	font-weight: lighter;
@@ -1004,7 +989,7 @@ transform: scale(1) translate(20px, -130px)
 	color: #999;
 	font-size: 13px;
 	line-height: 12px;
- display: inline-block  pointer: cursor;
+    display: inline-block  pointer: cursor;
 }
 #footer .btn_area .btn_t1 {
 	border: 1px solid #ccc;
@@ -1038,33 +1023,33 @@ transform: scale(1) translate(20px, -130px)
 	padding: 0 20px;
 	margin-top: 70px;
 	display: flex;
-  display: -webkit-flex; /* Safari 8 */
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap; /* Safari 8 */
-  justify-content: center;
-  -webkit-justify-content: center; /* Safari 8 */
+	display: -webkit-flex; /* Safari 8 */
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap; /* Safari 8 */
+	justify-content: center;
+	-webkit-justify-content: center; /* Safari 8 */
 }
 .skills .skills-tit {
 	float: left;
 	margin-top: 5px;
-  background-color: #000;
-  padding: 11px 15px;
-  color: #fff;
-  margin-right: 15px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .06em;
+	background-color: #000;
+	padding: 11px 15px;
+	color: #fff;
+	margin-right: 15px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .06em;
 }
 .skills a {
 	float: left;
 	margin-top: 5px;
 	background-color: transparent;
 	border: 1px solid #fff;
-  margin-right: 5px;
-  padding: 9px 15px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: .03em;
+	margin-right: 5px;
+	padding: 9px 15px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: .03em;
 }
-}
+
