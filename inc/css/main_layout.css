@@ -427,18 +427,18 @@ background-position-x: 10000px;
 }
 .illust_wrap h1 {
 	text-align: center;
-	font-family: 'Lobster', cursive;
+	font-family: 'Shrikhand', cursive;
 	font-size: 60px;
 	font-weight: bold;
 	color: #000;
-	letter-spacing: -2;
+	letter-spacing: -1;
 	/*text-shadow: 3px 3px 0px rgba(255,255,255, 1.0);*/
 }
 .illust_wrap .subtxt {
 	text-align: center;
-	margin: 20px 0px 10px 0px;
+	margin: 10px 0px 10px 0px;
 	font-size: 18px;
-	font-weight: lighter;
+	font-weight: 500;
 	color: #fff;
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -1034,7 +1034,7 @@ transform: scale(1) translate(20px, -130px)
 
 .skills {
 	padding: 0 20px;
-	margin-top: 30px;
+	margin-top: 50px;
 	display: flex;
 	display: -webkit-flex; /* Safari 8 */
 	flex-wrap: wrap;
