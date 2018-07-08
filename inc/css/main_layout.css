@@ -424,7 +424,24 @@ background-position-x: 10000px;
 	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
 	background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
 	background-blend-mode: screen;
+	overflow: hidden;
 }
+#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:-3;
+	}
 .illust_wrap h1 {
 	text-align: center;
 	font-family: 'Shrikhand', cursive;
