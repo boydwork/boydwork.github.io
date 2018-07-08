@@ -442,6 +442,12 @@ background-position-x: 10000px;
    		object-fit: cover; /*cover video background */
    		z-index:-3;
 	}
+/* Hiding video controls 
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+	video::-webkit-media-controls {
+	  display:none !important;
+	}
 .illust_wrap h1 {
 	text-align: center;
 	font-family: 'Shrikhand', cursive;
