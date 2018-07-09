@@ -486,6 +486,39 @@ background-position-x: 10000px;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 }
+.skills {
+	padding: 0 20px;
+	margin-top: 50px;
+	display: flex;
+	display: -webkit-flex; /* Safari 8 */
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap; /* Safari 8 */
+	justify-content: center;
+	-webkit-justify-content: center; /* Safari 8 */
+}
+.skills .skills-tit {
+	float: left;
+	margin-top: 5px;
+	background-color: #000;
+	padding: 11px 15px;
+	color: #fff;
+	margin-right: 15px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .06em;
+}
+.skills a {
+	float: left;
+	margin-top: 5px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	margin-right: 5px;
+	padding: 9px 15px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: .03em;
+}
 .night_wrap {
 	position: absolute;
 	left: 45%;
@@ -1055,37 +1088,18 @@ transform: scale(1) translate(20px, -130px)
 	padding-right: 8px;
 }
 
-.skills {
-	padding: 0 20px;
-	margin-top: 50px;
-	display: flex;
-	display: -webkit-flex; /* Safari 8 */
-	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; /* Safari 8 */
-	justify-content: center;
-	-webkit-justify-content: center; /* Safari 8 */
-}
-.skills .skills-tit {
-	float: left;
-	margin-top: 5px;
-	background-color: #000;
-	padding: 11px 15px;
-	color: #fff;
-	margin-right: 15px;
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: .06em;
-}
-.skills a {
-	float: left;
-	margin-top: 5px;
-	background-color: transparent;
-	border: 1px solid #fff;
-	margin-right: 5px;
-	padding: 9px 15px;
-	color: #fff;
-	font-weight: bold;
-	font-size: 12px;
-	letter-spacing: .03em;
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/loader/Preloader_1.gif) center no-repeat #fff;
 }
 
