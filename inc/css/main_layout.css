@@ -1109,4 +1109,5 @@ transform: scale(1) translate(20px, -130px)
     color: #000;
     text-align: center;
     opacity: 1;
+    line-height: 13px;
 } 
