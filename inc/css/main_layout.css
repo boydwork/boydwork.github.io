@@ -1098,21 +1098,3 @@ transform: scale(1) translate(20px, -130px)
     /*background: url('') 50% 50% no-repeat rgb(249,249,249);*/
     opacity: .8;
 }
-.load-spinner {
-    border: 16px solid lightgrey;
-    border-top: 16px solid #ff7d00;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 2s linear infinite;
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    position: absolute;
-    margin-left: -40px;
-    margin-top: -40px;
-}
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
