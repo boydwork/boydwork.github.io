@@ -1098,7 +1098,7 @@ transform: scale(1) translate(20px, -130px)
     background: /*url('../images/pageLoader.gif') 50% 50% no-repeat */ rgb(249,249,249);
     opacity: .8;
 }
-.loader .txt {
+.loader p {
 	font-size: 13px;
 	letter-spacing: -1px;
 	font-weight: 400;
