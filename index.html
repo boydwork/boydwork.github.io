@@ -10,6 +10,7 @@
 <!-- 스타일  -->
 <link rel="stylesheet" type="text/css" href="inc/css/main_layout.css">
 <link rel="stylesheet" type="text/css" href="inc/css/jquery.fullpage.css" />
+<link rel="stylesheet" type="text/css" href="inc/css/loading.css" />
 
 <!-- favicon -->
 <!-- Add to homescreen for Chrome on Android -->
@@ -32,6 +33,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="inc/js/loading.js"></script>
 <script src="inc/js/jquery.fullpage.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -54,16 +56,24 @@
         $(this).parent().toggleClass('show');
       });
 
-      $(window).load(function() {
-        $(".loader").fadeOut("slow");
-      });
+      // to close when clicked (example above)
+$('#loading-stop').loading({
+  stoppable: true
+});
+
+// or to close externally
+$('#another-loading').loading('stop')
+
+      // $(window).load(function() {
+      //   $(".loader").fadeOut("slow");
+      // });
 
     });
 </script>
 </head>
 <body>
- <div class="loader">
- </div>
+<!--  <div class="loader">
+ </div> -->
  <div id="fullpage"> 
   <!-- 인트로 -->
   <div class="intro_wrap section active">
