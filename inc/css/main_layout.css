@@ -1099,7 +1099,7 @@ transform: scale(1) translate(20px, -130px)
     opacity: .8;
 }
 .loader p {
-	font-size: 13px;
+	font-size: 12px;
 	letter-spacing: -1px;
 	font-weight: 500;
 	position:absolute; 
