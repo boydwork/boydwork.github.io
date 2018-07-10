@@ -1098,16 +1098,3 @@ transform: scale(1) translate(20px, -130px)
     background: /*url('../images/pageLoader.gif') 50% 50% no-repeat */ rgb(249,249,249);
     opacity: .8;
 }
-.loader .txt {
-	font-size: 13px;
-	letter-spacing: -1px;
-	font-weight: 500;
-	position:absolute; 
-    top:50%; 
-    left:50%; 
-    transform:translate(-50%, -50%);
-    color: #000;
-    text-align: center;
-    opacity: 1;
-    line-height: 13px;
-} 
