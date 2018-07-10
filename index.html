@@ -54,16 +54,17 @@
         $(this).parent().toggleClass('show');
       });
 
+      $(window).load(function() {
+        $(".loader").fadeOut("slow");
+      });
+
     });
-</script>
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("slow");
-});
 </script>
 </head>
 <body>
- <div class="loader"></div>
+ <div class="loader">
+   <div class="load-spinner"></div>
+ </div>
  <div id="fullpage"> 
   <!-- 인트로 -->
   <div class="intro_wrap section active">
