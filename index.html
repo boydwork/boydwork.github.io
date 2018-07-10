@@ -56,13 +56,7 @@
         $(this).parent().toggleClass('show');
       });
 
-      // to close when clicked (example above)
-$('#loading-stop').loading({
-  stoppable: true
-});
-
-// or to close externally
-$('#another-loading').loading('stop')
+      $('body').loading({stoppable: true});
 
       // $(window).load(function() {
       //   $(".loader").fadeOut("slow");
