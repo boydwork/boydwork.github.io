@@ -1101,7 +1101,7 @@ transform: scale(1) translate(20px, -130px)
 .loader p {
 	font-size: 13px;
 	letter-spacing: -1px;
-	font-weight: 400;
+	font-weight: 500;
 	position:absolute; 
     top:50%; 
     left:50%; 
