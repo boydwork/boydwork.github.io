@@ -1101,7 +1101,7 @@ transform: scale(1) translate(20px, -130px)
 .loader .txt {
 	font-size: 13px;
 	letter-spacing: -1px;
-	font-weight: 500;
+	font-weight: 400;
 	position:absolute; 
     top:50%; 
     left:50%; 
