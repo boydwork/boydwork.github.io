@@ -56,9 +56,15 @@
 
     });
 </script>
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});
+</script>
 </head>
 <body>
-<div id="fullpage"> 
+ <div class="loader"></div>
+ <div id="fullpage"> 
   <!-- 인트로 -->
   <div class="intro_wrap section active">
     <div class="container">
@@ -365,6 +371,6 @@
     </div>
   </div>
   <!-- 픽쳐 --> 
-</div>
+ </div>
 </body>
 </html>
