@@ -1098,7 +1098,7 @@ transform: scale(1) translate(20px, -130px)
     background: #000;
     opacity: 0.7;
 }
-.loader p {
+.loader .load_message {
 	z-index: 999;
 	font-size: 12px;
 	letter-spacing: -1px;
