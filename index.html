@@ -54,10 +54,20 @@
         $(this).parent().toggleClass('show');
       });
 
-      $(window).on('load', function() {
-        console.log('loading active');
+      $(document).ready(function() {
+        console.log('로딩 활성화');
         $('.loader').show().fadeOut("slow");
       });
+
+      $(window).on('load', function() {
+        console.log('로딩 비활성화');
+        $('.loader').hide().fadeOut("slow");
+      });
+
+      // $(window).on('load', function() {
+      //   console.log('loading active');
+      //   $('.loader').show().fadeOut("slow");
+      // });
 
     });
 </script>
