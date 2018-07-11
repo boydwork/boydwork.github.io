@@ -54,11 +54,18 @@
         $(this).parent().toggleClass('show');
       });
 
-      $(window).load(function() {
-        $(".loader").fadeOut("slow");
-      });
-
     });
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    console.log('로딩 활성화');
+    $('.loader').show().fadeOut("slow");
+});
+ 
+$(window).on('load', function() {
+    console.log('로딩 비활성화');
+    $('.loader').hide().fadeOut("slow");
+});
 </script>
 </head>
 <body>
