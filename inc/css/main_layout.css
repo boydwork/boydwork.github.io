@@ -1099,7 +1099,7 @@ transform: scale(1) translate(20px, -130px)
     opacity: 0.7;
 }
 
-.load_wrap {
+.loader .load_wrap {
 	z-index: 999;
 	position:absolute; 
     top:50%; 
