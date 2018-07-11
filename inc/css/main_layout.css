@@ -1098,15 +1098,25 @@ transform: scale(1) translate(20px, -130px)
     background: #000;
     opacity: 0.7;
 }
-.loader .load_message {
+
+.load_wrap {
 	z-index: 999;
-	font-size: 12px;
-	letter-spacing: -1px;
-	font-weight: 500;
 	position:absolute; 
     top:50%; 
     left:50%; 
     transform:translate(-50%, -50%);
+}
+.load_wrap .loading {
+	display: block;
+	margin: auto;
+	width: 32px;
+	height: 32px;
+}
+.load_wrap .load_message {
+	font-size: 12px;
+	letter-spacing: -1px;
+	font-weight: 500;
     color: #fff;
     text-align: center;
+    margin-top: 10px;
 } 
