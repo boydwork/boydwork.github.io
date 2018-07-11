@@ -1088,7 +1088,7 @@ transform: scale(1) translate(20px, -130px)
 	padding-right: 8px;
 }
 
-.loader {
+.loader_wrap {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -1099,20 +1099,20 @@ transform: scale(1) translate(20px, -130px)
     opacity: 0.7;
 }
 
-.loader .load_wrap {
+.loader_wrap .load {
 	z-index: 999;
 	position:absolute; 
     top:50%; 
     left:50%; 
     transform:translate(-50%, -50%);
 }
-.load_wrap .loading {
+.load .loading {
 	display: block;
 	margin: auto;
 	width: 32px;
 	height: 32px;
 }
-.load_wrap .load_message {
+.load .load_message {
 	font-size: 12px;
 	letter-spacing: -1px;
 	font-weight: 500;
