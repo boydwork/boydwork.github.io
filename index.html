@@ -56,6 +56,11 @@
 
       $(window).on('load', function() {
         console.log('loading active');
+        $('.loader').show().fadeIn("slow");
+      });
+
+      $(window).on('load', function() {
+        console.log('loading disable');
         $('.loader').show().fadeOut("slow");
       });
 
