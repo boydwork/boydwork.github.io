@@ -7,7 +7,7 @@
 }
 body {
 	font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	background: #333333;
+	background: #000000;
 	letter-spacing: -0.7px;
 	-webkit-font-smoothing: antialiased;
 }
@@ -671,6 +671,7 @@ opacity: 0.2
 	position: fixed;
 	top: 0;
 	z-index: -1;
+	color: #333333;
 }
 .timeline {
 	position: relative;
