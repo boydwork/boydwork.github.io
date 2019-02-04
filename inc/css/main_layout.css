@@ -1128,7 +1128,7 @@ transform: scale(1) translate(20px, -130px)
 }
 .writing_wrap .container {
 	z-index: 2;
-	width: 302px;
+	width: 322px;
 	margin:0 auto;
 }
 .writing_wrap .container h1 {
