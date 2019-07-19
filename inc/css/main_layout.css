@@ -1133,7 +1133,7 @@ transform: scale(1) translate(20px, -130px)
 	width: 335px;
 	margin:0 auto;
 }
-.writing_wrap .container h1 {
+/*.writing_wrap .container h1 {
 	font-size: 5em;
 	font-weight: 900;
 	line-height: 1em;
@@ -1141,7 +1141,7 @@ transform: scale(1) translate(20px, -130px)
 	background-image: linear-gradient(to left, #d500ff, #ff005a, #d500ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: bg 50s linear infinite;
+	animation: bg 50s linear infinite;*/
 }
 @keyframes bg {
  0% {
