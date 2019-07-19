@@ -1133,15 +1133,16 @@ transform: scale(1) translate(20px, -130px)
 	width: 335px;
 	margin:0 auto;
 }
-/*.writing_wrap .container h1 {
-	font-size: 5em;
+.writing_wrap .container h1 {
+	font-size: 7em;
 	font-weight: 900;
 	line-height: 1em;
 	margin: 20px 20px;
 	background-image: linear-gradient(to left, #d500ff, #ff005a, #d500ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: bg 50s linear infinite;*/
+	animation: bg 50s linear infinite;
+	text-align: center;
 }
 @keyframes bg {
  0% {
@@ -1172,9 +1173,10 @@ background-position-x: 10000px;
 	font-size: 1em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	letter-spacing: 1px;
+	letter-spacing: -0.5px;
 	color: #ffffff;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	margin-left: 20px;
+	text-align: center;
 }
