@@ -11,7 +11,7 @@ body {
 }
 .glitch {
   animation: glitch-skew 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s infinite;
-  font-family: orbitron, sans-serif;
+  font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 6rem;
   font-weight: 900;
   line-height: 1;
@@ -46,7 +46,7 @@ body {
   color: #00ff0b;
 }
 .glitch__line {
-  animation: glitch-line 2s linear infinite;
+  animation: glitch line 2s linear infinite;
   background: #000;
   content: '';
   height: 1px;

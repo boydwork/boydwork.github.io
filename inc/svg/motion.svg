@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="motion" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EEEEEE;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st1{fill:#39C5F3;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="gray_circle_g" transform="translate(361,325)">
+	<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="361,325 ; 361,325 ; 371,447 ; 371,447 ; 195,324 ; 195,324 ; 292,269 ; 292,269 ; 361,325">
+		</animateTransform>
+	<circle id="gray_circle" class="st0" r=""/>
+</g>
+<g id="bule_rectangle_g">
+	
+		<rect id="bule_rectangle" x="174.54" y="435.04" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -261.0379 261.7987)" class="st1" width="21.92" height="21.92"/>
+</g>
+<g id="white_line_g">
+	<line id="white_line" class="st2" x1="380.5" y1="463.5" x2="411.5" y2="494.5"/>
+</g>
+</svg>

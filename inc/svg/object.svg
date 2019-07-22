@@ -1,98 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="motion" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 382 447" enable-background="new 0 0 382 447" xml:space="preserve">
-  <g id="mint_ripple_g" transform="translate(282, 132)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" id="spread" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="380,120 ; 282,132">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="282,132 ; 282,132 ; 313,400 ; 313,400 ; 110,220 ; 110,220 ; 80,80 ; 80,80 ; 282,132"></animateTransform>
-    <path id="mint_ripple" fill="none" stroke="#50E3C2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M9.8,3.2
-		l0.9,10.3l9.5-4.3l0.9,10.4l9.4-4.4l1.1,10.4l9.4-4.4	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -158; -158; -251; -251; -123 ; -123; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="purple_bar_g" transform="translate(79, 35)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="50,-100 ; 79,35">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="79,35 ; 79,35 ; 286,35 ; 286,35 ; 244,360 ; 244,360 ; 49,168 ; 49,168 ; 79,35"></animateTransform>
-    <path id="purple_bar" fill="none" stroke="#9000FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M0,19
-		L16,0	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -80; -80; -248; -248; -123 ; -123 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="sky_tri_g" transform="translate(302, 14)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="380,-100 ; 302,14">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="302,14 ; 302,14 ; 100,312 ; 100,312 ; 320,123 ; 320,123 ; 55,230 ; 55,230 ; 302,14"></animateTransform>
-    <path id="sky_tri" fill="#6CB7FF" d="M10.4,2.7L2.9,12.9l12.2,1.4L10.4,2.7z	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 104; 104; 174; 174; -291 ; -291 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="yellow_circle_g" transform="translate(270, 2)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="100,-100 ; 260,2">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="260,2 ; 260,2 ; 330,180 ; 330,180 ; 100,50 ; 100,50 ; 309,250 ; 309,250 ; 260,2"></animateTransform>
-    <path fill="#FFD200" d="M1,41.5c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S7.6,41.5,1,41.5z M1,21.5c-4.4,0-8,3.6-8,8
-		s3.6,8,8,8s8-3.6,8-8S5.4,21.5,1,21.5z"/>
-  </g>
-  <g id="b_white_curve_g" transform="translate(292,282)">
-    
-    <!-- animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="320,300 ; 292,282">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="292,299 ; 292,299 ; 66,66 ; 66,66 ; 82,302 ; 82,302 ; 272,21 ; 272,21 ; 292,299"></animateTransform>
-    <path id="b_white_curve" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="
-		M0.6,30.5C9.4,37,22,37.2,31,30c9-7.4,11.5-20,6.7-30	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 170; 170; 85; 85; -298 ; -298 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="white_curve_g" transform="translate(23, 389)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="-100,320 ; 23,389">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="23,389 ; 23,389 ; 27,247 ; 27,247 ; 310,263 ; 310,263 ; 88,345 ; 88,345 ; 23,389"></animateTransform>
-    <path id="white_curve" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M25,6.7
-		C19.7,4,13,5,9,9.5C4.5,14,4,21,7.2,25.8	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -91; -91; 42; 42; -138 ; -138 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="blue_bar_g" transform="translate(30, 276)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="-100,240 ; 30,276">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="30,276 ; 30,276 ; 280,244 ; 280,244 ; 81,117 ; 81,117 ; 300,380 ; 300,380 ; 30,276"></animateTransform>
-    <path id="blue_bar_1_" fill="none" stroke="#135AFE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M29,27.7
-		L0,0	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 190; 190; 91; 91; 170 ; 170 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="yellow_bar_g" transform="translate(315, 335)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="360,360 ; 315,335">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="315,335 ; 315,335 ; 72,135 ; 72,135 ; 266,39 ; 266,39 ; 266,196 ; 266,196 ; 315,335"></animateTransform>
-    <path id="yellow_bar" fill="none" stroke="#FFD200" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M7.8,10.2
-		L0.4,0	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -120; -120; -212; -212; -96 ; -96 ; 0"></animateTransform>
-    </path>
-  </g>
-  <g id="mint_tri_g" transform="translate(54, 232)">
-    
-    <!-- <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0" calcMode="spline" dur=".8" fill="remove" keySplines="0,0,.2,1" keyTimes="0; 1" restart="always" type="translate" values="-100,100 ; 54,232">
-		</animateTransform> -->
-    
-    <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="54,232 ; 54,232 ; 293,97 ; 293,97 ; 297,168 ; 297,168 ; 35,400 ; 35,400 ; 54,232"></animateTransform>
-    <path id="mint_square" fill="#50E3C2" d="M27.6,23.2l-9.7-10.3l10.3-9.7l9.7,10.3L27.6,23.2z	">
-      <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 182; 182; 106; 106; -27 ; -27 ; 0"></animateTransform>
-    </path>
-  </g>
+	 viewBox="0 0 382 447" style="enable-background:new 0 0 382 447;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#50E3C2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#9000FF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:#6CB7FF;}
+	.st3{fill:#FFD200;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st5{fill:none;stroke:#135AFE;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{fill:none;stroke:#FFD200;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st7{fill:#50E3C2;}
+</style>
+<g id="mint_ripple_g" transform="translate(282, 132)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="282,132 ; 282,132 ; 313,400 ; 313,400 ; 110,220 ; 110,220 ; 80,80 ; 80,80 ; 282,132">
+		</animateTransform>
+	<path id="mint_ripple" class="st0" d="M9.8,3.2l0.9,10.3l9.5-4.3l0.9,10.4l9.4-4.4l1.1,10.4l9.4-4.4	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -158; -158; -251; -251; -123 ; -123; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="purple_bar_g" transform="translate(79, 35)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="79,35 ; 79,35 ; 286,35 ; 286,35 ; 244,360 ; 244,360 ; 49,168 ; 49,168 ; 79,35">
+		</animateTransform>
+	<path id="purple_bar" class="st1" d="M0,19L16,0	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -80; -80; -248; -248; -123 ; -123 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="sky_tri_g" transform="translate(302, 14)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="302,14 ; 302,14 ; 100,312 ; 100,312 ; 320,123 ; 320,123 ; 55,230 ; 55,230 ; 302,14">
+		</animateTransform>
+	<path id="sky_tri" class="st2" d="M10.4,2.7L2.9,12.9l12.2,1.4L10.4,2.7z	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 104; 104; 174; 174; -291 ; -291 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="yellow_circle_g" transform="translate(270, 2)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="260,2 ; 260,2 ; 330,180 ; 330,180 ; 100,50 ; 100,50 ; 309,250 ; 309,250 ; 260,2">
+		</animateTransform>
+	<path class="st3" d="M1,41.5c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S7.6,41.5,1,41.5z M1,21.5c-4.4,0-8,3.6-8,8s3.6,8,8,8
+		s8-3.6,8-8S5.4,21.5,1,21.5z"/>
+</g>
+<g id="b_white_curve_g" transform="translate(292,282)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="292,299 ; 292,299 ; 66,66 ; 66,66 ; 82,302 ; 82,302 ; 272,21 ; 272,21 ; 292,299">
+		</animateTransform>
+	<path id="b_white_curve" class="st4" d="M0.6,30.5C9.4,37,22,37.2,31,30c9-7.4,11.5-20,6.7-30	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 170; 170; 85; 85; -298 ; -298 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="white_curve_g" transform="translate(23, 389)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="23,389 ; 23,389 ; 27,247 ; 27,247 ; 310,263 ; 310,263 ; 88,345 ; 88,345 ; 23,389">
+		</animateTransform>
+	<path id="white_curve" class="st4" d="M25,6.7C19.7,4,13,5,9,9.5C4.5,14,4,21,7.2,25.8	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -91; -91; 42; 42; -138 ; -138 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="blue_bar_g" transform="translate(30, 276)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="30,276 ; 30,276 ; 280,244 ; 280,244 ; 81,117 ; 81,117 ; 300,380 ; 300,380 ; 30,276">
+		</animateTransform>
+	<path id="blue_bar_1_" class="st5" d="M29,27.7L0,0	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 190; 190; 91; 91; 170 ; 170 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="yellow_bar_g" transform="translate(315, 335)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="315,335 ; 315,335 ; 72,135 ; 72,135 ; 266,39 ; 266,39 ; 266,196 ; 266,196 ; 315,335">
+		</animateTransform>
+	<path id="yellow_bar" class="st6" d="M7.8,10.2L0.4,0	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; -120; -120; -212; -212; -96 ; -96 ; 0">
+			</animateTransform>
+	</path>
+</g>
+<g id="mint_tri_g" transform="translate(54, 232)">
+	
+		<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="translate" values="54,232 ; 54,232 ; 293,97 ; 293,97 ; 297,168 ; 297,168 ; 35,400 ; 35,400 ; 54,232">
+		</animateTransform>
+	<path id="mint_square" class="st7" d="M27.6,23.2l-9.7-10.3l10.3-9.7l9.7,10.3L27.6,23.2z	">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin=".7" calcMode="spline" dur="10" fill="remove" keySplines="0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1 ; 0,0,.2,1" keyTimes="0; .125; .25; .375; .5; .625; .75; .875; 1" repeatCount="indefinite" restart="always" type="rotate" values="0; 0; 182; 182; 106; 106; -27 ; -27 ; 0">
+			</animateTransform>
+	</path>
+</g>
 </svg>
