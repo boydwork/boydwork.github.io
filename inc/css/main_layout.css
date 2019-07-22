@@ -1141,7 +1141,7 @@ transform: scale(1) translate(20px, -130px)
 	background-image: linear-gradient(to left, #d500ff, #ff005a, #d500ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: bg 50s linear infinite;
+	animation: bg 10s linear infinite;
 	text-align: center;
 }
 @keyframes bg {
@@ -1171,12 +1171,12 @@ background-position-x: 10000px;
 .writing_wrap .container .comment{
 	padding: 20px 20px;
 	font-size: 1em;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Indie Flower', cursive;
 	font-weight: bold;
 	letter-spacing: -0.5px;
 	color: #ffffff;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-left: 20px;
+	margin-left: 0px;
 	text-align: center;
 }
