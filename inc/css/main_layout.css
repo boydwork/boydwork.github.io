@@ -1171,7 +1171,8 @@ background-position-x: 10000px;
 .writing_wrap .container .comment{
 	padding: 20px 20px;
 	font-size: 1em;
-	font-family: 'Indie Flower', cursive;
+	/*font-family: 'Indie Flower', cursive;*/
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	letter-spacing: -0.5px;
 	color: #ffffff;
