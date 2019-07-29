@@ -1160,7 +1160,7 @@ background-position-x: 10000px;
 	color: #ffffff;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 .writing_wrap .container .bar_w {
 	width: 1px;
