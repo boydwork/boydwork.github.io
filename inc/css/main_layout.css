@@ -1162,14 +1162,15 @@ background-position-x: 10000px;
 	margin-bottom: 1em;
 	/*margin-left: 20px;*/
 }
-.writing_wrap .container .bar_w {
+.writing_wrap .container .writing_info {padding-left: 20px;}
+.writing_info .bar_w {
 	width: 1px;
 	height: 30px;
 	background-color: #ffffff;
-	margin-left: 28px;
+	margin-left: 8px;
 }
-.writing_wrap .container .comment{
-	padding: 20px 20px;
+.writing_info .comment{
+	/*padding: 20px 20px;*/
 	font-size: 1em;
 	/*font-family: 'Indie Flower', cursive;*/
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
