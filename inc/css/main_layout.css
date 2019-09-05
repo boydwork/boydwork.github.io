@@ -1134,15 +1134,16 @@ transform: scale(1) translate(20px, -130px)
 	margin:0 auto;
 }
 .writing_wrap .container h1 {
-	font-size: 3em;
-	font-weight: 900;
+	font-size: 2em;
+	font-weight: 400;
 	line-height: 1em;
 	margin: 20px 20px;
+	font-family: "Black Han Sans";
 	background-image: linear-gradient(to left, #d500ff, #ff005a, #d500ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: bg 10s linear infinite;
-	text-align: center;
+	text-align: left;
 }
 @keyframes bg {
  0% {
