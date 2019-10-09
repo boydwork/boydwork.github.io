@@ -52,8 +52,9 @@
 
       $(document).on('click','.btn',function() {
         $(this).parent().toggleClass('shake');
+        return false;
         // $(this).parent().toggleClass('smoke');
-        $(this).parent().toggleClass('show');
+        // $(this).parent().toggleClass('show');
       });
 
       $(window).on('load', function() {
