@@ -81,6 +81,18 @@ background-position: 0% 50%
 	text-align: center;
 	position: relative;
 }
+.intro_wrap .container .btn {
+	position: absolute;
+	z-index: 5;
+	display: block;
+	width: 51px;
+	height: 50px;
+	left: 50%;
+	top: 0;
+	border-radius: 100%;
+	margin-left: -25px;
+	cursor: pointer;
+}
 .intro_wrap .container .sign {
 	position: relative;
 	z-index: 4;
