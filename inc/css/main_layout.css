@@ -403,12 +403,21 @@ background-position-x: 10000px;
 	font-weight: 100;
 	line-height: 20px;
 }
-.svg_box {
+.svg_box_type1 {
 	pointer-events: none; /* 스크롤 */
 	z-index: -1;
 	position: absolute;
 	width: 80%;
 	height: 80%;
+	top: 50%;
+	left: 50%;
+}
+.svg_box_type2 {
+	pointer-events: none; /* 스크롤 */
+	z-index: -1;
+	position: absolute;
+	width: 130%;
+	height: 130%;
 	top: 50%;
 	left: 50%;
 }
@@ -907,6 +916,7 @@ opacity: 0.2
 	padding-bottom: 120px;/*height: calc(100   - 100px) !important;*/
 }
 .pic_wrap .min li {
+	background-color: #fff;
 	position: relative;
 	width: 100%;
 	padding-top: 100%;
@@ -920,7 +930,8 @@ opacity: 0.2
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: rgba(0, 0, 0, 0.8);
+	line-height: 12;
+	background: rgba(0, 0, 0, 0.5);
 	top: 0;
 	left: 100%;
 	padding: 45px 30px;
