@@ -926,6 +926,9 @@ opacity: 0.2
 	overflow: hidden;
 	cursor: pointer;
 }
+.pic_wrap .min .column_dark {
+	background-color: #333;
+}
 .pic_wrap .min li .details {
 	width: 100%;
 	height: 100%;
