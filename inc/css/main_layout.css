@@ -930,14 +930,11 @@ opacity: 0.2
 	background-color: #333;
 }
 .pic_wrap .min li .details {
-	width: 100%;
-	height: 100%;
+	width: 101%;
+	height: 101%;
 	position: absolute;
-	line-height: 12;
 	background: rgba(0, 0, 0, 0.5);
-	top: 0;
 	left: 100%;
-	padding: 45px 30px;
 	box-sizing: border-box;
 	transition: .5s;
 }
@@ -945,11 +942,13 @@ opacity: 0.2
 	top: 0;
 	left: 0;
 	cursor: pointer;
+	text-align: center;
+	display: table;
 }
 .pic_wrap .min li .details h3 {
+	vertical-align: middle;
+	display: table-cell;
 	color: #ffffff;
-	text-align: center;
-	margin: 0;
 	font-size: 15px;
 	font-weight: bold;
 }
