@@ -939,13 +939,6 @@ opacity: 0.2
 	left: 100%;
 	box-sizing: border-box;
 	transition: .5s;
-}
-.pic_wrap .min li.active .details {
-	top: 0;
-	left: 0;
-	width: 101%
-	height: 101%;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -953,6 +946,13 @@ opacity: 0.2
 	display: -webkit-flex;
 	-webkit-align-items: center;
 	-webkit-justify-content: center;
+}
+.pic_wrap .min li.active .details {
+	top: 0;
+	left: 0;
+	width: 101%
+	height: 101%;
+	cursor: pointer;
 }
 .pic_wrap .min li .details h3 {
 	color: #ffffff;
