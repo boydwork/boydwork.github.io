@@ -932,6 +932,8 @@ opacity: 0.2
 .pic_wrap .min li .details {
 	width: 101%;
 	height: 101%;
+	top: 0;
+	padding: 45px 30px;
 	position: absolute;
 	background: rgba(0, 0, 0, 0.5);
 	left: 100%;
@@ -944,15 +946,13 @@ opacity: 0.2
 	width: 100%
 	height: 100%;
 	cursor: pointer;
-	text-align: center;
-	display: table;
 }
 .pic_wrap .min li .details h3 {
-	vertical-align: middle;
-	display: table-cell;
 	color: #ffffff;
 	font-size: 15px;
 	font-weight: bold;
+	text-align: center;
+	margin: 0;
 }
 .pic_wrap .min li .details p {
 	margin: 10px 0 0 0;
