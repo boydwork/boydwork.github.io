@@ -7,9 +7,7 @@
   .st0{fill:#FFFFFF;}
   .line {
     text-align: center;
-    border-radius: 100%;/*
-    -webkit-filter: drop-shadow(2px 8px 4px rgba(0,0,0,0.2));
-    filter: drop-shadow(2px 8px 4px rgba(0,0,0,0.2));*/
+    border-radius: 100%;/
   }
   .float {
     width: 100px;
