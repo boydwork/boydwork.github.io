@@ -26,12 +26,23 @@
 			height: auto;
 			background-size: cover;
 		}
-		.floating {
-			background-image: url(./floating_p.svg);
+		.floating_expand {
+			background-image: url(./floating_expand.svg);
 			position: fixed;
 			bottom: 146px;
 			right: 16px;
 			width: 240px;
+			height: 50px;
+			opacity: 0.9;
+			-webkit-filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2));
+			filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2));
+		}
+		.floating_small {
+			background-image: url(./floating_ver2.svg);
+			position: fixed;
+			bottom: 146px;
+			right: 16px;
+			width: 50px;
 			height: 50px;
 			opacity: 0.9;
 			-webkit-filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2));
@@ -66,7 +77,8 @@
   	</div>
   	<div class="lnb"></div>
 
-  	<div class="floating"></div>
+  	<div class="floating_expand"></div>
+  	<div class="floating_small"></div>
 
     <div class="top"></div>
 
