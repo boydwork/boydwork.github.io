@@ -30,7 +30,7 @@
   }
   #expand_area {
     animation-name: fadeout;
-    animation-fill-mode:forwards;
+    animation-fill-mode:both;
     animation-duration: 4.5s;
     animation-iteration-count: 1;
     transition: all cubic-bezier( 1) 1s
