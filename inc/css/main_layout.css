@@ -431,8 +431,8 @@ background-position-x: 10000px;
 .illust_wrap {
 	width: 100%;
 	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
-	background: linear-gradient(#6eff6e, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
-	background-blend-mode: overlay;
+	background: linear-gradient(#ffc3ca, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
+	background-blend-mode: hard-light;
 	overflow: hidden;
 }
 #myVideo{
@@ -520,7 +520,7 @@ background-position-x: 10000px;
 	float: left;
 	margin-top: 5px;
 	background-color: transparent;
-	border: 1px solid #ffffff;
+	border: 0.5px solid #ffffff;
 	margin-right: 5px;
 	padding: 9px 15px;
 	color: #ffffff;
