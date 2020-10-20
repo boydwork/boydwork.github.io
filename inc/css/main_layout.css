@@ -431,8 +431,9 @@ background-position-x: 10000px;
 .illust_wrap {
 	width: 100%;
 	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
-	background: linear-gradient(#ffc3ca, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
-	background-blend-mode: hard-light;
+	/*background: linear-gradient(#ffc3ca, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
+	background-blend-mode: hard-light;*/
+	background-color: #ffc0cb;
 	overflow: hidden;
 }
 #myVideo{
