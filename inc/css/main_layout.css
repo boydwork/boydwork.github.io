@@ -793,13 +793,13 @@ opacity: 0.2
 }
 .position .job {
 	font-size: 1.8em;
-	font-weight: 300;
+	font-weight: 100;
 	line-height: 1.5em;
 }
 .position .role {
 	display: block;
 	font-size: 1.8em;
-	font-weight: 300;
+	font-weight: 100;
 	line-height: 1em;
 }
 .desc {
