@@ -5,17 +5,30 @@
   <title>CSS Rain Effect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
 </head>
-<body class="bg">
-<div class="wrapper">
-<div class="sign">
-💿
-</div>
-</div>
-  <div class="rain front-row"></div>
-  <div class="rain back-row"></div>
+<body id="fullpage" class="bg">
+<div class="section">	
+ <div class="wrapper">
+  <div class="sign">💿</div>
+ </div>
+ <div class="rain front-row"></div>
+ <div class="rain back-row"></div>
+</div>  
 </body>
 <!-- partial -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="../inc/js/jquery.fullpage.js"></script>
   <script  src="./script.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['intro'],
+        slidesNavigation: true,
+        controlArrows: false,
+        autoScrolling: true,
+        scrollBar: false,
+        scrollOverflow: true
+      });
+    });
+</script>
 </body>
 </html>

@@ -8,12 +8,10 @@ body {
   overflow: hidden;
 }
 .wrapper {
-  position:absolute;
-  top:45%;
-  left:47%;
 }
 .sign {
-  font-size: 28px;
+  text-align: center;
+  font-size: 32px;
   border-radius: 100%;
 }
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -45,15 +43,15 @@ body {
   }
 }
 .sign {
-  -webkit-animation: rotating 4s linear infinite;
-  -moz-animation: rotating 4s linear infinite;
-  -ms-animation: rotating 4s linear infinite;
-  -o-animation: rotating 4s linear infinite;
-  animation: rotating 4s linear infinite;
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
 }
 
 .bg {
-  background: linear-gradient(-45deg, #c37474, #124760, #c37474, #124760);
+  background: linear-gradient(-45deg, #000000, #222, #000000, #222);
   background-size: 400% 400%;
   -webkit-animation: gradi 60s ease infinite;
   -moz-animation: gradi 60s ease infinite;
