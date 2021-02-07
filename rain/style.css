@@ -8,9 +8,12 @@ body {
   overflow: hidden;
 }
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .sign {
-  text-align: center;
   font-size: 32px;
   border-radius: 100%;
 }
@@ -42,13 +45,13 @@ body {
     transform: rotate(360deg);
   }
 }
-.sign {
+/*.sign {
   -webkit-animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
   -ms-animation: rotating 2s linear infinite;
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
-}
+}*/
 
 .bg {
   background-image: linear-gradient(to top, #3ab5b0 0%, #3d99be 31%, #56317a 100%);

@@ -17,9 +17,10 @@
 
 <!-- Add to homescreen for Safari on iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
 <meta name="apple-mobile-web-app-title" content="Boydwork Designer">
 <link rel="apple-touch-icon-precomposed" href="inc/favicon/ios-desktop.png">
+<link rel="apple-touch-startup-image" href="">
 
 <!-- Tile icon for Win8 (144x144 + tile color) -->
 <meta name="msapplication-TileImage" content="inc/favicon/touch/ms-touch-icon-144x144-precomposed.png">
@@ -65,6 +66,9 @@
         console.log('loading disable');
         $('.loader_wrap').show().fadeOut("slow");
       });
+
+      window.addEventListener('load', function(){setTimeout(scrollTo, 0, 0, 1);
+      }, false);
 
     });
 </script>
@@ -376,7 +380,7 @@
         <div class="btn_area">
           <div class="set"> <a class="btn_t1" href="https://www.facebook.com/boydwork" target="blank">페이스북</a> <a class="btn_t1" href="https://www.instagram.com/boydwork" target="blank">인스타그램</a> <a class="btn_t1" href="https://www.behance.net/boinkim" target="blank">비핸스</a></div>
           <!-- <div class="set"> <a class="btn_t2" href="mailto:boydworkshop@gmail.com" target="blank"><span>메일보내기</span></a></div> -->
-          <p class="copyright">© Boydwork All Rights Reserved.</p> </div>
+          <p class="copyright">©Boydwork All Rights Reserved.</p> </div>
       </div>
       <!-- </footer> --> 
     </div>
