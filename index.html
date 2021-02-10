@@ -29,6 +29,7 @@
 <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 <!-- jquery -->
 <!-- <script src="inc/js/jquery.min.js"></script> -->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="inc/js/jquery-ui.min.js"></script>
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
@@ -56,6 +57,7 @@
         // $(this).parent().toggleClass('show');
       });
 
+
       $(window).on('load', function() {
         console.log('loading active');
         $('.loader_wrap').show().fadeIn("slow");
@@ -68,6 +70,36 @@
 
       window.addEventListener('load', function(){setTimeout(scrollTo, 0, 0, 1);
       }, false);
+
+
+      $('#fullpage').imagesLoaded( function() {
+      // images have loaded
+      });
+      // options
+      $('#fullpage').imagesLoaded( {
+      // options...
+      },
+      function() 
+      {
+      // images have loaded
+      }
+      );
+
+      
+      $('#fullpage').imagesLoaded()
+      .always( function( instance ) {
+      console.log('all images loaded');
+      })
+      .done( function( instance ) {
+      console.log('all images successfully loaded');
+      })
+      .fail( function() {
+      console.log('all images loaded, at least one is broken');
+      })
+      .progress( function( instance, image ) {
+      var result = image.isLoaded ? 'loaded' : 'broken';
+      console.log( 'image is ' + result + ' for ' + image.img.src );
+      });
 
     });
 </script>

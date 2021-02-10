@@ -1120,7 +1120,8 @@ transform: scale(1) translate(20px, -130px)
 #footer .btn_area .copyright {
 	color: #fff;
     margin-top: 16px;
-    font-size: 12px;
+    font-size: 10px;
+    opacity: 0.5;
 }
 
 .loader_wrap {
