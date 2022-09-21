@@ -400,6 +400,8 @@ background-position-x: 10000px;
 	line-height: 20px;
 }
 .name_wrap .container p {
+	width: 320px;
+	margin: 0 auto;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 20px;
@@ -480,6 +482,8 @@ background-position-x: 10000px;
 @media screen and (max-width: 660px) {
 	.word {
 	text-align: center;
+	width: 320px;
+	margin: 0 auto;
 	padding: 0px 20px;
 	font-size: 12px;
 	font-weight: 400;
@@ -491,7 +495,7 @@ background-position-x: 10000px;
 	.word {
 	text-align: center;
 	margin: 0 auto;
-	width: 540px;
+	width: 320px;
 	font-size: 12px;
 	font-weight: 400;
 	opacity: 0.8;
