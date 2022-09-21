@@ -435,8 +435,8 @@ background-position-x: 10000px;
 .illust_wrap {
 	width: 100%;
 	/*background: radial-gradient(circle at 3% 100%, #828efb 20%, #c866e3 52%, #9b36b7);*/
-	/*background: linear-gradient(#ffc3ca, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
-	background-blend-mode: hard-light;*/
+	background: linear-gradient(#ffc3ca, transparent), linear-gradient(90deg, #ffb18b, transparent), linear-gradient(-90deg, #4886FF, transparent);
+	background-blend-mode: hard-light;
 	background-color: #ffc0cb;
 	overflow: hidden;
 }
@@ -476,7 +476,7 @@ background-position-x: 10000px;
 	margin: 10px 0px 10px 0px;
 	font-size: 18px;
 	font-weight: 800;
-	color: #ffffff;
+	color: #000000;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 @media screen and (max-width: 660px) {
@@ -487,7 +487,6 @@ background-position-x: 10000px;
 	padding: 0px 20px;
 	font-size: 12px;
 	font-weight: 400;
-	color: #ffffff;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 }
@@ -499,7 +498,7 @@ background-position-x: 10000px;
 	font-size: 12px;
 	font-weight: 400;
 	opacity: 0.8;
-	color: #ffffff;
+	ccolor: #000000;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 }
