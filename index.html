@@ -49,22 +49,22 @@
         $(this).toggleClass('active').siblings().removeClass('active');
       });
 
-      $(document).on('click','.btn',function() {
-        $(this).parent().toggleClass('shake');
-        return false;
-        // $(this).parent().toggleClass('smoke');
-        // $(this).parent().toggleClass('show');
-      });
+      // $(document).on('click','.btn',function() {
+      //   $(this).parent().toggleClass('shake');
+      //   return false;
+      //   // $(this).parent().toggleClass('smoke');
+      //   // $(this).parent().toggleClass('show');
+      // });
 
-      $(window).on('load', function() {
-        console.log('loading active');
-        $('.loader_wrap').show().fadeIn("slow");
-      });
+      // $(window).on('load', function() {
+      //   console.log('loading active');
+      //   $('.loader_wrap').show().fadeIn("slow");
+      // });
 
-      $(window).on('load', function() {
-        console.log('loading disable');
-        $('.loader_wrap').show().fadeOut("slow");
-      });
+      // $(window).on('load', function() {
+      //   console.log('loading disable');
+      //   $('.loader_wrap').show().fadeOut("slow");
+      // });
 
       // window.addEventListener('load', function(){setTimeout(scrollTo, 0, 0, 1);
       // }, false);
@@ -73,12 +73,12 @@
 </script>
 </head>
 <body>
- <div class="loader_wrap">
+ <!-- <div class="loader_wrap">
   <div class="load">
    <object class="loading" type="image/svg+xml" data="inc/svg/floating.svg"></object>
    <p class="load_message">안녕하세요.</p>
   </div> 
- </div>
+ </div> -->
  <div id="fullpage"> 
   <!-- 인트로 -->
   <div class="intro_wrap section active">
