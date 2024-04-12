@@ -917,8 +917,8 @@ opacity: 0.2
 .pic_wrap .min ul {
 	display: -ms-grid;
 	display: grid;
- -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ -ms-grid-columns: minmax(400px, 1fr)[auto-fit];
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	grid-gap: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
