@@ -1091,7 +1091,8 @@ transform: scale(1) translate(20px, -130px)
 	color: #999999;
 	font-size: 13px;
 	line-height: 12px;
-    display: inline-block  pointer: cursor;
+    display: inline-block;
+    cursor: pointer;
 }
 #footer .btn_area .btn_t1 {
 	border: 1px solid #cccccc;
