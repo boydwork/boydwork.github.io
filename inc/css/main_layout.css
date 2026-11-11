@@ -708,7 +708,7 @@ opacity: 0.2
 	vertical-align: middle;
 	background-color: #333333;
 	border-radius: 4px;
-	padding: 2px 10px;
+	padding: 2px 8px;
 	*opacity: 0.8;*
 }
 .direction-l .time-wrapper {
@@ -748,6 +748,11 @@ opacity: 0.2
 	font-weight: 400;
 	color: #333;
 	opacity: 0.5;
+}
+
+.yymm {
+	font-size: 0.2em;
+	opacity: 0.8;
 }
 .direction-r .desc {
 	margin: 1em 1.5em 0 0.75em;
@@ -833,9 +838,6 @@ opacity: 0.2
 	margin: 1em 0 0 0;
 	padding: 1em;
 	z-index: 15;
-}
-.desc .yymm {
-	font-style: italic;
 }
 .direction-l .desc, .direction-r .desc {
 	position: relative;
