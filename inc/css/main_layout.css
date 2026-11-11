@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 /* default CSS */
 * {
 	margin: 0;
@@ -6,7 +6,7 @@
 	-webkit-text-size-adjust: 100%;
 }
 body {
-	font-family: 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;;
 	background: #000000;
 	letter-spacing: -0.5px;
 	-webkit-font-smoothing: antialiased;
@@ -266,7 +266,6 @@ transform: translate(-2.5px, -0.5px) rotate(-1.5deg);
 	width: 100%;
 	margin: auto;
 	margin-top: 10px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #ffffff;
 	font-size: .9em;
 	text-align : center;
@@ -284,47 +283,10 @@ opacity: 1
 .sub_instructions {
 	line-height: 2em;
 	color: #ffffff;
-	font-family: 'Noto Sans KR', sans-serif;
 	font-size: .8em;
 	font-weight: 400;
 	opacity: 0.8;
 }
-/*.intro_wrap .scrolldown {
-	top: 30px;
-	left: 20px;
-	position: absolute;
-	color: #ffffff;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 500;
-	font-size: 13px;
-	letter-spacing: -0.5px;
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: tb-rl;
-	writing-mode: vertical-rl;
-}
-.scrolldown .scroller {
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background-color: #fff;
-	animation-name: scroll;
-	animation-duration: 1.2s;
-	animation-timing-function: cubic-bezier(.15, .41, .69, .94);
-	animation-iteration-count: infinite;
-}
-@keyframes scroll {
- 0% {
-opacity: 0;
-}
- 5% {
-transform: translateY(0);
-opacity: 1;
-}
- 100% {
-transform: translateY(75px);
-opacity: 0;
-}
-}*/
 #mouse_scroll {
 	position: absolute;
 	width: 100%;
@@ -440,44 +402,20 @@ background-position-x: 10000px;
 	background-color: #ffc0cb;
 	overflow: hidden;
 }
-#myVideo{
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: /* our video */;
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:-3;
-	}
-/* Hiding video controls 
-* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
-* --------------------------------------- */
-	video::-webkit-media-controls {
-	  display:none !important;
-	}
 .illust_wrap h1 {
 	text-align: center;
 	font-family: 'Shrikhand', cursive;
 	font-size: 50px;
 	font-weight: 500;
-	color: #000000;
-	letter-spacing: -0.04em;
-	/*text-shadow: 3px 3px 0px rgba(255,255,255, 0.5);*/
+	color: #333333;
+	letter-spacing: -0.005em;
 }
 .illust_wrap .subtxt {
 	text-align: center;
 	margin: 10px 0px 10px 0px;
 	font-size: 18px;
 	font-weight: 800;
-	color: #000000;
-	font-family: 'Noto Sans KR', sans-serif;
+	color: #333333
 }
 @media screen and (max-width: 660px) {
 	.word {
@@ -487,7 +425,8 @@ background-position-x: 10000px;
 	padding: 0px 20px;
 	font-size: 12px;
 	font-weight: 400;
-	font-family: 'Noto Sans KR', sans-serif;
+	opacity: 0.5;
+	ccolor: #333333;
 }
 }
 @media screen and (min-width: 660px) {
@@ -497,9 +436,8 @@ background-position-x: 10000px;
 	width: 320px;
 	font-size: 12px;
 	font-weight: 400;
-	opacity: 0.8;
-	ccolor: #000000;
-	font-family: 'Noto Sans KR', sans-serif;
+	opacity: 0.5;
+	ccolor: #333333;
 }
 }
 .skills {
@@ -515,7 +453,7 @@ background-position-x: 10000px;
 .skills .skills-tit {
 	float: left;
 	margin-top: 5px;
-	background-color: #000000;
+	background: #111827;
 	padding: 11px 15px;
 	color: #ffffff;
 	margin-right: 5px;
@@ -528,6 +466,7 @@ background-position-x: 10000px;
 	margin-top: 5px;
 	background-color: transparent;
 	border: 0.5px solid #ffffff;
+	border-radius: 4px;
 	margin-right: 5px;
 	padding: 9px 15px;
 	color: #ffffff;
@@ -681,7 +620,6 @@ opacity: 0.2
 }
 }
 .info_wrap {
-	/*background-image: linear-gradient(50deg, #ffd524 80%, #fff 60%);*/
 	background-color: #f8f4d5; 
 	bottom: 0;
 	position: fixed;
@@ -745,7 +683,6 @@ opacity: 0.2
 	font-weight: 700;
 	text-align: left;
 	color: #333333;
-	font-family: 'Noto Sans KR', sans-serif;
 }
 .direction-l .flag:before, .direction-r .flag:before {
 	position: absolute;
@@ -767,13 +704,12 @@ opacity: 0.2
 .time-wrapper {
 	display: inline;
 	font-size: 0.66666em;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #f8f4d5;
 	vertical-align: middle;
 	background-color: #333333;
-	border-radius: 100px;
-	padding: 0px 10px;
-	/*opacity: 0.8;*/
+	border-radius: 4px;
+	padding: 2px 10px;
+	*opacity: 0.8;*
 }
 .direction-l .time-wrapper {
 	float: left;
@@ -809,10 +745,9 @@ opacity: 0.2
 	margin: 1em 0.75em 0 1.5em;
 	font-size: 0.77777em;
 	line-height: 1.3em;
-	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	color: #333;
-	opacity: 0.3;
+	opacity: 0.5;
 }
 .direction-r .desc {
 	margin: 1em 1.5em 0 0.75em;
@@ -899,6 +834,9 @@ opacity: 0.2
 	padding: 1em;
 	z-index: 15;
 }
+.desc .yymm {
+	font-style: italic;
+}
 .direction-l .desc, .direction-r .desc {
 	position: relative;
 	margin: 1em 1em 0 1.5em;
@@ -923,7 +861,7 @@ opacity: 0.2
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
-	padding-bottom: 120px;/*height: calc(100   - 100px) !important;*/
+	padding-bottom: 120px;
 }
 .pic_wrap .min li {
 	background-color: #fff;
@@ -968,13 +906,13 @@ opacity: 0.2
 	color: #ffffff;
 	font-size: 15px;
 	font-weight: 700;
+	text-align: center;
 	margin: 0;
 }
 .pic_wrap .min li .details p {
 	margin: 10px 0 0 0;
 	color: #ffffff;
 	font-size: 12px;
-	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 100;
 }
 #smoke {
@@ -996,11 +934,6 @@ opacity: 0
 opacity: 1
 }
 }
-/*.show #smoke {
-	opacity: 0;
-	display: block;
-	transition: opacity 3s ease;
-}*/
 #smoke span {
 	position: absolute;
 	bottom: -35px;
