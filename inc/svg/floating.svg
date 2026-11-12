@@ -7,6 +7,8 @@
   }
   .float {
     width: 120px;
+    /* 사파리 GPU 가속 및 렌더링 최적화 */
+    will-change: transform;
     /* 유기체 특유의 부드러운 입체감(그림자 및 광채) 부여 */
     filter: drop-shadow(0px 12px 16px rgba(42, 193, 188, 0.25)) 
             drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
@@ -14,26 +16,37 @@
   }
   .gradient_bg {
     fill: url(#svg_gradient);
+    /* 모바일 브라우저 그라데이션 부드러운 전환 최적화 */
+    animation: gradientCycle 6s ease infinite;
   }
   body {
     background-color: #222;
   }
-  /* 전체적인 상하 유영(Float) 효과 추가 */
+  
+  /* 전체적인 상하 유영(Float) 효과 추가 (사파리 호환 변환) */
   @keyframes floatUpDown {
     0% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-8px) rotate(3deg); }
     100% { transform: translateY(4px) rotate(-2deg); }
   }
+
+  /* SVG 내부 stop-color 애니메이션을 대체하는 CSS 그라데이션 애니메이션 */
+  @keyframes gradientCycle {
+    0% { stop-color: #2AC1BC; }
+    33% { stop-color: #B9A7E9; }
+    66% { stop-color: #FF85A1; }
+    100% { stop-color: #2AC1BC; }
+  }
 </style>
-    <!-- 3가지 색상이 순환하는 유기적 그라데이션 -->
+    <!-- CSS 제어가 가능하도록 표준 그라데이션 ID 구성 -->
     <linearGradient id="svg_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#2AC1BC">
+        <stop offset="0%" style="stop-color:#2AC1BC">
           <animate attributeName="stop-color" values="#2AC1BC; #B9A7E9; #FF85A1; #2AC1BC" dur="6s" repeatCount="indefinite"></animate>
         </stop>
-        <stop offset="50%" stop-color="#B9A7E9">
+        <stop offset="50%" style="stop-color:#B9A7E9">
           <animate attributeName="stop-color" values="#B9A7E9; #FF85A1; #2AC1BC; #B9A7E9" dur="6s" repeatCount="indefinite"></animate>
         </stop>
-        <stop offset="100%" stop-color="#FF85A1">
+        <stop offset="100%" style="stop-color:#FF85A1">
           <animate attributeName="stop-color" values="#FF85A1; #2AC1BC; #B9A7E9; #FF85A1" dur="6s" repeatCount="indefinite"></animate>
         </stop>
       </linearGradient>
