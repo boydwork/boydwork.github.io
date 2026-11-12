@@ -301,9 +301,10 @@ ol, ul {
 	color: #1F2937;
 	opacity: 0.85;
 }
+
 @media screen and (max-width: 660px) {
 	.word {
-		width: 320px;
+		width: 280px;
 	}
 }
 @media screen and (min-width: 660px) {
@@ -623,7 +624,7 @@ ol, ul {
 	.direction-r .desc {
 		position: relative;
 		margin: 0.5em 1em 0 1.6em;
-		padding: 4em;
+		padding: 3em;
 		z-index: 15;
 	}
 }
