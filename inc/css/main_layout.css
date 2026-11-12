@@ -74,10 +74,9 @@ ol, ul {
 }
 .shake {
 	animation-name: shake;
-	animation-duration: 100ms;
-	animation-iteration-count: infinite;
+	animation-duration: 400ms; /* 흔들리는 전체 지속 시간 */
+	animation-iteration-count: 1; /* 딱 한 번만 흔들림 */
 	animation-timing-function: ease-in-out;
-	animation-delay: 1s;
 }
 @keyframes shake {
 	0% { transform: translate(0px, 0px) rotate(0deg); }
@@ -139,55 +138,60 @@ ol, ul {
 	color: #ffffff;
 	font-size: .9em;
 	text-align: center;
-	line-height: 1.0;
-	animation: fade 5s ease none;
-}
-@keyframes fade {
-	0%, 15% { opacity: 0; }
-	45%, 100% { opacity: 1; }
+	line-height: 1.2;
 }
 .sub_instructions {
 	line-height: 2em;
 	color: #ffffff;
 	font-size: .8em;
 	font-weight: 400;
-	opacity: 0.85;
+	opacity: 0; /* JS에서 타이핑 완료 후 서서히 나타나도록 처리 */
+	transition: opacity 0.5s ease;
 }
 #mouse_scroll {
 	position: absolute;
 	width: 100%;
-	bottom: 50px;
-	animation: fade 20s ease none;
+	bottom: 40px;
+	animation: fade 2s ease infinite; /* 서서히 나타났다가 은은하게 반복되는 페이드 효과 추가 */
 }
 #mouse_scroll .mouse {
-	width: 20px;
-	height: 35px;
+	width: 22px;
+	height: 36px;
 	margin: 0 auto;
-	border-radius: 25px;
-	border: 2px solid #ffffff;
+	border-radius: 14px;
+	border: 1.5px solid rgba(255, 255, 255, 0.7); /* 선을 살짝 가늘고 투명하게 주어 세련미 강조 */
+	background: rgba(255, 255, 255, 0.05); /* 미세한 반투명 배경으로 입체감 부여 */
+	box-sizing: border-box;
 }
 #mouse_scroll .mouse_in {
 	width: 3px;
-	height: 3px;
-	border-radius: 50px;
+	height: 6px; /* 점 모양에서 길쭉한 타원형(휠 모양)으로 변경하여 직관성 향상 */
+	border-radius: 3px;
 	display: block;
-	margin: 5px auto;
+	margin: 6px auto 0;
 	background: #ffffff;
 	position: relative;
-	-webkit-animation: mouse 1.2s ease infinite;
-	-moz-animation: mouse 1.2s ease infinite;
-	animation: mouse 1.2s ease infinite;
+	-webkit-animation: mouse 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+	-moz-animation: mouse 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+	animation: mouse 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
+
+/* 부드럽고 자연스러운 가속도(Easing)를 준 모션 키프레임 */
 @-webkit-keyframes mouse {
 	0% {
 		opacity: 1;
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
+	70% {
+		opacity: 0.2;
+		-webkit-transform: translateY(14px);
+		transform: translateY(14px);
+	}
 	100% {
 		opacity: 0;
-		-webkit-transform: translateY(20px);
-		transform: translateY(20px);
+		-webkit-transform: translateY(14px);
+		transform: translateY(14px);
 	}
 }
 @keyframes mouse {
@@ -195,9 +199,13 @@ ol, ul {
 		opacity: 1;
 		transform: translateY(0);
 	}
+	70% {
+		opacity: 0.2;
+		transform: translateY(14px);
+	}
 	100% {
 		opacity: 0;
-		transform: translateY(20px);
+		transform: translateY(14px);
 	}
 }
 .name_wrap {
@@ -545,7 +553,7 @@ ol, ul {
 	color: #191919;
 }
 .position .job {
-	font-size: 1.8em;
+	font-size: 1.8em;노
 	font-weight: 200;
 	line-height: 1.5em;
 }
@@ -706,32 +714,114 @@ ol, ul {
 	margin-left: -20px;
 	height: 0px;
 	width: 0px;
-	border: 35px solid #ffffff;
-	border-radius: 35px;
-	left: -14px;
+	border: 30px solid #ffffff;
+	border-radius: 50%;
 	opacity: 0;
+	filter: blur(2px); /* 연기 특유의 뿌연 질감을 위한 블러 효과 */
 	transform: scale(0.2) translate(0, 0);
 }
+
+/* 좌측으로 피어오르며 흔들리는 모션 */
 @keyframes smokeL {
-	0% { transform: scale(0.1) translate(0, 0); }
-	10% { opacity: 1; transform: scale(0.2) translate(0, -6px); }
-	100% { opacity: 0; transform: scale(1) translate(-20px, -130px); }
+	0% { 
+		opacity: 0; 
+		transform: scale(0.1) translate(0, 0) rotate(0deg); 
+	}
+	15% { 
+		opacity: 0.6; 
+		transform: scale(0.4) translate(-10px, -30px) rotate(45deg); 
+	}
+	60% { 
+		opacity: 0.3; 
+		transform: scale(0.8) translate(-25px, -80px) rotate(90deg); 
+	}
+	100% { 
+		opacity: 0; 
+		transform: scale(1.2) translate(-15px, -140px) rotate(135deg); 
+	}
 }
+
+/* 우측으로 피어오르며 흔들리는 모션 */
 @keyframes smokeR {
-	0% { opacity: 0; transform: scale(0.0) translate(0, 0); }
-	10% { opacity: 1; transform: scale(0.1) translate(0, -5px); }
-	100% { opacity: 0; transform: scale(1) translate(20px, -130px); }
+	0% { 
+		opacity: 0; 
+		transform: scale(0.1) translate(0, 0) rotate(0deg); 
+	}
+	15% { 
+		opacity: 0.6; 
+		transform: scale(0.4) translate(10px, -30px) rotate(-45deg); 
+	}
+	60% { 
+		opacity: 0.3; 
+		transform: scale(0.8) translate(25px, -80px) rotate(-90deg); 
+	}
+	100% { 
+		opacity: 0; 
+		transform: scale(1.2) translate(15px, -140px) rotate(-135deg); 
+	}
 }
-#smoke .s0 { animation: smokeL 10s 0s infinite; }
-#smoke .s1 { animation: smokeR 10s 1s infinite; }
-#smoke .s2 { animation: smokeL 10s 2s infinite; }
-#smoke .s3 { animation: smokeR 10s 3s infinite; }
-#smoke .s4 { animation: smokeL 10s 4s infinite; }
-#smoke .s5 { animation: smokeR 10s 5s infinite; }
-#smoke .s6 { animation: smokeL 10s 6s infinite; }
-#smoke .s7 { animation: smokeR 10s 7s infinite; }
-#smoke .s8 { animation: smokeL 10s 8s infinite; }
-#smoke .s9 { animation: smokeR 10s 9s infinite; }
+
+#smoke .s0 { animation: smokeL 8s 0s infinite ease-out; }
+#smoke .s1 { animation: smokeR 8s 0.8s infinite ease-out; }
+#smoke .s2 { animation: smokeL 8s 1.6s infinite ease-out; }
+#smoke .s3 { animation: smokeR 8s 2.4s infinite ease-out; }
+#smoke .s4 { animation: smokeL 8s 3.2s infinite ease-out; }
+#smoke .s5 { animation: smokeR 8s 4.0s infinite ease-out; }
+#smoke .s6 { animation: smokeL 8s 4.8s infinite ease-out; }
+#smoke .s7 { animation: smokeR 8s 5.6s infinite ease-out; }
+#smoke .s8 { animation: smokeL 8s 6.4s infinite ease-out; }
+#smoke .s9 { animation: smokeR 8s 7.2s infinite ease-out; }
+
+/* 좌측으로 피어오르며 흔들리는 모션 */
+@keyframes smokeL {
+	0% { 
+		opacity: 0; 
+		transform: scale(0.1) translate(0, 0) rotate(0deg); 
+	}
+	15% { 
+		opacity: 0.6; 
+		transform: scale(0.4) translate(-10px, -30px) rotate(45deg); 
+	}
+	60% { 
+		opacity: 0.3; 
+		transform: scale(0.8) translate(-25px, -80px) rotate(90deg); 
+	}
+	100% { 
+		opacity: 0; 
+		transform: scale(1.2) translate(-15px, -140px) rotate(135deg); 
+	}
+}
+
+/* 우측으로 피어오르며 흔들리는 모션 */
+@keyframes smokeR {
+	0% { 
+		opacity: 0; 
+		transform: scale(0.1) translate(0, 0) rotate(0deg); 
+	}
+	15% { 
+		opacity: 0.6; 
+		transform: scale(0.4) translate(10px, -30px) rotate(-45deg); 
+	}
+	60% { 
+		opacity: 0.3; 
+		transform: scale(0.8) translate(25px, -80px) rotate(-90deg); 
+	}
+	100% { 
+		opacity: 0; 
+		transform: scale(1.2) translate(15px, -140px) rotate(-135deg); 
+	}
+}
+
+#smoke .s0 { animation: smokeL 8s 0s infinite ease-out; }
+#smoke .s1 { animation: smokeR 8s 0.8s infinite ease-out; }
+#smoke .s2 { animation: smokeL 8s 1.6s infinite ease-out; }
+#smoke .s3 { animation: smokeR 8s 2.4s infinite ease-out; }
+#smoke .s4 { animation: smokeL 8s 3.2s infinite ease-out; }
+#smoke .s5 { animation: smokeR 8s 4.0s infinite ease-out; }
+#smoke .s6 { animation: smokeL 8s 4.8s infinite ease-out; }
+#smoke .s7 { animation: smokeR 8s 5.6s infinite ease-out; }
+#smoke .s8 { animation: smokeL 8s 6.4s infinite ease-out; }
+#smoke .s9 { animation: smokeR 8s 7.2s infinite ease-out; }
 #footer {
 	position: absolute;
 	bottom: 0;

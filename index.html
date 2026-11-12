@@ -46,6 +46,49 @@
         $(this).toggleClass('active').siblings().removeClass('active');
       });
     });
+    $(document).ready(function() {
+    // ... 기존 fullpage 및 기타 코드들 ...
+
+    // 시그니처 아이콘(.sign 또는 .btn)을 클릭했을 때
+    $('.intro_wrap .container .btn, .intro_wrap .container .sign').on('click', function() {
+        const $sign = $('.intro_wrap .container .sign');
+        
+        // 이미 애니메이션 중이 아닐 때만 클래스 추가 (중복 실행 방지)
+        if (!$sign.hasClass('shake')) {
+            $sign.addClass('shake');
+            
+            // CSS animation-duration(400ms)과 동일한 시간이 지난 후 클래스 제거
+            setTimeout(function() {
+                $sign.removeClass('shake');
+            }, 400);
+          }
+        });
+    });
+    $(document).ready(function() {
+    // ... 기존 fullpage 및 기타 초기화 코드 ...
+
+    // 타이핑 효과 구현 함수
+    const text = "Hello, Stranger";
+    let i = 0;
+    const speed = 100; // 글자가 타이핑되는 속도 (밀리초, 숫자가 작을수록 빠름)
+
+    function typeWriter() {
+        if (i < text.length) {
+            $('.typed-text').append(text.charAt(i));
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            // 타이핑이 모두 끝난 후 하단 '반가워요.' 서브 문구 페이드인 등 추가 연출 가능
+            $('.sub_instructions').animate({ opacity: 1 }, 500);
+        }
+    }
+
+    // 초기 서브 문구 투명도 0으로 시작 (선택 사항)
+    $('.sub_instructions').css('opacity', 0);
+
+    // 페이지 로드 후 약간의 딜레이를 두고 타이핑 시작
+    setTimeout(typeWriter, 600);
+  });
 </script>
 </head>
 <body>
@@ -57,7 +100,10 @@
       <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg">
       </object>
       <a class="btn"></a> </div>
-    <div class="instructions">Hello, Stranger<br/><span class="sub_instructions">반가워요.</span></div> 
+    <div class="instructions">
+      <span class="typed-text"></span><br/>
+      <span class="sub_instructions">반가워요.</span>
+    </div>
     <div id="mouse_scroll">
       <div class="mouse">
         <div class="mouse_in"></div>
