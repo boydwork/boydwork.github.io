@@ -615,7 +615,7 @@ ol, ul {
 	.direction-r .desc {
 		position: relative;
 		margin: 0.5em 1em 0 1.6em;
-		padding: 1em;
+		padding: 4em;
 		z-index: 15;
 	}
 }
