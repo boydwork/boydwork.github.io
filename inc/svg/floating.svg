@@ -1,78 +1,66 @@
 <svg class="float" id="layer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 320.68 320.69" xml:space="preserve">
    <defs>
     <style type="text/css">
-  .line {
-    text-align: center;
-    border-radius: 100%;
-  }
   .float {
     width: 120px;
-    /* 사파리 GPU 가속 및 렌더링 최적화 */
+    /* iOS Safari GPU 가속 및 렌더링 최적화 */
     will-change: transform;
-    /* 유기체 특유의 부드러운 입체감(그림자 및 광채) 부여 */
+    transform-origin: center center;
+    /* 입체적인 그림자 효과 */
     filter: drop-shadow(0px 12px 16px rgba(42, 193, 188, 0.25)) 
             drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
-    animation: floatUpDown 6s ease-in-out infinite alternate;
+    /* 사파리에서 완벽히 작동하는 CSS 유영 및 크기 변형 애니메이션 */
+    animation: organicMotion 6s ease-in-out infinite alternate;
   }
+  
   .gradient_bg {
     fill: url(#svg_gradient);
-    /* 모바일 브라우저 그라데이션 부드러운 전환 최적화 */
-    animation: gradientCycle 6s ease infinite;
   }
+
   body {
     background-color: #222;
   }
   
-  /* 전체적인 상하 유영(Float) 효과 추가 (사파리 호환 변환) */
-  @keyframes floatUpDown {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(3deg); }
-    100% { transform: translateY(4px) rotate(-2deg); }
+  /* 아이폰에서도 완벽히 작동하는 웨이브 및 회전 모션 */
+  @keyframes organicMotion {
+    0% { 
+      transform: translateY(0px) rotate(0deg) scale(1); 
+    }
+    33% { 
+      transform: translateY(-6px) rotate(2deg) scale(1.03, 0.97); 
+    }
+    66% { 
+      transform: translateY(4px) rotate(-2deg) scale(0.97, 1.02); 
+    }
+    100% { 
+      transform: translateY(-4px) rotate(1deg) scale(1.02, 1.01); 
+    }
   }
 
-  /* SVG 내부 stop-color 애니메이션을 대체하는 CSS 그라데이션 애니메이션 */
-  @keyframes gradientCycle {
+  /* 사파리 호환 부드러운 그라데이션 색상 순환 효과 */
+  @keyframes gradientLoop {
     0% { stop-color: #2AC1BC; }
     33% { stop-color: #B9A7E9; }
     66% { stop-color: #FF85A1; }
     100% { stop-color: #2AC1BC; }
   }
+
+  .stop1 { animation: gradientLoop 6s infinite; }
+  .stop2 { animation: gradientLoop 6s infinite; animation-delay: -2s; }
+  .stop3 { animation: gradientLoop 6s infinite; animation-delay: -4s; }
 </style>
-    <!-- CSS 제어가 가능하도록 표준 그라데이션 ID 구성 -->
+
+    <!-- 표준 그라데이션 정의 -->
     <linearGradient id="svg_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#2AC1BC">
-          <animate attributeName="stop-color" values="#2AC1BC; #B9A7E9; #FF85A1; #2AC1BC" dur="6s" repeatCount="indefinite"></animate>
-        </stop>
-        <stop offset="50%" style="stop-color:#B9A7E9">
-          <animate attributeName="stop-color" values="#B9A7E9; #FF85A1; #2AC1BC; #B9A7E9" dur="6s" repeatCount="indefinite"></animate>
-        </stop>
-        <stop offset="100%" style="stop-color:#FF85A1">
-          <animate attributeName="stop-color" values="#FF85A1; #2AC1BC; #B9A7E9; #FF85A1" dur="6s" repeatCount="indefinite"></animate>
-        </stop>
-      </linearGradient>
+        <stop offset="0%" stop-color="#2AC1BC" class="stop1"></stop>
+        <stop offset="50%" stop-color="#B9A7E9" class="stop2"></stop>
+        <stop offset="100%" stop-color="#FF85A1" class="stop3"></stop>
+    </linearGradient>
   </defs>
 
+<!-- 고정된 아름다운 유기체 패스 (아이폰 호환용) -->
 <path class="gradient_bg" d="M276,160.35c0,34.78-15.35,65.98-39.65,87.18c-20.33,17.74-46.91,28.48-76.01,28.48
     c-31.94,0-60.85-12.95-81.78-33.88s-33.88-49.85-33.88-81.78c0-30.41,11.73-58.07,30.92-78.72c21.12-22.73,51.27-36.94,84.74-36.94
     c30.23,0,57.74,11.59,78.35,30.58C261.63,96.4,276,126.69,276,160.35z">
-  <animate attributeName="d" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" begin="0s" dur="5s" repeatCount="indefinite" values="
-    M276,160.35c0,34.78-15.35,65.98-39.65,87.18c-20.33,17.74-46.91,28.48-76.01,28.48
-    c-31.94,0-60.85-12.95-81.78-33.88s-33.88-49.85-33.88-81.78c0-30.41,11.73-58.07,30.92-78.72
-    c21.12-22.73,51.27-36.94,84.74-36.94c30.23,0,57.74,11.59,78.35,30.58C261.63,96.4,276,126.69,276,160.35z
-    ;
-    M282,145.7c0,22.12-8.39,48.02-37.7,70.01C218.42,238.11,202,278.66,152,275.66
-    c-34.94-2.11-66.85-18.95-84.78-43.88s-27.34-58.94-23.34-93.78c3.9-33.81,28.01-51.19,53.2-74.84
-    c24.12-22.73,42.99-36.82,79.46-32.82c33.23,3.61,54.85,27.73,71.39,53.33
-    C267.4,111.59,282,123.71,282,145.7z
-    ;
-    M268,168.35c0,42.78-29.47,48.59-53.77,69.79c-24.33,21.74-55.79,35.87-84.89,30.87
-    c-28.94-4.99-43.34-31.08-64.27-52.01s-50.39-38.71-41.39-75.65c9-36.41,31.71-47.05,50.9-67.7
-    c21.12-22.73,48.29-47.96,81.76-41.96c31.23,5.64,51.74,25.59,72.35,48.58
-    C256.63,101.4,268,134.69,268,168.35z
-    ;
-    M276,160.35c0,34.78-15.35,65.98-39.65,87.18c-20.33,17.74-46.91,28.48-76.01,28.48
-    c-31.94,0-60.85-12.95-81.78-33.88s-33.88-49.85-33.88-81.78c0-30.41,11.73-58.07,30.92-78.72
-    c21.12-22.73,51.27-36.94,84.74-36.94c30.23,0,57.74,11.59,78.35,30.58C261.63,96.4,276,126.69,276,160.35z
-    " />
 </path>
 </svg>
