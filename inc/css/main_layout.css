@@ -656,6 +656,7 @@ ol, ul {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	border-radius: 8px;
 	overflow: hidden;
 	cursor: zoom-in;
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
