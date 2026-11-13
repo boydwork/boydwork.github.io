@@ -32,6 +32,59 @@ html, body {
   z-index: 9999;
 }
 
+/* 화면 테두리를 어둡게 만들어 창가에 있는 듯한 깊이감 부여 (비네팅) */
+.night-sky::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.85), inset 0 0 200px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+  z-index: 10003;
+}
+
+/* 은은한 무드 조명 */
+.ambient-light {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(60, 90, 130, 0.15) 0%, rgba(10, 15, 30, 0) 70%);
+  pointer-events: none;
+  z-index: 10000;
+  filter: blur(40px);
+}
+
+/* --- 물안개(Fog) 효과 스타일 및 애니메이션 --- */
+@keyframes fogMove {
+  0% {
+    transform: translateX(-20%) translateY(0);
+  }
+  50% {
+    transform: translateX(10%) translateY(-2%);
+  }
+  100% {
+    transform: translateX(-20%) translateY(0);
+  }
+}
+
+.fog-layer {
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 160%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(100, 120, 150, 0.08) 0%, rgba(30, 40, 60, 0.03) 50%, transparent 70%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 10001; /* 배경 위, 비 아래에 배치 */
+  filter: blur(50px);
+  animation: fogMove 15s ease-in-out infinite;
+}
+
 /* 비 컨테이너 */
 .rain {
   position: absolute;
@@ -43,12 +96,12 @@ html, body {
 }
 
 .rain.front-row {
-  z-index: 10001;
+  z-index: 10004; /* 안개보다 앞으로 오게 설정하여 원근감 부여 */
 }
 
 .rain.back-row {
-  z-index: 10000;
-  opacity: 0.25; /* 멀리 있는 비는 희미하게 */
+  z-index: 10002;
+  opacity: 0.25; 
 }
 
 /* 빗방울 기본 낙하 스타일 */

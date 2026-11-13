@@ -670,7 +670,7 @@ ol, ul {
 	display: none;
 }
 
-/* 갤러리 라이트박스 모달 (하단 빈틈 없이 전체 화면 덮음) */
+/* 갤러리 라이트박스 모달 (모바일 화면 핏 수정) */
 #gallery-lightbox {
 	position: fixed;
 	top: 0;
@@ -679,7 +679,7 @@ ol, ul {
 	bottom: 0;
 	width: 100vw;
 	height: 100vh;
-	min-height: 100lvh;
+	height: 100dvh; /* 모바일 주소창 영역 완벽 대응 */
 	z-index: 10000;
 	background: rgba(0, 0, 0, 0.96);
 	backdrop-filter: blur(14px);
@@ -688,7 +688,7 @@ ol, ul {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	padding: calc(24px + env(safe-area-inset-top)) 20px calc(24px + env(safe-area-inset-bottom));
+	padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.28s ease;
@@ -700,9 +700,11 @@ ol, ul {
 #gallery-lightbox .lb-content {
 	max-width: 820px;
 	width: 100%;
+	max-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	text-align: center;
 	transform: scale(0.96);
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -710,9 +712,15 @@ ol, ul {
 #gallery-lightbox.is-open .lb-content {
 	transform: scale(1);
 }
+#gallery-lightbox .lb-img-wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 #gallery-lightbox .lb-img-wrap img {
 	max-width: 100%;
-	max-height: 66dvh;
+	max-height: 60dvh; /* 모바일 화면에서 이미지가 잘리지 않도록 최대 높이 제한[cite: 11] */
 	width: auto;
 	height: auto;
 	border-radius: 8px;
@@ -720,7 +728,7 @@ ol, ul {
 	object-fit: contain;
 }
 #gallery-lightbox .lb-caption {
-	margin-top: 18px;
+	margin-top: 12px;
 	color: #ffffff;
 	padding: 0 16px;
 }
