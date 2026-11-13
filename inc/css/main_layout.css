@@ -27,12 +27,6 @@ ol, ul {
 }
 /* default CSS */
 
-/* fullpage 섹션이 툴바 포함 전체 화면(100lvh)을 채우도록 보정 */
-.section,
-.fp-tableCell {
-	height: 100lvh !important;
-}
-
 /* CSS */
 .intro_wrap {
 	background: linear-gradient(-45deg, #87f252, #00aeff, #87f252, #00aeff);
