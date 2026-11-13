@@ -63,14 +63,13 @@
       }
     });
 
-    // 2. 갤러리 라이트박스 (그리드 클릭 시 원본 비율 확대 모달)
-    var $galleryItems = $('.pic_wrap .min li');
+    // 2. 갤러리 라이트박스 DOM 생성 (CLOSE 텍스트 버튼 적용)
     var currentGalleryIndex = 0;
+    var $galleryItems = $('.pic_wrap .min li');
 
     var $lightbox = $(
       '<div id="gallery-lightbox" role="dialog" aria-modal="true">' +
-        '<button type="button" class="lb-close" aria-label="닫기">&times;</button>' +
-        '<button type="button" class="lb-nav lb-prev" aria-label="이전">&#10094;</button>' +
+        '<button type="button" class="lb-close" aria-label="닫기">CLOSE</button>' +
         '<div class="lb-content">' +
           '<div class="lb-img-wrap"><img src="" alt="" /></div>' +
           '<div class="lb-caption">' +
@@ -79,81 +78,61 @@
             '<p class="lb-desc"></p>' +
           '</div>' +
         '</div>' +
-        '<button type="button" class="lb-nav lb-next" aria-label="다음">&#10095;</button>' +
       '</div>'
     );
     $('body').append($lightbox);
 
+    // 라이트박스 오픈 함수
     function openLightbox(index) {
-      if (index < 0) index = $galleryItems.length - 1;
-      if (index >= $galleryItems.length) index = 0;
       currentGalleryIndex = index;
-
       var $item = $galleryItems.eq(index);
-      var bgUrl = $item.css('background-image').replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
-      var titleHtml = $item.find('.details h3').html() || '';
-      var titleText = titleHtml.replace(/<br\s*\/?>/gi, ' ');
-      var descText = $item.attr('data-desc') || '';
+      
+      // 배경 이미지 URL 추출
+      var bgImage = $item.css('background-image');
+      var imageUrl = bgImage.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+      
+      var title = $item.find('.details h3').text();
+      var desc = $item.attr('data-desc') || '';
+      var total = $galleryItems.length;
 
-      $lightbox.find('.lb-img-wrap img').attr({ src: bgUrl, alt: titleText });
-      $lightbox.find('.lb-counter').text((index + 1) + ' / ' + $galleryItems.length);
-      $lightbox.find('.lb-title').text(titleText);
-      $lightbox.find('.lb-desc').text(descText);
+      $lightbox.find('img').attr('src', imageUrl);
+      $lightbox.find('.lb-counter').text((index + 1) + ' / ' + total);
+      $lightbox.find('.lb-title').text(title);
+      $lightbox.find('.lb-desc').text(desc);
 
       $lightbox.addClass('is-open');
       $('body').addClass('lb-open');
-      if ($.fn.fullpage && $.fn.fullpage.setAllowScrolling) {
-        $.fn.fullpage.setAllowScrolling(false);
-        $.fn.fullpage.setKeyboardScrolling(false);
-      }
     }
 
+    // 라이트박스 닫기 함수
     function closeLightbox() {
       $lightbox.removeClass('is-open');
       $('body').removeClass('lb-open');
-      if ($.fn.fullpage && $.fn.fullpage.setAllowScrolling) {
-        $.fn.fullpage.setAllowScrolling(true);
-        $.fn.fullpage.setKeyboardScrolling(true);
-      }
     }
 
-    $galleryItems.on('click', function(e) {
-      e.stopPropagation();
-      openLightbox($galleryItems.index(this));
+    // 갤러리 이미지 클릭 시 라이트박스 오픈
+    $galleryItems.on('click', function() {
+      var index = $galleryItems.index(this);
+      openLightbox(index);
     });
 
-    $lightbox.find('.lb-close').on('click', closeLightbox);
-    $lightbox.find('.lb-prev').on('click', function(e) {
+    // 닫기 버튼 클릭
+    $lightbox.on('click', '.lb-close', function(e) {
       e.stopPropagation();
-      openLightbox(currentGalleryIndex - 1);
-    });
-    $lightbox.find('.lb-next').on('click', function(e) {
-      e.stopPropagation();
-      openLightbox(currentGalleryIndex + 1);
+      closeLightbox();
     });
 
+    // 배경(딤드 영역) 클릭 시 닫기
     $lightbox.on('click', function(e) {
-      if ($(e.target).is('#gallery-lightbox')) {
+      if ($(e.target).closest('.lb-content').length === 0) {
         closeLightbox();
       }
     });
 
+    // ESC 키로 닫기
     $(document).on('keydown', function(e) {
-      if (!$lightbox.hasClass('is-open')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') openLightbox(currentGalleryIndex - 1);
-      if (e.key === 'ArrowRight') openLightbox(currentGalleryIndex + 1);
-    });
-
-    var lbStartX = 0;
-    $lightbox.on('touchstart', function(e) {
-      lbStartX = e.originalEvent.touches[0].pageX;
-    });
-    $lightbox.on('touchend', function(e) {
-      var lbDiffX = e.originalEvent.changedTouches[0].pageX - lbStartX;
-      if (Math.abs(lbDiffX) > 45) {
-        if (lbDiffX < 0) openLightbox(currentGalleryIndex + 1);
-        else openLightbox(currentGalleryIndex - 1);
+      if (e.key === 'Escape') {
+        closeLightbox();
       }
     });
 
@@ -226,7 +205,8 @@
     });
 
     // 6. 배경 또는 토스트 클릭 시 즉시 닫기
-    $(document).on('click', function() {
+    $(document).on('click', function(e) {
+      if ($(e.target).closest('#gallery-lightbox').length > 0) return;
       $('#skill-toast').removeClass('is-visible');
       $('.skills a').removeClass('is-open');
       clearTimeout(toastTimer);
