@@ -6,7 +6,6 @@
 	-webkit-text-size-adjust: 100%;
 }
 html, body {
-	background-color: #000000;
 	height: 100%;
 	min-height: 100%;
 }
@@ -252,7 +251,7 @@ ol, ul {
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 1.7;
-	opacity: 0.8;
+	opacity: 0.5;
 }
 .svg_box_type1 {
 	pointer-events: none;
@@ -547,7 +546,7 @@ ol, ul {
 	line-height: 1.6;
 	font-weight: 400;
 	color: #1F2937;
-	opacity: 0.85;
+	opacity: 0.7;
 }
 .direction-r .desc {
 	margin: 1em 1.5em 0 0.75em;
@@ -609,10 +608,11 @@ ol, ul {
 	}
 }
 
-/* 갤러리 그리드 (데스크톱 4열 / 태블릿 3열 / 모바일 2열, 호버 딤드 텍스트 제거) */
+/* 갤러리 그리드 */
 .pic_wrap .fp-tableCell {
 	vertical-align: top;
 	width: 100%;
+	background-color: #000000;
 }
 .pic_wrap .fp-scrollable,
 .pic_wrap .fp-scroller,
@@ -665,12 +665,11 @@ ol, ul {
 .pic_wrap .min .column_dark {
 	background-color: #333;
 }
-/* 호버 딤드 텍스트 노출 제거 (라이트박스 제목 데이터 참조용으로만 유지) */
 .pic_wrap .min li .details {
 	display: none;
 }
 
-/* 갤러리 라이트박스 모달 (모바일 화면 핏 및 하단 바 간격 완벽 대응) */
+/* 갤러리 라이트박스 모달 */
 #gallery-lightbox {
 	position: fixed;
 	top: 0;
@@ -708,7 +707,6 @@ ol, ul {
 	text-align: center;
 	transform: scale(0.96);
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-	/* 모바일 하단 브라우저 바와 겹치지 않도록 여유 공간 확보 */
 	padding-bottom: 20px;
 	box-sizing: border-box;
 }
@@ -723,7 +721,7 @@ ol, ul {
 }
 #gallery-lightbox .lb-img-wrap img {
 	max-width: 100%;
-	max-height: 52dvh; /* 모바일에서 텍스트와 버튼 공간을 위해 이미지 최대 높이 조정 */
+	max-height: 52dvh;
 	width: auto;
 	height: auto;
 	border-radius: 8px;
@@ -775,7 +773,7 @@ ol, ul {
 }
 #gallery-lightbox .lb-nav {
 	position: fixed;
-	top: 48%; /* 이미지 중앙에 오도록 위치 미세 조정 */
+	top: 48%;
 	transform: translateY(-50%);
 	width: 40px;
 	height: 40px;
