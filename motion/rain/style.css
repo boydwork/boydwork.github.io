@@ -1,136 +1,103 @@
-html {
+/* 화면 전체 고정 및 어두운 밤하늘 배경 */
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #00000c;
+  background-color: #00000c !important;
   overflow: hidden;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* 밤하늘 번개 번쩍임 애니메이션 */
+/* 불규칙하게 번쩍이는 밤하늘 번개 애니메이션 */
 @keyframes flash {
-  0%, 90%, 94%, 98%, 100% {
-    opacity: 1;
-    background: #00000c;
+  0%, 78%, 82%, 85%, 95%, 100% {
+    background-color: #00000c;
   }
-  92%, 96% {
-    opacity: 1;
-    background: #2b3b55;
+  80%, 83% {
+    background-color: #2b3b55; /* 번개 섬광 */
+  }
+  96% {
+    background-color: #1a2536; /* 잔광 */
   }
 }
 
-.bg-lightning {
-  animation: flash 7s infinite steps(1, start);
+.night-sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000c;
+  animation: flash 9s infinite;
+  z-index: 9999;
 }
 
-.sky-gradient {
-   position: relative;
-   z-index: 1;
-   float: left;
-   width: 100%;
-   height: 100vh;
-}
-
-.sky-gradient-00 {
-   background: #00000c;
-}
-
+/* 비 컨테이너 */
 .rain {
   position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
   pointer-events: none;
+}
+
+.rain.front-row {
+  z-index: 10001;
 }
 
 .rain.back-row {
-  display: block;
-  z-index: 1;
-  bottom: 60px;
-  opacity: 0.5; /* 뒷줄 비는 약간 흐리게 표현하여 원근감 부여 */
+  z-index: 10000;
+  opacity: 0.25; /* 멀리 있는 비는 희미하게 */
 }
 
+/* 빗방울 기본 낙하 스타일 */
 .drop {
   position: absolute;
   bottom: 100%;
-  width: 15px;
-  height: 120px;
   pointer-events: none;
-  animation: drop 0.5s linear infinite;
+  animation: drop linear infinite;
 }
 
 @keyframes drop {
   0% {
-    transform: translateY(0vh);
-  }
-  75% {
-    transform: translateY(90vh);
-    opacity: 1;
+    transform: translateY(-10vh);
   }
   100% {
-    transform: translateY(90vh);
-    opacity: 0;
+    transform: translateY(110vh);
   }
 }
+
+/* 빗방울 두께 및 선명도 타입별 정의 */
+.drop.type-1 { width: 6px; height: 70px; }
+.drop.type-1 .stem { width: 1px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.3)); }
+
+.drop.type-2 { width: 10px; height: 100px; }
+.drop.type-2 .stem { width: 1.5px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.6)); }
+
+.drop.type-3 { width: 14px; height: 130px; }
+.drop.type-3 .stem { width: 2px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.9)); }
 
 .stem {
-  width: 1px;
   height: 60%;
-  margin-left: 7px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  animation: stem 0.5s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes stem {
-  0% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* 바닥에 닿을 때 튀는(splat) 효과 활성화 및 스타일 수정 */
+/* 바닥 튀김 효과 */
 .splat {
-  width: 15px;
-  height: 10px;
-  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  width: 8px;
+  height: 4px;
+  border-top: 1.5px dotted rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0;
   transform: scale(0);
-  animation: splat 0.5s linear infinite;
-  display: block; /* 기존 none에서 block으로 변경하여 튀는 효과 노출 */
+  animation: splat 0.35s linear infinite;
+  margin: 0 auto;
 }
 
 @keyframes splat {
-  0% {
-    opacity: 1;
-    transform: scale(0);
-  }
-  75% {
-    opacity: 1;
-    transform: scale(0.2);
-  }
-  90% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
+  0% { opacity: 0; transform: scale(0); }
+  70% { opacity: 0.6; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(1.3); }
 }

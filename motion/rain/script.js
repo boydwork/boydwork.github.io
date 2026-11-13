@@ -1,21 +1,31 @@
-var makeItRain = function() {
-  //clear out everything
-  $('.rain').empty();
+$(document).ready(function() {
+  var makeItRain = function() {
+    $('.rain').empty();
 
-  var increment = 0;
-  var drops = "";
-  var backDrops = "";
+    var drops = "";
+    var backDrops = "";
+    
+    // 빗방울 120개 생성 (랜덤 위치, 속도, 타입 부여)
+    for (var i = 0; i < 120; i++) {
+      var randomLeft = Math.floor(Math.random() * 100); 
+      var randomDelay = (Math.random() * 2).toFixed(2);  
+      
+      // 앞줄 비 (빠름)
+      var randomFrontSpeed = (Math.random() * 0.23 + 0.22).toFixed(2);
+      // 뒷줄 비 (느림, 원근감)
+      var randomBackSpeed = (Math.random() * 0.35 + 0.55).toFixed(2);
+      
+      var dropType = Math.floor(Math.random() * 3) + 1;
+      var typeClass = "type-" + dropType;
 
-  while (increment < 100) {
-    //couple random numbers to use for various randomizations
-    var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
-    var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
-    increment += randoFiver;
-    drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
-    backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
-  }
+      drops += '<div class="drop ' + typeClass + '" style="left: ' + randomLeft + '%; animation-delay: ' + randomDelay + 's; animation-duration: ' + randomFrontSpeed + 's;"><div class="stem"></div><div class="splat"></div></div>';
+      
+      backDrops += '<div class="drop ' + typeClass + '" style="left: ' + (randomLeft + 3) + '%; animation-delay: ' + randomDelay + 's; animation-duration: ' + randomBackSpeed + 's;"><div class="stem"></div><div class="splat"></div></div>';
+    }
 
-  $('.rain.front-row').append(drops);
-  $('.rain.back-row').append(backDrops);
-};
-makeItRain();
+    $('.rain.front-row').append(drops);
+    $('.rain.back-row').append(backDrops);
+  };
+
+  makeItRain();
+});

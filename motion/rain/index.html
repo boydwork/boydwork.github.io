@@ -1,45 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<title>Rain & Lightning</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
-<!-- favicon -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="../inc/favicon/android-desktop.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Rain">
-<link rel="apple-touch-icon-precomposed" href="../inc/favicon/ios-desktop.png">
-<meta name="msapplication-TileImage" content="../inc/favicon/favicon.png">
-<meta name="msapplication-TileColor" content="#000000">
-<link rel="shortcut icon" href="../inc/favicon/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Rain & Lightning</title>
+<link rel="stylesheet" href="./style.css">
 </head>
-<body style="margin: 0;">
-<!-- bg-lightning 클래스를 추가하여 번개 번쩍임 효과 적용 -->
-<div id="fullpage" class="section bg bg-lightning">
- <div class="sky-gradient sky-gradient-00"></div>
- <div class="wrapper">
- </div>
- <div class="rain front-row"></div>
- <div class="rain back-row"></div>
-</div>  
-</body>
+<body>
+  <!-- 번개와 밤하늘 배경 -->
+  <div class="night-sky">
+    <!-- 빗물이 내리는 레이어 -->
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+  </div>  
+
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-  <script src="../inc/js/jquery.fullpage.js"></script>
   <script src="./script.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        anchors: ['intro'],
-        slidesNavigation: true,
-        controlArrows: false,
-        autoScrolling: true,
-        scrollBar: false,
-        scrollOverflow: true
-      });
-    });
-</script>
+</body>
 </html>
