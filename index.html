@@ -29,7 +29,7 @@
   $(document).ready(function() {
     var toastTimer;
 
-    // 1. fullpage 초기화 (토스트 자동 닫힘)
+    // 1. fullpage 초기화 (모바일 섹션 꽉참 보정 옵션 적용)
     $('#fullpage').fullpage({
       anchors: ['intro', 'Introduce', 'Experience', 'Info', 'Work'],
       navigation: true,
@@ -39,6 +39,8 @@
       autoScrolling: true,
       scrollBar: false,
       scrollOverflow: true,
+      fitToSection: true,
+      resize: true,
       onLeave: function(index, nextIndex) {
         $('#skill-toast').removeClass('is-visible');
         $('.skills a').removeClass('is-open');
