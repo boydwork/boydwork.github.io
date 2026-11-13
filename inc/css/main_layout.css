@@ -670,7 +670,7 @@ ol, ul {
 	display: none;
 }
 
-/* 갤러리 라이트박스 모달 (모바일 화면 핏 수정) */
+/* 갤러리 라이트박스 모달 (모바일 화면 핏 및 하단 바 간격 완벽 대응) */
 #gallery-lightbox {
 	position: fixed;
 	top: 0;
@@ -679,7 +679,7 @@ ol, ul {
 	bottom: 0;
 	width: 100vw;
 	height: 100vh;
-	height: 100dvh; /* 모바일 주소창 영역 완벽 대응 */
+	height: 100dvh;
 	z-index: 10000;
 	background: rgba(0, 0, 0, 0.96);
 	backdrop-filter: blur(14px);
@@ -688,7 +688,7 @@ ol, ul {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+	padding: calc(16px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom));
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.28s ease;
@@ -708,6 +708,9 @@ ol, ul {
 	text-align: center;
 	transform: scale(0.96);
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	/* 모바일 하단 브라우저 바와 겹치지 않도록 여유 공간 확보 */
+	padding-bottom: 20px;
+	box-sizing: border-box;
 }
 #gallery-lightbox.is-open .lb-content {
 	transform: scale(1);
@@ -720,7 +723,7 @@ ol, ul {
 }
 #gallery-lightbox .lb-img-wrap img {
 	max-width: 100%;
-	max-height: 60dvh; /* 모바일 화면에서 이미지가 잘리지 않도록 최대 높이 제한[cite: 11] */
+	max-height: 52dvh; /* 모바일에서 텍스트와 버튼 공간을 위해 이미지 최대 높이 조정 */
 	width: auto;
 	height: auto;
 	border-radius: 8px;
@@ -728,7 +731,7 @@ ol, ul {
 	object-fit: contain;
 }
 #gallery-lightbox .lb-caption {
-	margin-top: 12px;
+	margin-top: 14px;
 	color: #ffffff;
 	padding: 0 16px;
 }
@@ -738,79 +741,73 @@ ol, ul {
 	font-weight: 600;
 	color: rgba(255, 255, 255, 0.5);
 	letter-spacing: 0.08em;
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 	font-variant-numeric: tabular-nums;
 }
 #gallery-lightbox .lb-title {
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 700;
 	color: #ffffff;
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 }
 #gallery-lightbox .lb-desc {
-	font-size: 13px;
+	font-size: 12.5px;
 	font-weight: 400;
-	line-height: 1.6;
+	line-height: 1.5;
 	color: rgba(255, 255, 255, 0.8);
 	word-break: keep-all;
 }
 #gallery-lightbox .lb-close {
 	position: fixed;
-	top: calc(18px + env(safe-area-inset-top));
-	right: 20px;
-	width: 40px;
-	height: 40px;
+	top: calc(16px + env(safe-area-inset-top));
+	right: 16px;
+	width: 38px;
+	height: 38px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 50%;
 	background: rgba(255, 255, 255, 0.08);
 	color: #ffffff;
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 1;
 	cursor: pointer;
 	z-index: 10002;
 	transition: background-color 0.2s ease;
 }
-#gallery-lightbox .lb-close:hover {
-	background: rgba(255, 255, 255, 0.22);
-}
 #gallery-lightbox .lb-nav {
 	position: fixed;
-	top: 50%;
+	top: 48%; /* 이미지 중앙에 오도록 위치 미세 조정 */
 	transform: translateY(-50%);
-	width: 44px;
-	height: 44px;
+	width: 40px;
+	height: 40px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	border-radius: 50%;
 	background: rgba(0, 0, 0, 0.45);
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 15px;
 	cursor: pointer;
 	z-index: 10002;
 	transition: background-color 0.2s ease;
 }
-#gallery-lightbox .lb-nav:hover {
-	background: rgba(255, 255, 255, 0.2);
-}
 #gallery-lightbox .lb-prev {
-	left: 20px;
+	left: 12px;
 }
 #gallery-lightbox .lb-next {
-	right: 20px;
+	right: 12px;
 }
 @media screen and (max-width: 660px) {
 	#gallery-lightbox .lb-img-wrap img {
-		max-height: 58dvh;
+		max-height: 50dvh;
 	}
 	#gallery-lightbox .lb-nav {
-		width: 36px;
-		height: 36px;
-		font-size: 14px;
+		width: 34px;
+		height: 34px;
+		font-size: 13px;
 	}
 	#gallery-lightbox .lb-prev {
-		left: 10px;
+		left: 8px;
 	}
 	#gallery-lightbox .lb-next {
-		right: 10px;
+		right: 8px;
 	}
 }
 
