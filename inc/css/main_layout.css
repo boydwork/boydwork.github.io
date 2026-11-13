@@ -5,9 +5,12 @@
 	padding: 0;
 	-webkit-text-size-adjust: 100%;
 }
+html, body {
+	background-color: #000000;
+	min-height: 100dvh;
+}
 body {
 	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-	background: #000000;
 	letter-spacing: -0.5px;
 	-webkit-font-smoothing: antialiased;
 }
@@ -24,31 +27,10 @@ ol, ul {
 }
 /* default CSS */
 
-/* 아이폰 노치 및 하단 홈 바 안전 영역(Safe Area) 대응 */
-html, body {
-	background-color: #000000;
-	min-height: 100dvh;
-}
-
 /* fullpage 섹션이 모바일 Safari 주소창 유무와 관계없이 꽉 차도록 보정 */
 .section,
 .fp-tableCell {
 	height: 100dvh !important;
-}
-
-/* 홈 화면 추가(black-translucent) 시 상단 상태바 여백 확보 */
-.experience_wrap .intro,
-.name_wrap .container {
-	padding-top: env(safe-area-inset-top);
-}
-
-/* 하단 마우스 스크롤 아이콘 및 갤러리 푸터가 아이폰 하단 홈 바에 겹치지 않도록 여백 확보 */
-#mouse_scroll {
-	bottom: calc(36px + env(safe-area-inset-bottom));
-}
-
-#footer .btn_area {
-	padding-bottom: calc(20px + env(safe-area-inset-bottom));
 }
 
 /* CSS */
@@ -178,7 +160,7 @@ html, body {
 #mouse_scroll {
 	position: absolute;
 	width: 100%;
-	bottom: 40px;
+	bottom: calc(36px + env(safe-area-inset-bottom));
 	animation: fade 2s ease infinite;
 }
 #mouse_scroll .mouse {
@@ -242,6 +224,7 @@ html, body {
 	z-index: 2;
 	color: #ffffff;
 	text-align: center;
+	padding-top: env(safe-area-inset-top);
 }
 .name_wrap .container h1 {
 	font-size: 35px;
@@ -301,6 +284,20 @@ html, body {
 	background-blend-mode: hard-light;
 	background-color: #ffc0cb;
 	overflow: hidden;
+	touch-action: pan-y;
+	cursor: grab;
+}
+.experience_wrap:active {
+	cursor: grabbing;
+}
+.experience_wrap .intro {
+	padding-top: env(safe-area-inset-top);
+}
+.experience_wrap .intro h1,
+.experience_wrap .intro .subtxt,
+.experience_wrap .intro .word {
+	user-select: none;
+	-webkit-user-select: none;
 }
 .experience_wrap h1 {
 	text-align: center;
@@ -335,22 +332,6 @@ html, body {
 	.word {
 		width: 460px;
 	}
-}
-.experience_wrap {
-	touch-action: pan-y; /* 수직 스크롤은 유지하되 가로 스와이프 제스처를 JS가 온전히 제어 */
-	cursor: grab;
-}
-
-.experience_wrap:active {
-	cursor: grabbing;
-}
-
-/* 본문 텍스트 드래그 시 브라우저 파란색 선택 블록이 스와이프를 방해하지 않도록 설정 */
-.experience_wrap .intro h1,
-.experience_wrap .intro .subtxt,
-.experience_wrap .intro .word {
-	user-select: none;
-	-webkit-user-select: none;
 }
 .skills {
 	max-width: 560px;
@@ -408,13 +389,11 @@ html, body {
 	pointer-events: none;
 	transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 #skill-toast.is-visible {
 	opacity: 1;
 	transform: translate(-50%, 0);
 	pointer-events: auto;
 }
-
 #skill-toast .toast-title {
 	display: block;
 	font-size: 13px;
@@ -423,7 +402,6 @@ html, body {
 	margin-bottom: 5px;
 	letter-spacing: -0.02em;
 }
-
 #skill-toast .toast-desc {
 	font-size: 12.5px;
 	font-weight: 400;
@@ -432,7 +410,6 @@ html, body {
 	word-break: keep-all;
 	margin: 0;
 }
-
 /* 4.5초 자동 닫힘 진행 바 */
 #skill-toast .toast-progress {
 	position: absolute;
@@ -444,16 +421,13 @@ html, body {
 	transform-origin: left center;
 	transform: scaleX(1);
 }
-
 #skill-toast.is-visible .toast-progress {
 	animation: toastCountdown 4.5s linear forwards;
 }
-
 @keyframes toastCountdown {
 	0% { transform: scaleX(1); }
 	100% { transform: scaleX(0); }
 }
-
 @media screen and (max-width: 660px) {
 	#skill-toast {
 		top: calc(20px + env(safe-area-inset-top));
@@ -635,7 +609,7 @@ html, body {
 	.direction-r .desc {
 		position: relative;
 		margin: 0.5em 1em 0 1.6em;
-		padding: 0.5em 1em;
+		padding: 1.5em 2.5em 1.5em 2em;;
 		z-index: 15;
 	}
 }
@@ -655,8 +629,8 @@ html, body {
 	grid-gap: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 20px;
-	padding-bottom: 120px;
+	padding-top: calc(20px + env(safe-area-inset-top));
+	padding-bottom: calc(120px + env(safe-area-inset-bottom));
 }
 .pic_wrap .min li {
 	background-color: #fff;
@@ -789,7 +763,7 @@ html, body {
 	margin-top: 0;
 }
 #footer .btn_area {
-	padding: 20px 0;
+	padding: 20px 0 calc(20px + env(safe-area-inset-bottom));
 }
 #footer .btn_area .set {
 	margin-top: 3px;
