@@ -1,66 +1,73 @@
 <svg class="float" id="layer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 320.68 320.69" xml:space="preserve">
-   <defs>
+  <defs>
     <style type="text/css">
-  .float {
-    width: 120px;
-    /* iOS Safari GPU 가속 및 렌더링 최적화 */
-    will-change: transform;
-    transform-origin: center center;
-    /* 입체적인 그림자 효과 */
-    filter: drop-shadow(0px 12px 16px rgba(42, 193, 188, 0.25)) 
-            drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
-    /* 사파리에서 완벽히 작동하는 CSS 유영 및 크기 변형 애니메이션 */
-    animation: organicMotion 6s ease-in-out infinite alternate;
-  }
-  
-  .gradient_bg {
-    fill: url(#svg_gradient);
-  }
+      .float {
+        width: 120px;
+        /* iOS Safari GPU 가속 및 렌더링 최적화 */
+        will-change: transform;
+        transform-origin: center center;
+        /* 입체적인 그림자 효과 */
+        filter: drop-shadow(0px 12px 16px rgba(42, 193, 188, 0.25)) 
+                drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+        /* 사파리에서 완벽히 작동하는 CSS 유영 및 크기 변형 애니메이션 */
+        animation: organicMotion 6s ease-in-out infinite alternate;
+      }
 
-  body {
-    background-color: #222;
-  }
-  
-  /* 아이폰에서도 완벽히 작동하는 웨이브 및 회전 모션 */
-  @keyframes organicMotion {
-    0% { 
-      transform: translateY(0px) rotate(0deg) scale(1); 
-    }
-    33% { 
-      transform: translateY(-6px) rotate(2deg) scale(1.03, 0.97); 
-    }
-    66% { 
-      transform: translateY(4px) rotate(-2deg) scale(0.97, 1.02); 
-    }
-    100% { 
-      transform: translateY(-4px) rotate(1deg) scale(1.02, 1.01); 
-    }
-  }
+      .gradient_bg {
+        fill: url(#svg_gradient);
+      }
 
-  /* 사파리 호환 부드러운 그라데이션 색상 순환 효과 */
-  @keyframes gradientLoop {
-    0% { stop-color: #2AC1BC; }
-    33% { stop-color: #B9A7E9; }
-    66% { stop-color: #FF85A1; }
-    100% { stop-color: #2AC1BC; }
-  }
+      body {
+        background-color: #222;
+      }
 
-  .stop1 { animation: gradientLoop 6s infinite; }
-  .stop2 { animation: gradientLoop 6s infinite; animation-delay: -2s; }
-  .stop3 { animation: gradientLoop 6s infinite; animation-delay: -4s; }
-</style>
+      /* 아이폰에서도 완벽히 작동하는 웨이브 및 회전 모션 */
+      @keyframes organicMotion {
+        0% { 
+          transform: translateY(0px) rotate(0deg) scale(1); 
+        }
+        33% { 
+          transform: translateY(-6px) rotate(2deg) scale(1.03, 0.97); 
+        }
+        66% { 
+          transform: translateY(4px) rotate(-2deg) scale(0.97, 1.02); 
+        }
+        100% { 
+          transform: translateY(-4px) rotate(1deg) scale(1.02, 1.01); 
+        }
+      }
 
-    <!-- 표준 그라데이션 정의 -->
-    <linearGradient id="svg_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#2AC1BC" class="stop1"></stop>
-        <stop offset="50%" stop-color="#B9A7E9" class="stop2"></stop>
-        <stop offset="100%" stop-color="#FF85A1" class="stop3"></stop>
-    </linearGradient>
+      /* 사파리 호환 부드러운 그라데이션 색상 순환 효과 */
+      @keyframes gradientLoop {
+        0% { stop-color: #2AC1BC; }
+        33% { stop-color: #B9A7E9; }
+        66% { stop-color: #FF85A1; }
+        100% { stop-color: #2AC1BC; }
+      }
+
+      .stop1 { animation: gradientLoop 6s infinite; }
+      .stop2 { animation: gradientLoop 6s infinite; animation-delay: -2s; }
+      .stop3 { animation: gradientLoop 6s infinite; animation-delay: -4s; }
+    </style>
+
+    <!-- 중심에서 바깥으로 퍼지며 반경과 초점이 함께 변하는 방사형 그라데이션 -->
+    <radialGradient id="svg_gradient" gradientUnits="userSpaceOnUse" cx="160.34" cy="160.35" r="115" fx="160.34" fy="160.35">
+      <stop offset="0%" stop-color="#2AC1BC" class="stop1"></stop>
+      <stop offset="52%" stop-color="#B9A7E9" class="stop2"></stop>
+      <stop offset="100%" stop-color="#FF85A1" class="stop3"></stop>
+
+      <!-- 안쪽 색상 영역이 바깥쪽으로 넓어졌다 줄어드는 변화 -->
+      <animate attributeName="r" values="82;148;82" dur="6s" repeatCount="indefinite" />
+
+      <!-- 중심 광원이 살짝 흔들리며 퍼지는 느낌 강조 -->
+      <animate attributeName="fx" values="146;176;146" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="fy" values="142;174;142" dur="6s" repeatCount="indefinite" />
+    </radialGradient>
   </defs>
 
-<!-- 고정된 아름다운 유기체 패스 (아이폰 호환용) -->
-<path class="gradient_bg" d="M276,160.35c0,34.78-15.35,65.98-39.65,87.18c-20.33,17.74-46.91,28.48-76.01,28.48
-    c-31.94,0-60.85-12.95-81.78-33.88s-33.88-49.85-33.88-81.78c0-30.41,11.73-58.07,30.92-78.72c21.12-22.73,51.27-36.94,84.74-36.94
-    c30.23,0,57.74,11.59,78.35,30.58C261.63,96.4,276,126.69,276,160.35z">
-</path>
+  <!-- 고정된 아름다운 유기체 패스 (아이폰 호환용) -->
+  <path class="gradient_bg" d="M276,160.35c0,34.78-15.35,65.98-39.65,87.18c-20.33,17.74-46.91,28.48-76.01,28.48
+      c-31.94,0-60.85-12.95-81.78-33.88s-33.88-49.85-33.88-81.78c0-30.41,11.73-58.07,30.92-78.72c21.12-22.73,51.27-36.94,84.74-36.94
+      c30.23,0,57.74,11.59,78.35,30.58C261.63,96.4,276,126.69,276,160.35z">
+  </path>
 </svg>
