@@ -928,6 +928,14 @@ body.is-info-active:not(.is-info-bottom) #info-scroll-gradient {
 	font-size: 10px;
 	opacity: 0.6;
 }
+#footer .btn_area .visit-count {
+	color: #fff;
+	margin-top: 6px;
+	font-size: 10px;
+	opacity: 0.45;
+	letter-spacing: 0.04em;
+	font-variant-numeric: tabular-nums;
+}
 .writing_wrap {
 	z-index: 1;
 	background: #ffffff;

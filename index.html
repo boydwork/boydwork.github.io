@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://boydwork.github.io/inc/images/photo/open-graph.png">
 
 <!-- 스타일 -->
-<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261119_rev4">
+<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261119_rev5">
 <link rel="stylesheet" type="text/css" href="inc/css/jquery.fullpage.css">
 
 <!-- favicon -->
@@ -91,18 +91,25 @@
 
     function checkInfoScrollBottom() {
       var $scrollable = $infoWrap.find('.fp-scrollable');
-      if (!$scrollable.length) return;
+      if (!$scrollable.length) {
+        $('body').removeClass('is-info-bottom');
+        return;
+      }
 
       var el = $scrollable[0];
       var iscroll = $scrollable.data('iscrollInstance');
 
-      if (iscroll && typeof iscroll.y === 'number' && typeof iscroll.maxScrollY === 'number') {
+      if (iscroll && typeof iscroll.y === 'number' && typeof iscroll.maxScrollY === 'number' && iscroll.maxScrollY < 0) {
         $('body').toggleClass('is-info-bottom', iscroll.y <= iscroll.maxScrollY + 20);
         return;
       }
 
-      var isBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 20;
-      $('body').toggleClass('is-info-bottom', isBottom);
+      if (el.scrollHeight > el.clientHeight && el.clientHeight > 0) {
+        var isBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 20;
+        $('body').toggleClass('is-info-bottom', isBottom);
+      } else {
+        $('body').removeClass('is-info-bottom');
+      }
     }
 
     // 1. fullpage v2.9.4 초기화 복구
@@ -127,10 +134,10 @@
       },
       onLeave: function(index, nextIndex, direction) {
         if (index === 4) {
-          $('body').removeClass('is-info-active');
+          $('body').removeClass('is-info-active is-info-bottom');
         }
         if (nextIndex === 4) {
-          $('body').addClass('is-info-active');
+          $('body').removeClass('is-info-bottom').addClass('is-info-active');
         }
         $('#skill-toast').removeClass('is-visible');
         $('.skills a').removeClass('is-open');
@@ -351,6 +358,41 @@
       $scrollable.on('scroll', checkInfoScrollBottom);
       checkInfoScrollBottom();
     }, 600);
+
+    // 9. 푸터 방문자수 카운터 (세션 중복 방지 + 운영 도메인 기준)
+    var visitNamespace = 'boydwork-github-io';
+    var visitKey = 'portfolio-visits';
+    var sessionFlagKey = 'boydwork_visit_counted';
+    var isProductionHost = window.location.hostname === 'boydwork.github.io';
+    var alreadyCounted = false;
+
+    try {
+      alreadyCounted = sessionStorage.getItem(sessionFlagKey) === '1';
+    } catch (err) {
+      alreadyCounted = false;
+    }
+
+    var endpoint = (isProductionHost && !alreadyCounted)
+      ? 'https://abacus.jasoncameron.dev/hit/' + visitNamespace + '/' + visitKey
+      : 'https://abacus.jasoncameron.dev/get/' + visitNamespace + '/' + visitKey;
+
+    fetch(endpoint)
+      .then(function(res) {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(function(data) {
+        var count = typeof data.value === 'number' ? data.value : 0;
+        $('#visit-count-num').text(count.toLocaleString());
+        if (isProductionHost && !alreadyCounted) {
+          try {
+            sessionStorage.setItem(sessionFlagKey, '1');
+          } catch (err) {}
+        }
+      })
+      .catch(function() {
+        $('#visit-count-num').text('-');
+      });
   });
 </script>
 </head>
@@ -666,7 +708,9 @@
             <a class="btn_t1" href="mailto:boydworshop@gmail.com" aria-label="이메일 문의">Email
             </a>
           </div>
-          <p class="copyright">©Boydwork All Rights Reserved.</p> </div>
+          <p class="copyright">©Boydwork All Rights Reserved.</p>
+          <p class="visit-count">Visits <span id="visit-count-num">-</span></p>
+        </div>
       </div>
       <!-- </footer> --> 
     </div>
