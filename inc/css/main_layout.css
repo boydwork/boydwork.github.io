@@ -428,28 +428,24 @@ ol, ul {
 
 .info_wrap {
 	background-color: #f8f4d5;
-	bottom: 0;
-	position: fixed;
-	top: 0;
-	z-index: -1;
 	color: #191919;
+	position: relative;
 }
-/* .info_wrap 하단 스크롤 힌트 그라데이션 */
-.info_wrap::after {
-	content: "";
-	position: absolute;
+/* #fullpage 외부 뷰포트 고정 하단 스크롤 힌트 그라데이션 */
+#info-scroll-gradient {
+	position: fixed;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: calc(56px + env(safe-area-inset-bottom));
-	background: linear-gradient(to bottom, rgba(248, 244, 213, 0) 0%, rgba(248, 244, 213, 0.95) 85%, #f8f4d5 100%);
+	height: calc(64px + env(safe-area-inset-bottom));
+	background: linear-gradient(to bottom, rgba(248, 244, 213, 0) 0%, rgba(248, 244, 213, 0.96) 85%, #f8f4d5 100%);
 	pointer-events: none;
-	z-index: 20;
-	opacity: 1;
+	z-index: 90;
+	opacity: 0;
 	transition: opacity 0.3s ease;
 }
-.info_wrap.is-bottom::after {
-	opacity: 0;
+body.is-info-active:not(.is-info-bottom) #info-scroll-gradient {
+	opacity: 1;
 }
 .timeline {
 	position: relative;
@@ -900,7 +896,7 @@ ol, ul {
 	cursor: pointer;
 }
 #footer .btn_area .btn_t1 {
-	border: 1px solid #cccccc; /* 오류 수정: string -> solid */
+	border: 1px solid #cccccc;
 	color: #ffffff;
 	padding: 6px 11px;
 	line-height: 13px;

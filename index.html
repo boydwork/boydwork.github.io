@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://boydwork.github.io/inc/images/photo/open-graph.png">
 
 <!-- 스타일 -->
-<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261119_rev">
+<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261119_rev4">
 <link rel="stylesheet" type="text/css" href="inc/css/jquery.fullpage.css">
 
 <!-- favicon -->
@@ -86,6 +86,25 @@
     setScreenSize();
     window.addEventListener('resize', setScreenSize);
 
+    // 8. .info_wrap 하단 스크롤 힌트 그라데이션 제어
+    var $infoWrap = $('.info_wrap');
+
+    function checkInfoScrollBottom() {
+      var $scrollable = $infoWrap.find('.fp-scrollable');
+      if (!$scrollable.length) return;
+
+      var el = $scrollable[0];
+      var iscroll = $scrollable.data('iscrollInstance');
+
+      if (iscroll && typeof iscroll.y === 'number' && typeof iscroll.maxScrollY === 'number') {
+        $('body').toggleClass('is-info-bottom', iscroll.y <= iscroll.maxScrollY + 20);
+        return;
+      }
+
+      var isBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 20;
+      $('body').toggleClass('is-info-bottom', isBottom);
+    }
+
     // 1. fullpage v2.9.4 초기화 복구
     $('#fullpage').fullpage({
       anchors: ['intro', 'Introduce', 'Experience', 'Info', 'Work'],
@@ -98,7 +117,21 @@
       scrollOverflow: true,
       fitToSection: true,
       resize: true,
-      onLeave: function(index, nextIndex) {
+      afterLoad: function(anchorLink, index) {
+        if (anchorLink === 'Info' || index === 4) {
+          $('body').addClass('is-info-active');
+          checkInfoScrollBottom();
+        } else {
+          $('body').removeClass('is-info-active');
+        }
+      },
+      onLeave: function(index, nextIndex, direction) {
+        if (index === 4) {
+          $('body').removeClass('is-info-active');
+        }
+        if (nextIndex === 4) {
+          $('body').addClass('is-info-active');
+        }
         $('#skill-toast').removeClass('is-visible');
         $('.skills a').removeClass('is-open');
         clearTimeout(toastTimer);
@@ -308,40 +341,16 @@
       }
     });
 
-    // 8. .info_wrap 하단 스크롤 힌트 그라데이션 제어
-    var $infoWrap = $('.info_wrap');
-    var $infoScrollable = $infoWrap.find('.fp-scrollable');
-
-    function checkInfoScrollBottom() {
-      if ($infoScrollable.length) {
-        var iscrollInstance = $infoScrollable.data('iscrollInstance');
-        if (iscrollInstance) {
-          if (iscrollInstance.y <= iscrollInstance.maxScrollY + 20) {
-            $infoWrap.addClass('is-bottom');
-          } else {
-            $infoWrap.removeClass('is-bottom');
-          }
-          return;
-        }
-      }
-
-      var el = $infoScrollable.length ? $infoScrollable[0] : $infoWrap[0];
-      if (el && el.scrollTop + el.clientHeight >= el.scrollHeight - 20) {
-        $infoWrap.addClass('is-bottom');
-      } else {
-        $infoWrap.removeClass('is-bottom');
-      }
-    }
-
     setTimeout(function() {
-      var iscrollInstance = $infoWrap.find('.fp-scrollable').data('iscrollInstance');
-      if (iscrollInstance) {
-        iscrollInstance.on('scroll', checkInfoScrollBottom);
-        iscrollInstance.on('scrollEnd', checkInfoScrollBottom);
+      var $scrollable = $infoWrap.find('.fp-scrollable');
+      var iscroll = $scrollable.data('iscrollInstance');
+      if (iscroll) {
+        iscroll.on('scroll', checkInfoScrollBottom);
+        iscroll.on('scrollEnd', checkInfoScrollBottom);
       }
-      $infoWrap.find('.fp-scrollable').on('scroll', checkInfoScrollBottom);
+      $scrollable.on('scroll', checkInfoScrollBottom);
       checkInfoScrollBottom();
-    }, 500);
+    }, 600);
   });
 </script>
 </head>
@@ -664,5 +673,6 @@
   </div>
   <!-- 픽쳐 --> 
   </div>
+  <div id="info-scroll-gradient" aria-hidden="true"></div>
 </body>
 </html>
