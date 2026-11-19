@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>Boydwork | Senior Product Designer 김보인</title>
@@ -142,7 +142,10 @@
       var desc = $item.attr('data-desc') || '';
       var total = $galleryItems.length;
 
-      $lightbox.find('img').attr('src', imageUrl);
+      $lightbox.find('img').attr({
+        'src': imageUrl,
+        'alt': title + (desc ? ' - ' + desc : '')
+      });
       $lightbox.find('.lb-counter').text((index + 1) + ' / ' + total);
       $lightbox.find('.lb-title').text(title);
       $lightbox.find('.lb-desc').text(desc);
@@ -161,6 +164,14 @@
     $galleryItems.on('click', function() {
       var index = $galleryItems.index(this);
       openLightbox(index);
+    });
+
+    // 갤러리 항목 키보드(Enter/Space) 오픈 지원
+    $galleryItems.attr({ 'role': 'button', 'tabindex': '0' }).on('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox($galleryItems.index(this));
+      }
     });
 
     // 닫기 버튼 클릭
@@ -298,9 +309,9 @@
   <div class="intro_wrap section active">
     <div class="container">
       <div id="smoke"> <span class="s0"></span> <span class="s1"></span> <span class="s2"></span> <span class="s3"></span> <span class="s4"></span> <span class="s5"></span> <span class="s6"></span> <span class="s7"></span> <span class="s8"></span> <span class="s9"></span> </div>
-      <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg">
+      <object class="sign" type="image/svg+xml" data="inc/svg/boydwork.svg" aria-label="Boydwork 시그니처 로고">
       </object>
-      <a class="btn"></a> </div>
+      <a class="btn" role="button" tabindex="0" aria-label="Boydwork 로고 인터랙션"></a> </div>
     <div class="instructions">
       <span class="typed-text"></span><br/>
       <span class="sub_instructions">반가워요.</span>
@@ -323,7 +334,7 @@
       </p>
     </div>
     <div class="svg_box_type1">
-      <object class="bigs_gate_particle" type="image/svg+xml" data="inc/svg/object.svg">
+      <object class="bigs_gate_particle" type="image/svg+xml" data="inc/svg/object.svg" aria-hidden="true">
       </object>
     </div>
   </div>
@@ -338,9 +349,9 @@
         <p class="word">
           저의 가장 큰 강점은 생소한 도메인을 두려워하지 않고 비즈니스 결과로 증명해 내는 것입니다. 새로운 환경에서 느끼는 낯섦과 부담감은 당연하지만, 스스로 확신을 가질 수 있는 가장 올바른 방식으로 현장과 시스템을 탐구하고 학습합니다. 온라인 광고, 이커머스, 교육, O2O, 배달, 엔터테인먼트, 숙박 B2B, 항공까지 복잡하고 파편화된 도메인을 끊임없이 확장해 왔으며, 언제나 정성·정량적 성과로 디자인의 가치를 입증하는 것이 저의 일하는 방식입니다.</p>
         <div class="skills">
-          <a data-popover="숙박·항공 B2B 어드민 및 식자재 커머스의 복잡한 정책과 재고·요금 구조를 직관적인 시스템 UI로 설계합니다.">복잡한 B2B·정책 구조화</a>
-          <a data-popover="파편화된 프로덕트의 UI 체계를 통합하고, 개발자와 싱크되는 공통 컴포넌트 가이드를 구축·리딩합니다.">디자인 시스템 구축</a>
-          <a data-popover="정성적 UT와 정량적 데이터를 통해 탐색 시간 52% 단축, 전환율 +18.6% 등 실질적 지표를 만듭니다.">데이터 기반 UX 성과 증명</a>
+          <a href="#" data-popover="숙박·항공 B2B 어드민 및 식자재 커머스의 복잡한 정책과 재고·요금 구조를 직관적인 시스템 UI로 설계합니다.">복잡한 B2B·정책 구조화</a>
+          <a href="#" data-popover="파편화된 프로덕트의 UI 체계를 통합하고, 개발자와 싱크되는 공통 컴포넌트 가이드를 구축·리딩합니다.">디자인 시스템 구축</a>
+          <a href="#" data-popover="정성적 UT와 정량적 데이터를 통해 탐색 시간 52% 단축, 전환율 +18.6% 등 실질적 지표를 만듭니다.">데이터 기반 UX 성과 증명</a>
         </div>
       </div>
     </div>
@@ -353,9 +364,9 @@
         <p class="word">
           디자이너로서 시각적 표현의 한계를 넓히고 그래픽 언어를 구축하기 위해 일러스트레이터 활동을 했습니다. 당시 삼성전자나 AROUND 매거진 등 다양한 클라이언트와 협업하며 메시지를 시각 예술로 번역하는 감각을 익혔고, 현재 복잡한 프로덕트의 UI/UX를 설계할 때 핵심 정보에 시각적 위계와 브랜드 아이덴티티를 명확히 부여하는 강력한 자산이 되었습니다.</p>
         <div class="skills">
-          <a data-popover="삼성전자, 현대카드, AROUND 등 다양한 브랜드와 협업 하였습니다.">비주얼 & 아트 디렉팅</a>
-          <a data-popover="추상적인 메시지를 직관적인 시각 언어로 바꿔 사용자와 브랜드의 접점을 만듭니다.">브랜드 커뮤니케이션</a>
-          <a data-popover="일러스트레이터 경험이 프로덕트 UI의 명확한 시각 위계와 완성도 높은 디테일로 확장합니다.">시각 언어의 UX 확장</a>
+          <a href="#" data-popover="삼성전자, 현대카드, AROUND 등 다양한 브랜드와 협업 하였습니다.">비주얼 & 아트 디렉팅</a>
+          <a href="#" data-popover="추상적인 메시지를 직관적인 시각 언어로 바꿔 사용자와 브랜드의 접점을 만듭니다.">브랜드 커뮤니케이션</a>
+          <a href="#" data-popover="일러스트레이터 경험이 프로덕트 UI의 명확한 시각 위계와 완성도 높은 디테일로 확장합니다.">시각 언어의 UX 확장</a>
         </div>
       </div>
     </div>
@@ -409,10 +420,10 @@
           <div class="position"> <span class="job">디자인실</span> <span class="role">UX Designer</span> </div>
           <div class="desc">
             <b>WORK EXPERIENCE</b><br>
-            B2B 식자재 쇼핑몰 '배민상회'의 탈고도 고도화 프로젝트 리딩.
+            B2B 식자재 쇼핑몰 '배민상회'의 고도몰 탈피 고도화 프로젝트 리딩.
             업주 대상 정성적 사용자 리서치(User Research)를 통해 "기존 구매 패턴(항상 사던 것만 재구매)으로 인해 신상품 인지가 어렵다"는 핵심 Pain Point 도출.<br><br>
             <b>PROJECT</b><br>
-            배민상회 탈고도 고도화 프로젝트 디자인 리딩<br>
+            배민상회 고도몰 탈피 고도화 프로젝트 디자인 리딩<br>
             배민상회 공통 컴포넌트 가이드 및 디자인 시스템 작업<br>
             배민상회 주요 프로모션 및 비주얼 아이덴티티 작업<br>
             배달의민족 프로모션 디자인<br><br>
