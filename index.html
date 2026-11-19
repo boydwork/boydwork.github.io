@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://boydwork.github.io/inc/images/photo/open-graph.png">
 
 <!-- 스타일 -->
-<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261113_rev">
+<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261119_rev">
 <link rel="stylesheet" type="text/css" href="inc/css/jquery.fullpage.css">
 
 <!-- favicon -->
@@ -307,6 +307,41 @@
         }
       }
     });
+
+    // 8. .info_wrap 하단 스크롤 힌트 그라데이션 제어
+    var $infoWrap = $('.info_wrap');
+    var $infoScrollable = $infoWrap.find('.fp-scrollable');
+
+    function checkInfoScrollBottom() {
+      if ($infoScrollable.length) {
+        var iscrollInstance = $infoScrollable.data('iscrollInstance');
+        if (iscrollInstance) {
+          if (iscrollInstance.y <= iscrollInstance.maxScrollY + 20) {
+            $infoWrap.addClass('is-bottom');
+          } else {
+            $infoWrap.removeClass('is-bottom');
+          }
+          return;
+        }
+      }
+
+      var el = $infoScrollable.length ? $infoScrollable[0] : $infoWrap[0];
+      if (el && el.scrollTop + el.clientHeight >= el.scrollHeight - 20) {
+        $infoWrap.addClass('is-bottom');
+      } else {
+        $infoWrap.removeClass('is-bottom');
+      }
+    }
+
+    setTimeout(function() {
+      var iscrollInstance = $infoWrap.find('.fp-scrollable').data('iscrollInstance');
+      if (iscrollInstance) {
+        iscrollInstance.on('scroll', checkInfoScrollBottom);
+        iscrollInstance.on('scrollEnd', checkInfoScrollBottom);
+      }
+      $infoWrap.find('.fp-scrollable').on('scroll', checkInfoScrollBottom);
+      checkInfoScrollBottom();
+    }, 500);
   });
 </script>
 </head>
