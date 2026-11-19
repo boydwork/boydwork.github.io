@@ -86,8 +86,9 @@
     setScreenSize();
     window.addEventListener('resize', setScreenSize);
 
-    // 8. .info_wrap 하단 스크롤 힌트 그라데이션 제어
+    // 8. .info_wrap 하단 스크롤 힌트 그라데이션 & Info 전용 하단 이동 버튼 제어
     var $infoWrap = $('.info_wrap');
+    var $bottomBtn = $('#scroll-bottom-btn');
 
     function checkInfoScrollBottom() {
       var $scrollable = $infoWrap.find('.fp-scrollable');
@@ -100,7 +101,8 @@
       var iscroll = $scrollable.data('iscrollInstance');
 
       if (iscroll && typeof iscroll.y === 'number' && typeof iscroll.maxScrollY === 'number' && iscroll.maxScrollY < 0) {
-        $('body').toggleClass('is-info-bottom', iscroll.y <= iscroll.maxScrollY + 20);
+        var atBottomIscroll = iscroll.y <= iscroll.maxScrollY + 20;
+        $('body').toggleClass('is-info-bottom', atBottomIscroll);
         return;
       }
 
@@ -109,6 +111,53 @@
         $('body').toggleClass('is-info-bottom', isBottom);
       } else {
         $('body').removeClass('is-info-bottom');
+      }
+    }
+
+    function updateBottomBtnVisibility() {
+      if (!$bottomBtn.length || !$('body').hasClass('is-info-active')) {
+        $bottomBtn.removeClass('is-visible');
+        return;
+      }
+
+      var $scrollable = $infoWrap.find('.fp-scrollable');
+      if (!$scrollable.length) {
+        $bottomBtn.removeClass('is-visible');
+        return;
+      }
+
+      var el = $scrollable[0];
+      var iscroll = $scrollable.data('iscrollInstance');
+      var hasScroll = false;
+      var isNearBottom = false;
+
+      if (iscroll && typeof iscroll.y === 'number' && typeof iscroll.maxScrollY === 'number' && iscroll.maxScrollY < 0) {
+        hasScroll = true;
+        isNearBottom = iscroll.y <= iscroll.maxScrollY + 40;
+      } else if (el.scrollHeight > el.clientHeight && el.clientHeight > 0) {
+        hasScroll = true;
+        isNearBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 40;
+      }
+
+      $bottomBtn.toggleClass('is-visible', hasScroll && !isNearBottom);
+    }
+
+    function syncInfoState(isInfoSection) {
+      if (isInfoSection) {
+        $('body').addClass('is-info-active');
+        checkInfoScrollBottom();
+        updateBottomBtnVisibility();
+        setTimeout(function() {
+          checkInfoScrollBottom();
+          updateBottomBtnVisibility();
+        }, 80);
+        setTimeout(function() {
+          checkInfoScrollBottom();
+          updateBottomBtnVisibility();
+        }, 250);
+      } else {
+        $('body').removeClass('is-info-active is-info-bottom');
+        $bottomBtn.removeClass('is-visible');
       }
     }
 
@@ -125,20 +174,24 @@
       fitToSection: true,
       resize: true,
       afterLoad: function(anchorLink, index) {
-        if (anchorLink === 'Info' || index === 4) {
-          $('body').addClass('is-info-active');
-          checkInfoScrollBottom();
-        } else {
-          $('body').removeClass('is-info-active');
-        }
+        syncInfoState(anchorLink === 'Info' || index === 4);
       },
       onLeave: function(index, nextIndex, direction) {
-        if (index === 4) {
-          $('body').removeClass('is-info-active is-info-bottom');
-        }
         if (nextIndex === 4) {
           $('body').removeClass('is-info-bottom').addClass('is-info-active');
+          setTimeout(function() {
+            checkInfoScrollBottom();
+            updateBottomBtnVisibility();
+          }, 80);
+          setTimeout(function() {
+            checkInfoScrollBottom();
+            updateBottomBtnVisibility();
+          }, 250);
+        } else if (index === 4) {
+          $('body').removeClass('is-info-active is-info-bottom');
+          $bottomBtn.removeClass('is-visible');
         }
+
         $('#skill-toast').removeClass('is-visible');
         $('.skills a').removeClass('is-open');
         clearTimeout(toastTimer);
@@ -348,15 +401,49 @@
       }
     });
 
+    $bottomBtn.on('click', function() {
+      if (!$('body').hasClass('is-info-active')) return;
+
+      var $scrollable = $infoWrap.find('.fp-scrollable');
+      if (!$scrollable.length) return;
+
+      var el = $scrollable[0];
+      var iscroll = $scrollable.data('iscrollInstance');
+
+      if (iscroll && typeof iscroll.maxScrollY === 'number' && iscroll.maxScrollY < 0) {
+        iscroll.scrollTo(0, iscroll.maxScrollY, 600);
+        setTimeout(function() {
+          checkInfoScrollBottom();
+          updateBottomBtnVisibility();
+        }, 650);
+        return;
+      }
+
+      $scrollable.stop().animate({ scrollTop: el.scrollHeight }, 600, function() {
+        checkInfoScrollBottom();
+        updateBottomBtnVisibility();
+      });
+    });
+
     setTimeout(function() {
       var $scrollable = $infoWrap.find('.fp-scrollable');
       var iscroll = $scrollable.data('iscrollInstance');
       if (iscroll) {
-        iscroll.on('scroll', checkInfoScrollBottom);
-        iscroll.on('scrollEnd', checkInfoScrollBottom);
+        iscroll.on('scroll', function() {
+          checkInfoScrollBottom();
+          updateBottomBtnVisibility();
+        });
+        iscroll.on('scrollEnd', function() {
+          checkInfoScrollBottom();
+          updateBottomBtnVisibility();
+        });
       }
-      $scrollable.on('scroll', checkInfoScrollBottom);
+      $scrollable.on('scroll', function() {
+        checkInfoScrollBottom();
+        updateBottomBtnVisibility();
+      });
       checkInfoScrollBottom();
+      updateBottomBtnVisibility();
     }, 600);
 
     // 9. 푸터 방문자수 카운터 (세션 중복 방지 + 운영 도메인 기준)
@@ -718,5 +805,10 @@
   <!-- 픽쳐 --> 
   </div>
   <div id="info-scroll-gradient" aria-hidden="true"></div>
+  <button type="button" id="scroll-bottom-btn" class="scroll-bottom-btn" aria-label="Info 섹션 맨 아래로 이동">
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path d="M8 2.75V13.25M8 13.25L3.75 9M8 13.25L12.25 9" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
 </body>
 </html>
