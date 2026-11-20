@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://boydwork.github.io/inc/images/photo/open-graph.png">
 
 <!-- 스타일 -->
-<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261120_rev1">
+<link rel="stylesheet" type="text/css" href="inc/css/main_layout.css?v=20261120_rev7">
 <link rel="stylesheet" type="text/css" href="inc/css/jquery.fullpage.css">
 
 <!-- favicon -->
@@ -77,6 +77,43 @@
 <script type="text/javascript">
   $(document).ready(function() {
     var toastTimer;
+    var highlightDemoPlayed = false;
+
+    function playHighlightDemoOnce() {
+      if (highlightDemoPlayed) return;
+      highlightDemoPlayed = true;
+
+      var targetPhrase = '핵심 문제를 구체화';
+      var wordEl = document.querySelector('.name_wrap p.word');
+      if (!wordEl) return;
+
+      var walker = document.createTreeWalker(wordEl, NodeFilter.SHOW_TEXT, null, false);
+      var textNode;
+      while ((textNode = walker.nextNode())) {
+        var idx = textNode.nodeValue.indexOf(targetPhrase);
+        if (idx !== -1) {
+          var range = document.createRange();
+          range.setStart(textNode, idx);
+          range.setEnd(textNode, idx + targetPhrase.length);
+
+          var span = document.createElement('span');
+          span.className = 'demo-marker';
+          range.surroundContents(span);
+
+          void span.offsetWidth;
+          span.classList.add('is-animating');
+
+          setTimeout(function() {
+            if (!span.parentNode) return;
+            var parent = span.parentNode;
+            var restored = document.createTextNode(span.textContent);
+            parent.replaceChild(restored, span);
+            parent.normalize();
+          }, 2150);
+          break;
+        }
+      }
+    }
 
     // 모바일 사파리 상/하단 고정 바 영역 보정을 위한 뷰포트 높이 계산 함수
     function setScreenSize() {
@@ -175,6 +212,9 @@
       resize: true,
       afterLoad: function(anchorLink, index) {
         syncInfoState(anchorLink === 'Info' || index === 4);
+        if (anchorLink === 'Introduce' || index === 2) {
+          playHighlightDemoOnce();
+        }
       },
       onLeave: function(index, nextIndex, direction) {
         if (nextIndex === 4) {
@@ -473,6 +513,75 @@
       .catch(function() {
         $('#visit-count-num').text('-');
       });
+
+    // 10. Introduce 섹션(.name_wrap) 텍스트 형광펜 하이라이팅 (재드래그 해제 지원)
+    var highlightTargetSelector = '.name_wrap';
+
+    function isInsideHighlightTarget(node) {
+      if (!node) return false;
+      var el = node.nodeType === 3 ? node.parentElement : node;
+      if (!el || !el.closest) return false;
+      if (el.closest('a, button, #skill-toast, #gallery-lightbox, #fp-nav, .fp-slidesNav')) return false;
+      return Boolean(el.closest(highlightTargetSelector));
+    }
+
+    function unwrapHighlightMark(markEl) {
+      if (!markEl || !markEl.parentNode) return;
+      var parent = markEl.parentNode;
+      var textNode = document.createTextNode(markEl.textContent);
+      parent.replaceChild(textNode, markEl);
+      parent.normalize();
+    }
+
+    function applyTextHighlight() {
+      var selection = window.getSelection ? window.getSelection() : null;
+      if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
+
+      var range = selection.getRangeAt(0);
+      if (!isInsideHighlightTarget(range.startContainer) || !isInsideHighlightTarget(range.endContainer)) {
+        return;
+      }
+
+      var startEl = range.startContainer.nodeType === 3 ? range.startContainer.parentElement : range.startContainer;
+      var endEl = range.endContainer.nodeType === 3 ? range.endContainer.parentElement : range.endContainer;
+      var startMark = startEl && startEl.closest ? startEl.closest('.penco-highlight') : null;
+      var endMark = endEl && endEl.closest ? endEl.closest('.penco-highlight') : null;
+
+      if (startMark || endMark) {
+        if (startMark) unwrapHighlightMark(startMark);
+        if (endMark && endMark !== startMark) unwrapHighlightMark(endMark);
+        selection.removeAllRanges();
+        return;
+      }
+
+      if (
+        range.startContainer.nodeType === 3 &&
+        range.endContainer.nodeType === 3 &&
+        range.startContainer === range.endContainer
+      ) {
+        var selectedText = range.toString();
+        if (!selectedText || !selectedText.trim()) return;
+
+        var mark = document.createElement('mark');
+        mark.className = 'penco-highlight';
+        mark.title = '드래그 또는 클릭하여 하이라이트 해제';
+
+        try {
+          range.surroundContents(mark);
+          selection.removeAllRanges();
+        } catch (err) {}
+      }
+    }
+
+    $(document).on('mouseup touchend', function() {
+      setTimeout(applyTextHighlight, 10);
+    });
+
+    $(document).on('click', '.name_wrap .penco-highlight', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      unwrapHighlightMark(this);
+    });
   });
 </script>
 </head>

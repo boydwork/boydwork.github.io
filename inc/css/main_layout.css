@@ -1005,3 +1005,55 @@ body.lb-open #fp-nav {
 	opacity: 0;
 	pointer-events: none;
 }
+
+/* Introduce 섹션(.name_wrap) 문구 형광펜 하이라이팅 */
+.name_wrap .penco-highlight {
+	background-color: rgba(255, 245, 71, 0.5);
+	color: inherit;
+	padding: 0;
+	border-radius: 0;
+	cursor: pointer;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* Introduce 섹션(.name_wrap) 본문 형광펜 데모 애니메이션 */
+.name_wrap .demo-marker {
+	position: relative;
+	display: inline;
+	z-index: 1;
+}
+.name_wrap .demo-marker::before {
+	content: '';
+	position: absolute;
+	left: -2px;
+	right: -2px;
+	top: 1px;
+	bottom: 1px;
+	background-color: rgba(255, 245, 71, 0.5);
+	transform: scaleX(0);
+	transform-origin: left center;
+	z-index: -1;
+	pointer-events: none;
+}
+.name_wrap .demo-marker.is-animating::before {
+	animation: pencoDemoSweep 2.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes pencoDemoSweep {
+	0% {
+		transform: scaleX(0);
+		opacity: 1;
+	}
+	38% {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	72% {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleX(1);
+		opacity: 0;
+	}
+}
