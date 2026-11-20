@@ -15,11 +15,12 @@
 		animation-duration: 10s;
 		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
 		animation-iteration-count: infinite;
-		animation-fill-mode: forwards;
+		animation-fill-mode: both;
 		animation-delay: 0.7s;
 	}
 
 	/* 1. Mint Ripple 애니메이션 */
+	#mint_ripple_g { transform: translate(282px, 132px) rotate(0deg); }
 	@keyframes mintRippleAnim {
 		0%, 12.5% { transform: translate(282px, 132px) rotate(0deg); }
 		25%, 37.5% { transform: translate(313px, 400px) rotate(-158deg); }
@@ -30,6 +31,7 @@
 	#mint_ripple_g { animation-name: mintRippleAnim; }
 
 	/* 2. Purple Bar 애니메이션 */
+	#purple_bar_g { transform: translate(79px, 35px) rotate(0deg); }
 	@keyframes purpleBarAnim {
 		0%, 12.5% { transform: translate(79px, 35px) rotate(0deg); }
 		25%, 37.5% { transform: translate(286px, 35px) rotate(-80deg); }
@@ -40,6 +42,7 @@
 	#purple_bar_g { animation-name: purpleBarAnim; }
 
 	/* 3. Sky Triangle 애니메이션 */
+	#sky_tri_g { transform: translate(302px, 14px) rotate(0deg); }
 	@keyframes skyTriAnim {
 		0%, 12.5% { transform: translate(302px, 14px) rotate(0deg); }
 		25%, 37.5% { transform: translate(100px, 312px) rotate(104deg); }
@@ -50,6 +53,7 @@
 	#sky_tri_g { animation-name: skyTriAnim; }
 
 	/* 4. Yellow Circle 애니메이션 */
+	#yellow_circle_g { transform: translate(260px, 2px); }
 	@keyframes yellowCircleAnim {
 		0%, 12.5% { transform: translate(260px, 2px); }
 		25%, 37.5% { transform: translate(330px, 180px); }
@@ -60,6 +64,7 @@
 	#yellow_circle_g { animation-name: yellowCircleAnim; }
 
 	/* 5. White Curve (b) 애니메이션 */
+	#b_white_curve_g { transform: translate(292px, 299px) rotate(0deg); }
 	@keyframes bWhiteCurveAnim {
 		0%, 12.5% { transform: translate(292px, 299px) rotate(0deg); }
 		25%, 37.5% { transform: translate(66px, 66px) rotate(170deg); }
@@ -70,6 +75,7 @@
 	#b_white_curve_g { animation-name: bWhiteCurveAnim; }
 
 	/* 6. White Curve 애니메이션 */
+	#white_curve_g { transform: translate(23px, 389px) rotate(0deg); }
 	@keyframes whiteCurveAnim {
 		0%, 12.5% { transform: translate(23px, 389px) rotate(0deg); }
 		25%, 37.5% { transform: translate(27px, 247px) rotate(-91deg); }
@@ -80,6 +86,7 @@
 	#white_curve_g { animation-name: whiteCurveAnim; }
 
 	/* 7. Blue Bar 애니메이션 */
+	#blue_bar_g { transform: translate(30px, 276px) rotate(0deg); }
 	@keyframes blueBarAnim {
 		0%, 12.5% { transform: translate(30px, 276px) rotate(0deg); }
 		25%, 37.5% { transform: translate(280px, 244px) rotate(190deg); }
@@ -90,6 +97,7 @@
 	#blue_bar_g { animation-name: blueBarAnim; }
 
 	/* 8. Yellow Bar 애니메이션 */
+	#yellow_bar_g { transform: translate(315px, 335px) rotate(0deg); }
 	@keyframes yellowBarAnim {
 		0%, 12.5% { transform: translate(315px, 335px) rotate(0deg); }
 		25%, 37.5% { transform: translate(72px, 135px) rotate(-120deg); }
@@ -100,6 +108,7 @@
 	#yellow_bar_g { animation-name: yellowBarAnim; }
 
 	/* 9. Mint Square 애니메이션 */
+	#mint_tri_g { transform: translate(54px, 232px) rotate(0deg); }
 	@keyframes mintTriAnim {
 		0%, 12.5% { transform: translate(54px, 232px) rotate(0deg); }
 		25%, 37.5% { transform: translate(293px, 97px) rotate(182deg); }
