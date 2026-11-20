@@ -1005,32 +1005,3 @@ body.lb-open #fp-nav {
 	opacity: 0;
 	pointer-events: none;
 }
-
-/* 모션 감소(prefers-reduced-motion) 대응 */
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
-
-	.intro_wrap {
-		background-size: 100% 100%;
-		background-position: 0% 50%;
-	}
-
-	#smoke {
-		display: none;
-	}
-
-	.sub_instructions {
-		opacity: 1 !important;
-	}
-
-	.pic_wrap .min li:hover {
-		transform: none;
-	}
-}
