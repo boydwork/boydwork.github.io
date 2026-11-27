@@ -10,14 +10,23 @@
 	-webkit-text-size-adjust: 100%;
 }
 
-html,
+html {
+	scroll-behavior: smooth;
+	background-color: #000000;
+}
+
 body {
 	background-color: #000000;
-	height: 100%;
-	overflow: hidden;
+	min-height: 100vh;
+	min-height: 100dvh;
+	overflow-x: hidden;
 	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
 	letter-spacing: -0.5px;
 	-webkit-font-smoothing: antialiased;
+}
+
+body.lb-open {
+	overflow: hidden;
 }
 
 a {
@@ -30,40 +39,20 @@ ul {
 	list-style: none;
 }
 
-/* Fullpage Scroll Snap Container */
+/* 애플 제품 소개 사이트 스타일의 자연스러운 전체 화면 섹션 흐름 */
 #fullpage {
-	height: 100vh;
-	height: 100dvh;
-	overflow-y: auto;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
-	scrollbar-width: none;
-}
-#fullpage::-webkit-scrollbar {
-	display: none;
+	width: 100%;
 }
 
 .section {
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	height: 100dvh;
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
+	min-height: 100vh;
+	min-height: 100dvh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
-}
-
-/* 내부 스크롤 섹션 (Info, Work) */
-.section-scroll {
-	width: 100%;
-	height: 100%;
-	overflow-y: auto;
-	overscroll-behavior-y: contain;
-	-webkit-overflow-scrolling: touch;
 }
 
 /* 1. Intro Section */
@@ -71,6 +60,7 @@ ul {
 	background: linear-gradient(-45deg, #87f252, #00aeff, #87f252, #00aeff);
 	background-size: 400% 400%;
 	animation: gradi 15s ease infinite;
+	overflow: hidden;
 }
 
 @keyframes gradi {
@@ -150,7 +140,7 @@ ul {
 #mouse_scroll {
 	position: absolute;
 	width: 100%;
-	bottom: calc(36px + env(safe-area-inset-bottom));
+	bottom: calc(28px + env(safe-area-inset-bottom));
 }
 
 #mouse_scroll .mouse {
@@ -240,13 +230,14 @@ ul {
 .name_wrap {
 	z-index: 1;
 	background: #000000;
+	overflow: hidden;
 }
 
 .name_wrap .container {
 	z-index: 2;
 	color: #ffffff;
 	text-align: center;
-	padding-top: env(safe-area-inset-top);
+	padding: 80px 0;
 }
 
 .name_wrap .container h1 {
@@ -348,6 +339,7 @@ ul {
 	background-blend-mode: hard-light;
 	background-color: #ffc0cb;
 	cursor: grab;
+	overflow: hidden;
 }
 
 .experience_wrap:active {
@@ -357,7 +349,8 @@ ul {
 .slides-track {
 	display: flex;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
@@ -370,15 +363,13 @@ ul {
 .experience_wrap .slide {
 	flex: 0 0 100%;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
 	scroll-snap-align: start;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.experience_wrap .intro {
-	padding-top: env(safe-area-inset-top);
+	padding: 80px 0 96px;
 }
 
 .experience_wrap .intro h1,
@@ -464,7 +455,7 @@ ul {
 /* 하단 슬라이드 인디케이터 */
 .fp-slidesNav {
 	position: absolute;
-	bottom: calc(20px + env(safe-area-inset-bottom));
+	bottom: 24px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 20;
@@ -504,7 +495,7 @@ ul {
 /* Skill Toast */
 #skill-toast {
 	position: fixed;
-	top: calc(28px + env(safe-area-inset-top));
+	top: calc(20px + env(safe-area-inset-top));
 	left: 50%;
 	transform: translate(-50%, -24px);
 	width: calc(100% - 48px);
@@ -545,88 +536,18 @@ ul {
 	word-break: keep-all;
 }
 
-@media (max-width: 660px) {
-	#skill-toast {
-		top: calc(20px + env(safe-area-inset-top));
-		padding: 15px 20px;
-	}
-}
-
-/* 4. Info Timeline Section */
+/* 4. Info Timeline Section (자연스러운 세로 흐름) */
 .info_wrap {
 	background-color: #f8f4d5;
 	color: #191919;
 	display: block;
 }
 
-#info-scroll-gradient {
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: calc(64px + env(safe-area-inset-bottom));
-	background: linear-gradient(to bottom, rgba(248, 244, 213, 0) 0%, rgba(248, 244, 213, 0.96) 85%, #f8f4d5 100%);
-	pointer-events: none;
-	z-index: 90;
-	opacity: 0;
-	transition: opacity 0.15s ease;
-}
-
-body.is-info-active:not(.is-info-bottom) #info-scroll-gradient {
-	opacity: 1;
-}
-
-.scroll-bottom-btn {
-	position: fixed;
-	left: 50%;
-	bottom: calc(20px + env(safe-area-inset-bottom));
-	transform: translateX(-50%) translateY(10px);
-	width: 34px;
-	height: 34px;
-	border: none;
-	border-radius: 50%;
-	background: #ffffff;
-	color: #191919;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	z-index: 96;
-	opacity: 0;
-	pointer-events: none;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
-	transition: opacity 0.18s ease, transform 0.2s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-	-webkit-tap-highlight-color: transparent;
-}
-
-body.is-info-active .scroll-bottom-btn.is-visible {
-	opacity: 1;
-	transform: translateX(-50%) translateY(0);
-	pointer-events: auto;
-}
-
-.scroll-bottom-btn:hover {
-	background: #fafafa;
-	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
-	transform: translateX(-50%) translateY(-1px);
-}
-
-.scroll-bottom-btn:active {
-	background: #f2f2f2;
-	transform: translateX(-50%) translateY(0) scale(0.96);
-}
-
-body:not(.is-info-active) .scroll-bottom-btn,
-body.lb-open .scroll-bottom-btn {
-	opacity: 0;
-	pointer-events: none;
-}
-
 .timeline {
 	position: relative;
 	width: 660px;
 	margin: 0 auto;
-	padding: 5em 0;
+	padding: 6em 0;
 }
 
 .timeline::before {
@@ -765,7 +686,7 @@ body.lb-open .scroll-bottom-btn {
 @media (max-width: 660px) {
 	.timeline {
 		width: 100%;
-		padding: 4em 2em 4em 0;
+		padding: 4.5em 1.5em 4.5em 0;
 	}
 	.timeline li {
 		padding: 1.5em 0;
@@ -801,7 +722,7 @@ body.lb-open .scroll-bottom-btn {
 	.direction-r .desc {
 		position: relative;
 		margin: 0.5em 1em 0 1.6em;
-		padding: 1.5em 2.5em 1.5em 2em;
+		padding: 1.25em 1.5em 1.25em 1.75em;
 		z-index: 15;
 	}
 }
@@ -809,18 +730,17 @@ body.lb-open .scroll-bottom-btn {
 @media (min-width: 400px) and (max-width: 660px) {
 	.direction-l .desc,
 	.direction-r .desc {
-		margin: 0.5em 2em 0 1.6em;
+		margin: 0.5em 1.5em 0 1.6em;
 	}
 }
 
 /* 5. Gallery & Footer Section */
 .pic_wrap {
 	display: block;
+	background-color: #000000;
 }
 
 .pic_wrap .min {
-	position: relative;
-	min-height: 100%;
 	width: 100%;
 }
 
@@ -830,7 +750,7 @@ body.lb-open .scroll-bottom-btn {
 	gap: 20px;
 	max-width: 1120px;
 	margin: 0 auto;
-	padding: calc(48px + env(safe-area-inset-top)) 24px calc(140px + env(safe-area-inset-bottom));
+	padding: 64px 24px 48px;
 }
 
 @media (max-width: 960px) {
@@ -844,7 +764,7 @@ body.lb-open .scroll-bottom-btn {
 	.pic_wrap .min ul {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 12px;
-		padding: calc(20px + env(safe-area-inset-top)) 16px calc(120px + env(safe-area-inset-bottom));
+		padding: 40px 16px 32px;
 	}
 }
 
@@ -870,6 +790,51 @@ body.lb-open .scroll-bottom-btn {
 	display: none;
 }
 
+/* Footer (문서 흐름 내 자연 배치) */
+#footer {
+	width: 100%;
+	text-align: center;
+}
+
+#footer .btn_area {
+	padding: 24px 0 calc(40px + env(safe-area-inset-bottom));
+}
+
+#footer .btn_area .set {
+	margin-top: 3px;
+}
+
+#footer .btn_area .btn_t1 {
+	border: 1px solid #cccccc;
+	color: #ffffff;
+	padding: 6px 11px;
+	line-height: 13px;
+	margin-left: 5px;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#footer .btn_area .btn_t1:first-child {
+	margin-left: 0;
+}
+
+#footer .btn_area .copyright {
+	color: #ffffff;
+	margin-top: 16px;
+	font-size: 10px;
+	opacity: 0.6;
+}
+
+#footer .btn_area .visit-count {
+	color: #ffffff;
+	margin-top: 6px;
+	font-size: 10px;
+	opacity: 0.45;
+	letter-spacing: 0.04em;
+	font-variant-numeric: tabular-nums;
+}
+
 /* Native <dialog> Lightbox */
 #gallery-lightbox {
 	position: fixed;
@@ -888,7 +853,7 @@ body.lb-open .scroll-bottom-btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: calc(20px + env(safe-area-inset-top)) 16px calc(40px + env(safe-area-inset-bottom));
+	padding: 20px 16px;
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.28s ease;
@@ -933,7 +898,7 @@ body.lb-open .scroll-bottom-btn {
 
 #gallery-lightbox .lb-img-wrap img {
 	max-width: 100%;
-	max-height: 48dvh;
+	max-height: 55dvh;
 	width: auto;
 	height: auto;
 	border-radius: 8px;
@@ -991,65 +956,6 @@ body.lb-open .scroll-bottom-btn {
 
 #gallery-lightbox .lb-close:hover {
 	opacity: 1;
-}
-
-@media (max-width: 660px) {
-	#gallery-lightbox .lb-img-wrap img {
-		max-height: 45dvh;
-	}
-	#gallery-lightbox .lb-close {
-		top: calc(16px + env(safe-area-inset-top));
-		right: 16px;
-		font-size: 12px;
-	}
-}
-
-/* Footer */
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	overflow: hidden;
-}
-
-#footer .btn_area {
-	padding: 20px 0 calc(20px + env(safe-area-inset-bottom));
-}
-
-#footer .btn_area .set {
-	margin-top: 3px;
-}
-
-#footer .btn_area .btn_t1 {
-	border: 1px solid #cccccc;
-	color: #ffffff;
-	padding: 6px 11px;
-	line-height: 13px;
-	margin-left: 5px;
-	font-size: 13px;
-	display: inline-block;
-	vertical-align: top;
-}
-
-#footer .btn_area .btn_t1:first-child {
-	margin-left: 0;
-}
-
-#footer .btn_area .copyright {
-	color: #ffffff;
-	margin-top: 16px;
-	font-size: 10px;
-	opacity: 0.6;
-}
-
-#footer .btn_area .visit-count {
-	color: #ffffff;
-	margin-top: 6px;
-	font-size: 10px;
-	opacity: 0.45;
-	letter-spacing: 0.04em;
-	font-variant-numeric: tabular-nums;
 }
 
 /* 우측 고정 섹션 인디케이터 */
